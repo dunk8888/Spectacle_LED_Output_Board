@@ -152,7 +152,7 @@
 <layer number="254" name="cooling" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="255" name="routoute" color="7" fill="1" visible="yes" active="yes"/>
 </layers>
-<schematic xreflabel="%F%N/%S" xrefpart="/%S.%C%R">
+<schematic xreflabel="%F%N/%S" xrefpart="1_/%S.%C%R">
 <libraries>
 <library name="SparkFun-Aesthetics">
 <description>&lt;h3&gt;SparkFun Electronics' preferred foot prints&lt;/h3&gt;
@@ -18814,7 +18814,7 @@ near U1G4.25</text>
 <wire x1="104.14" y1="86.36" x2="0" y2="86.36" width="0.3048" layer="97" style="longdash"/>
 <wire x1="104.14" y1="86.36" x2="147.32" y2="86.36" width="0.3048" layer="97" style="longdash"/>
 <wire x1="147.32" y1="86.36" x2="147.32" y2="35.56" width="0.3048" layer="97" style="longdash"/>
-<text x="165.1" y="7.62" size="3.81" layer="91" font="vector">Mike Hord</text>
+<text x="165.1" y="7.62" size="2.54" layer="94" font="vector">Dia Campbell and Mike Hord</text>
 <text x="239.268" y="6.604" size="3.81" layer="91" font="vector">01</text>
 <wire x1="147.32" y1="86.36" x2="147.32" y2="114.3" width="0.3048" layer="97" style="longdash"/>
 <wire x1="147.32" y1="114.3" x2="248.92" y2="114.3" width="0.3048" layer="97" style="longdash"/>
@@ -18824,6 +18824,7 @@ near U1G4.25</text>
 Connectors</text>
 <text x="81.28" y="88.9" size="3.81" layer="97" font="vector">Power
 Supply</text>
+<text x="38.1" y="91.694" size="2.54" layer="97" font="vector">4.5V &lt; VIN &lt; 5.5V</text>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
@@ -19377,20 +19378,6 @@ Supply</text>
 <pinref part="J7" gate="J$1" pin="3"/>
 <wire x1="63.5" y1="50.8" x2="71.12" y2="50.8" width="0.1524" layer="91"/>
 <label x="71.12" y="50.8" size="1.27" layer="95" xref="yes"/>
-</segment>
-</net>
-<net name="LED_3" class="0">
-<segment>
-<pinref part="U1" gate="G0" pin="P1.2"/>
-<wire x1="144.78" y1="172.72" x2="147.32" y2="172.72" width="0.1524" layer="91"/>
-<label x="147.32" y="172.72" size="1.27" layer="95" xref="yes"/>
-</segment>
-</net>
-<net name="LED_4" class="0">
-<segment>
-<pinref part="U1" gate="G3" pin="P2.0"/>
-<wire x1="172.72" y1="177.8" x2="170.18" y2="177.8" width="0.1524" layer="91"/>
-<label x="170.18" y="177.8" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 </nets>
