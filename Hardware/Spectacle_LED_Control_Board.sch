@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.3.0">
+<eagle version="7.6.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -18843,7 +18843,7 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 <part name="J4" library="SparkFun-Connectors" deviceset="AUDIO-JACK3" device=""/>
 <part name="D4" library="SparkFun-DiscreteSemi" deviceset="PESD1CAN" device=""/>
 <part name="GND4" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
-<part name="D5" library="SparkFun-DiscreteSemi" deviceset="PESD1CAN" device=""/>
+<part name="D1" library="SparkFun-DiscreteSemi" deviceset="PESD1CAN" device=""/>
 <part name="SUPPLY1" library="SparkFun-Aesthetics" deviceset="3.3V" device=""/>
 <part name="H1" library="SparkFun-Electromechanical" deviceset="STAND-OFF" device=""/>
 <part name="H2" library="SparkFun-Electromechanical" deviceset="STAND-OFF" device=""/>
@@ -18861,7 +18861,7 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 <part name="U$1" library="SparkFun-Aesthetics" deviceset="FOUR_LAYER_WARNING" device=""/>
 <part name="LOGO1" library="SparkFun-Aesthetics" deviceset="OSHW-LOGO" device="S"/>
 <part name="LOGO2" library="SparkFun-Aesthetics" deviceset="SFE_LOGO_NAME_FLAME" device=".1_INCH"/>
-<part name="J10" library="SparkFun-Connectors" deviceset="AUDIO-JACK3" device=""/>
+<part name="J8" library="SparkFun-Connectors" deviceset="AUDIO-JACK3" device=""/>
 <part name="GND16" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="GND17" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="FD1" library="SparkFun-Aesthetics" deviceset="FIDUCIAL" device="UFIDUCIAL"/>
@@ -18889,6 +18889,7 @@ Connectors</text>
 <text x="81.28" y="88.9" size="3.81" layer="97" font="vector">Power
 Supply</text>
 <text x="4.318" y="88.9" size="2.54" layer="97" font="vector">4.5V &lt; VIN &lt; 5.5V</text>
+<text x="228.6" y="102.362" size="1.778" layer="97" font="vector">I2C p/u</text>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
@@ -18942,7 +18943,7 @@ Supply</text>
 <instance part="J4" gate="G$1" x="190.5" y="76.2" rot="MR180"/>
 <instance part="D4" gate="G$1" x="223.52" y="71.12" rot="MR180"/>
 <instance part="GND4" gate="1" x="241.3" y="40.64"/>
-<instance part="D5" gate="G$1" x="223.52" y="43.18"/>
+<instance part="D1" gate="G$1" x="223.52" y="43.18"/>
 <instance part="SUPPLY1" gate="G$1" x="22.86" y="177.8"/>
 <instance part="H1" gate="G$1" x="246.38" y="33.02"/>
 <instance part="H2" gate="G$1" x="243.84" y="33.02"/>
@@ -18960,7 +18961,7 @@ Supply</text>
 <instance part="U$1" gate="G$1" x="213.36" y="27.94"/>
 <instance part="LOGO1" gate="G$1" x="81.28" y="10.16"/>
 <instance part="LOGO2" gate="G$1" x="88.9" y="0"/>
-<instance part="J10" gate="G$1" x="190.5" y="53.34" rot="MR180"/>
+<instance part="J8" gate="G$1" x="190.5" y="53.34" rot="MR180"/>
 <instance part="GND16" gate="1" x="198.12" y="43.18"/>
 <instance part="GND17" gate="1" x="27.94" y="22.86"/>
 <instance part="FD1" gate="G$1" x="238.76" y="25.4"/>
@@ -19063,7 +19064,7 @@ Supply</text>
 <pinref part="GND4" gate="1" pin="GND"/>
 <wire x1="238.76" y1="66.04" x2="241.3" y2="66.04" width="0.1524" layer="91"/>
 <wire x1="241.3" y1="66.04" x2="241.3" y2="48.26" width="0.1524" layer="91"/>
-<pinref part="D5" gate="G$1" pin="3"/>
+<pinref part="D1" gate="G$1" pin="3"/>
 <wire x1="241.3" y1="48.26" x2="241.3" y2="43.18" width="0.1524" layer="91"/>
 <wire x1="238.76" y1="48.26" x2="241.3" y2="48.26" width="0.1524" layer="91"/>
 <junction x="241.3" y="48.26"/>
@@ -19075,7 +19076,7 @@ Supply</text>
 <wire x1="111.76" y1="25.4" x2="111.76" y2="22.86" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="J10" gate="G$1" pin="TIP"/>
+<pinref part="J8" gate="G$1" pin="TIP"/>
 <pinref part="GND16" gate="1" pin="GND"/>
 <wire x1="195.58" y1="55.88" x2="198.12" y2="55.88" width="0.1524" layer="91"/>
 <wire x1="198.12" y1="55.88" x2="198.12" y2="45.72" width="0.1524" layer="91"/>
@@ -19164,10 +19165,10 @@ Supply</text>
 <pinref part="J4" gate="G$1" pin="EARTH"/>
 <wire x1="208.28" y1="45.72" x2="208.28" y2="48.26" width="0.1524" layer="91"/>
 <junction x="208.28" y="71.12"/>
-<pinref part="D5" gate="G$1" pin="2"/>
+<pinref part="D1" gate="G$1" pin="2"/>
 <wire x1="208.28" y1="48.26" x2="208.28" y2="71.12" width="0.1524" layer="91"/>
 <wire x1="208.28" y1="45.72" x2="218.44" y2="45.72" width="0.1524" layer="91"/>
-<pinref part="J10" gate="G$1" pin="EARTH"/>
+<pinref part="J8" gate="G$1" pin="EARTH"/>
 <wire x1="195.58" y1="48.26" x2="208.28" y2="48.26" width="0.1524" layer="91"/>
 <junction x="208.28" y="48.26"/>
 </segment>
@@ -19197,7 +19198,7 @@ Supply</text>
 <junction x="213.36" y="78.74"/>
 <pinref part="D4" gate="G$1" pin="1"/>
 <wire x1="218.44" y1="63.5" x2="213.36" y2="63.5" width="0.1524" layer="91"/>
-<pinref part="J10" gate="G$1" pin="RING2"/>
+<pinref part="J8" gate="G$1" pin="RING2"/>
 <wire x1="195.58" y1="58.42" x2="203.2" y2="58.42" width="0.1524" layer="91"/>
 <wire x1="203.2" y1="58.42" x2="203.2" y2="81.28" width="0.1524" layer="91"/>
 <junction x="203.2" y="81.28"/>
@@ -19226,7 +19227,7 @@ Supply</text>
 <wire x1="218.44" y1="68.58" x2="215.9" y2="68.58" width="0.1524" layer="91"/>
 <wire x1="205.74" y1="73.66" x2="205.74" y2="50.8" width="0.1524" layer="91"/>
 <junction x="205.74" y="73.66"/>
-<pinref part="J10" gate="G$1" pin="RING1"/>
+<pinref part="J8" gate="G$1" pin="RING1"/>
 <wire x1="205.74" y1="50.8" x2="195.58" y2="50.8" width="0.1524" layer="91"/>
 </segment>
 <segment>
