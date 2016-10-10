@@ -19849,6 +19849,11 @@ Supply</text>
 <wire x1="76.2" y1="53.34" x2="76.2" y2="55.88" width="0.1524" layer="91" style="longdash"/>
 <junction x="76.2" y="55.88"/>
 </segment>
+<segment>
+<pinref part="U1" gate="G3" pin="P2.3"/>
+<wire x1="172.72" y1="170.18" x2="170.18" y2="170.18" width="0.1524" layer="91"/>
+<label x="170.18" y="170.18" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
 </net>
 </nets>
 </sheet>
