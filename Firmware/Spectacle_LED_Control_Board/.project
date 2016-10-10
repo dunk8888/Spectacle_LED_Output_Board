@@ -1,0 +1,11 @@
+
+~/Projects/Spectacle/Spectacle_LED_Control_Board/Firmware/Spectacle_LED_Control_Board/=/home/mike.hord/dropbox/Projects/Spectacle/Spectacle_LED_Control_Board/Firmware/Spectacle_LED_Control_Board CD=. filter="*.h *.c" {
+ Spectacle_LED_Control_Board.cydsn=Spectacle_LED_Control_Board.cydsn {
+  cyapicallbacks.h
+  LED_effects.h
+  WS2811.h
+  LED_effects.c
+  main.c
+  WS2811.c
+ }
+}

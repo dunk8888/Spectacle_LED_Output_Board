@@ -1,0 +1,118 @@
+--------------- Rebuild Started: 09/29/2016 09:16:04 Project: Spectacle_LED_Control_Board, Configuration: ARM GCC 4.9-2015-q1-update Debug ---------------
+Deleting file ".\CortexM0p\ARM_GCC_493\Debug\main.o"
+Deleting file ".\CortexM0p\ARM_GCC_493\Debug\cyfitter_cfg.o"
+Deleting file ".\CortexM0p\ARM_GCC_493\Debug\cymetadata.o"
+Deleting file ".\CortexM0p\ARM_GCC_493\Debug\EZI2C.o"
+Deleting file ".\CortexM0p\ARM_GCC_493\Debug\EZI2C_PM.o"
+Deleting file ".\CortexM0p\ARM_GCC_493\Debug\EZI2C_BOOT.o"
+Deleting file ".\CortexM0p\ARM_GCC_493\Debug\EZI2C_EZI2C.o"
+Deleting file ".\CortexM0p\ARM_GCC_493\Debug\EZI2C_EZI2C_INT.o"
+Deleting file ".\CortexM0p\ARM_GCC_493\Debug\EZI2C_EZI2C_BOOT.o"
+Deleting file ".\CortexM0p\ARM_GCC_493\Debug\UART.o"
+Deleting file ".\CortexM0p\ARM_GCC_493\Debug\UART_SPI_UART.o"
+Deleting file ".\CortexM0p\ARM_GCC_493\Debug\UART_SPI_UART_INT.o"
+Deleting file ".\CortexM0p\ARM_GCC_493\Debug\UART_PM.o"
+Deleting file ".\CortexM0p\ARM_GCC_493\Debug\UART_UART.o"
+Deleting file ".\CortexM0p\ARM_GCC_493\Debug\UART_BOOT.o"
+Deleting file ".\CortexM0p\ARM_GCC_493\Debug\UART_UART_BOOT.o"
+Deleting file ".\CortexM0p\ARM_GCC_493\Debug\EZI2C_SCBCLK.o"
+Deleting file ".\CortexM0p\ARM_GCC_493\Debug\EZI2C_sda.o"
+Deleting file ".\CortexM0p\ARM_GCC_493\Debug\EZI2C_sda_PM.o"
+Deleting file ".\CortexM0p\ARM_GCC_493\Debug\EZI2C_scl.o"
+Deleting file ".\CortexM0p\ARM_GCC_493\Debug\EZI2C_scl_PM.o"
+Deleting file ".\CortexM0p\ARM_GCC_493\Debug\EZI2C_SCB_IRQ.o"
+Deleting file ".\CortexM0p\ARM_GCC_493\Debug\UART_SCBCLK.o"
+Deleting file ".\CortexM0p\ARM_GCC_493\Debug\UART_tx.o"
+Deleting file ".\CortexM0p\ARM_GCC_493\Debug\UART_tx_PM.o"
+Deleting file ".\CortexM0p\ARM_GCC_493\Debug\UART_rx.o"
+Deleting file ".\CortexM0p\ARM_GCC_493\Debug\UART_rx_PM.o"
+Deleting file ".\CortexM0p\ARM_GCC_493\Debug\Cm0plusStart.o"
+Deleting file ".\CortexM0p\ARM_GCC_493\Debug\CyBootAsmGnu.o"
+Deleting file ".\CortexM0p\ARM_GCC_493\Debug\CyFlash.o"
+Deleting file ".\CortexM0p\ARM_GCC_493\Debug\CyLib.o"
+Deleting file ".\CortexM0p\ARM_GCC_493\Debug\cyPm.o"
+Deleting file ".\CortexM0p\ARM_GCC_493\Debug\cyutils.o"
+Deleting file ".\CortexM0p\ARM_GCC_493\Debug\CyLFClk.o"
+Deleting file ".\CortexM0p\ARM_GCC_493\Debug\LED.o"
+Deleting file ".\CortexM0p\ARM_GCC_493\Debug\LED_PM.o"
+Deleting file ".\CortexM0p\ARM_GCC_493\Debug\LED2.o"
+Deleting file ".\CortexM0p\ARM_GCC_493\Debug\LED2_PM.o"
+Deleting file ".\CortexM0p\ARM_GCC_493\Debug\LED0.o"
+Deleting file ".\CortexM0p\ARM_GCC_493\Debug\LED0_PM.o"
+Deleting file ".\CortexM0p\ARM_GCC_493\Debug\LED1.o"
+Deleting file ".\CortexM0p\ARM_GCC_493\Debug\LED1_PM.o"
+Deleting file ".\CortexM0p\ARM_GCC_493\Debug\Spectacle_LED_Control_Board.hex"
+Deleting file ".\CortexM0p\ARM_GCC_493\Debug\Spectacle_LED_Control_Board.elf"
+Deleting file ".\CortexM0p\ARM_GCC_493\Debug\Spectacle_LED_Control_Board.map"
+Deleting file ".\Spectacle_LED_Control_Board.cycdx"
+Deleting file ".\Spectacle_LED_Control_Board.rpt"
+Deleting file ".\CortexM0p\ARM_GCC_493\Debug\.deps\C_FILE.P"
+Deleting file ".\CortexM0p\ARM_GCC_493\Debug\.deps\ARM_C_FILE.P"
+Deleting file ".\CortexM0p\ARM_GCC_493\Debug\.deps\GNU_ARM_ASM_FILE.P"
+cydsfit.exe -.appdatapath "C:\Users\mike.hord\AppData\Local\Cypress Semiconductor\PSoC Creator\3.3" -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -p C:\Dropbox\Projects\Spectacle\Spectacle_LED_Control_Board\Firmware\Spectacle_LED_Control_Board\Spectacle_LED_Control_Board.cydsn\Spectacle_LED_Control_Board.cyprj -d CY8C4146LQI-S422 -s C:\Dropbox\Projects\Spectacle\Spectacle_LED_Control_Board\Firmware\Spectacle_LED_Control_Board\Spectacle_LED_Control_Board.cydsn\Generated_Source\PSoC4 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
+Elaborating Design...
+HDL Generation ...
+Synthesis ...
+Place and Route ...
+Tech mapping ...
+Analog Placement ...
+Analog Routing ...
+Analog Code Generation ...
+Digital Placement ...
+Digital Routing ...
+Info: pft.M0077: There is no timing information available for the selected device. Static timing checks will not be applied and digital routing will not be timing-driven. (App=cydsfit)
+Bitstream Generation ...
+Static timing analysis ...
+API Generation ...
+Dependency Generation ...
+Clean Temporary Files ...
+arm-none-eabi-gcc.exe -mcpu=cortex-m0plus -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0p\ARM_GCC_493\Debug/main.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects -c .\main.c -o .\CortexM0p\ARM_GCC_493\Debug\main.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0plus -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0p\ARM_GCC_493\Debug/cyfitter_cfg.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects -c .\Generated_Source\PSoC4\cyfitter_cfg.c -o .\CortexM0p\ARM_GCC_493\Debug\cyfitter_cfg.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0plus -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0p\ARM_GCC_493\Debug/cymetadata.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects -c .\Generated_Source\PSoC4\cymetadata.c -o .\CortexM0p\ARM_GCC_493\Debug\cymetadata.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0plus -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0p\ARM_GCC_493\Debug/EZI2C.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects -c .\Generated_Source\PSoC4\EZI2C.c -o .\CortexM0p\ARM_GCC_493\Debug\EZI2C.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0plus -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0p\ARM_GCC_493\Debug/EZI2C_PM.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects -c .\Generated_Source\PSoC4\EZI2C_PM.c -o .\CortexM0p\ARM_GCC_493\Debug\EZI2C_PM.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0plus -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0p\ARM_GCC_493\Debug/EZI2C_BOOT.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects -c .\Generated_Source\PSoC4\EZI2C_BOOT.c -o .\CortexM0p\ARM_GCC_493\Debug\EZI2C_BOOT.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0plus -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0p\ARM_GCC_493\Debug/EZI2C_EZI2C.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects -c .\Generated_Source\PSoC4\EZI2C_EZI2C.c -o .\CortexM0p\ARM_GCC_493\Debug\EZI2C_EZI2C.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0plus -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0p\ARM_GCC_493\Debug/EZI2C_EZI2C_INT.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects -c .\Generated_Source\PSoC4\EZI2C_EZI2C_INT.c -o .\CortexM0p\ARM_GCC_493\Debug\EZI2C_EZI2C_INT.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0plus -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0p\ARM_GCC_493\Debug/EZI2C_EZI2C_BOOT.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects -c .\Generated_Source\PSoC4\EZI2C_EZI2C_BOOT.c -o .\CortexM0p\ARM_GCC_493\Debug\EZI2C_EZI2C_BOOT.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0plus -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0p\ARM_GCC_493\Debug/UART.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects -c .\Generated_Source\PSoC4\UART.c -o .\CortexM0p\ARM_GCC_493\Debug\UART.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0plus -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0p\ARM_GCC_493\Debug/UART_SPI_UART.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects -c .\Generated_Source\PSoC4\UART_SPI_UART.c -o .\CortexM0p\ARM_GCC_493\Debug\UART_SPI_UART.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0plus -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0p\ARM_GCC_493\Debug/UART_SPI_UART_INT.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects -c .\Generated_Source\PSoC4\UART_SPI_UART_INT.c -o .\CortexM0p\ARM_GCC_493\Debug\UART_SPI_UART_INT.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0plus -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0p\ARM_GCC_493\Debug/UART_PM.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects -c .\Generated_Source\PSoC4\UART_PM.c -o .\CortexM0p\ARM_GCC_493\Debug\UART_PM.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0plus -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0p\ARM_GCC_493\Debug/UART_UART.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects -c .\Generated_Source\PSoC4\UART_UART.c -o .\CortexM0p\ARM_GCC_493\Debug\UART_UART.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0plus -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0p\ARM_GCC_493\Debug/UART_BOOT.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects -c .\Generated_Source\PSoC4\UART_BOOT.c -o .\CortexM0p\ARM_GCC_493\Debug\UART_BOOT.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0plus -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0p\ARM_GCC_493\Debug/UART_UART_BOOT.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects -c .\Generated_Source\PSoC4\UART_UART_BOOT.c -o .\CortexM0p\ARM_GCC_493\Debug\UART_UART_BOOT.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0plus -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0p\ARM_GCC_493\Debug/EZI2C_SCBCLK.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects -c .\Generated_Source\PSoC4\EZI2C_SCBCLK.c -o .\CortexM0p\ARM_GCC_493\Debug\EZI2C_SCBCLK.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0plus -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0p\ARM_GCC_493\Debug/EZI2C_sda.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects -c .\Generated_Source\PSoC4\EZI2C_sda.c -o .\CortexM0p\ARM_GCC_493\Debug\EZI2C_sda.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0plus -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0p\ARM_GCC_493\Debug/EZI2C_sda_PM.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects -c .\Generated_Source\PSoC4\EZI2C_sda_PM.c -o .\CortexM0p\ARM_GCC_493\Debug\EZI2C_sda_PM.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0plus -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0p\ARM_GCC_493\Debug/EZI2C_scl.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects -c .\Generated_Source\PSoC4\EZI2C_scl.c -o .\CortexM0p\ARM_GCC_493\Debug\EZI2C_scl.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0plus -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0p\ARM_GCC_493\Debug/EZI2C_scl_PM.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects -c .\Generated_Source\PSoC4\EZI2C_scl_PM.c -o .\CortexM0p\ARM_GCC_493\Debug\EZI2C_scl_PM.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0plus -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0p\ARM_GCC_493\Debug/EZI2C_SCB_IRQ.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects -c .\Generated_Source\PSoC4\EZI2C_SCB_IRQ.c -o .\CortexM0p\ARM_GCC_493\Debug\EZI2C_SCB_IRQ.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0plus -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0p\ARM_GCC_493\Debug/UART_SCBCLK.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects -c .\Generated_Source\PSoC4\UART_SCBCLK.c -o .\CortexM0p\ARM_GCC_493\Debug\UART_SCBCLK.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0plus -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0p\ARM_GCC_493\Debug/UART_tx.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects -c .\Generated_Source\PSoC4\UART_tx.c -o .\CortexM0p\ARM_GCC_493\Debug\UART_tx.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0plus -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0p\ARM_GCC_493\Debug/UART_tx_PM.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects -c .\Generated_Source\PSoC4\UART_tx_PM.c -o .\CortexM0p\ARM_GCC_493\Debug\UART_tx_PM.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0plus -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0p\ARM_GCC_493\Debug/UART_rx.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects -c .\Generated_Source\PSoC4\UART_rx.c -o .\CortexM0p\ARM_GCC_493\Debug\UART_rx.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0plus -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0p\ARM_GCC_493\Debug/UART_rx_PM.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects -c .\Generated_Source\PSoC4\UART_rx_PM.c -o .\CortexM0p\ARM_GCC_493\Debug\UART_rx_PM.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0plus -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0p\ARM_GCC_493\Debug/Cm0plusStart.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects -c .\Generated_Source\PSoC4\Cm0plusStart.c -o .\CortexM0p\ARM_GCC_493\Debug\Cm0plusStart.o
+arm-none-eabi-as.exe -mcpu=cortex-m0plus -mthumb -I. -IGenerated_Source\PSoC4 -alh=.\CortexM0p\ARM_GCC_493\Debug/CyBootAsmGnu.lst -g -W -o .\CortexM0p\ARM_GCC_493\Debug\CyBootAsmGnu.o .\Generated_Source\PSoC4\CyBootAsmGnu.s
+arm-none-eabi-gcc.exe -mcpu=cortex-m0plus -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0p\ARM_GCC_493\Debug/CyFlash.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects -c .\Generated_Source\PSoC4\CyFlash.c -o .\CortexM0p\ARM_GCC_493\Debug\CyFlash.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0plus -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0p\ARM_GCC_493\Debug/CyLib.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects -c .\Generated_Source\PSoC4\CyLib.c -o .\CortexM0p\ARM_GCC_493\Debug\CyLib.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0plus -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0p\ARM_GCC_493\Debug/cyPm.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects -c .\Generated_Source\PSoC4\cyPm.c -o .\CortexM0p\ARM_GCC_493\Debug\cyPm.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0plus -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0p\ARM_GCC_493\Debug/cyutils.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects -c .\Generated_Source\PSoC4\cyutils.c -o .\CortexM0p\ARM_GCC_493\Debug\cyutils.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0plus -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0p\ARM_GCC_493\Debug/CyLFClk.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects -c .\Generated_Source\PSoC4\CyLFClk.c -o .\CortexM0p\ARM_GCC_493\Debug\CyLFClk.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0plus -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0p\ARM_GCC_493\Debug/LED.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects -c .\Generated_Source\PSoC4\LED.c -o .\CortexM0p\ARM_GCC_493\Debug\LED.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0plus -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0p\ARM_GCC_493\Debug/LED_PM.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects -c .\Generated_Source\PSoC4\LED_PM.c -o .\CortexM0p\ARM_GCC_493\Debug\LED_PM.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0plus -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0p\ARM_GCC_493\Debug/LED2.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects -c .\Generated_Source\PSoC4\LED2.c -o .\CortexM0p\ARM_GCC_493\Debug\LED2.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0plus -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0p\ARM_GCC_493\Debug/LED2_PM.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects -c .\Generated_Source\PSoC4\LED2_PM.c -o .\CortexM0p\ARM_GCC_493\Debug\LED2_PM.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0plus -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0p\ARM_GCC_493\Debug/LED0.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects -c .\Generated_Source\PSoC4\LED0.c -o .\CortexM0p\ARM_GCC_493\Debug\LED0.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0plus -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0p\ARM_GCC_493\Debug/LED0_PM.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects -c .\Generated_Source\PSoC4\LED0_PM.c -o .\CortexM0p\ARM_GCC_493\Debug\LED0_PM.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0plus -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0p\ARM_GCC_493\Debug/LED1.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects -c .\Generated_Source\PSoC4\LED1.c -o .\CortexM0p\ARM_GCC_493\Debug\LED1.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0plus -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0p\ARM_GCC_493\Debug/LED1_PM.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects -c .\Generated_Source\PSoC4\LED1_PM.c -o .\CortexM0p\ARM_GCC_493\Debug\LED1_PM.o
+arm-none-eabi-ar.exe -rs .\CortexM0p\ARM_GCC_493\Debug\Spectacle_LED_Control_Board.a .\CortexM0p\ARM_GCC_493\Debug\cyfitter_cfg.o .\CortexM0p\ARM_GCC_493\Debug\EZI2C.o .\CortexM0p\ARM_GCC_493\Debug\EZI2C_PM.o .\CortexM0p\ARM_GCC_493\Debug\EZI2C_BOOT.o .\CortexM0p\ARM_GCC_493\Debug\EZI2C_EZI2C.o .\CortexM0p\ARM_GCC_493\Debug\EZI2C_EZI2C_INT.o .\CortexM0p\ARM_GCC_493\Debug\EZI2C_EZI2C_BOOT.o .\CortexM0p\ARM_GCC_493\Debug\UART.o .\CortexM0p\ARM_GCC_493\Debug\UART_SPI_UART.o .\CortexM0p\ARM_GCC_493\Debug\UART_SPI_UART_INT.o .\CortexM0p\ARM_GCC_493\Debug\UART_PM.o .\CortexM0p\ARM_GCC_493\Debug\UART_UART.o .\CortexM0p\ARM_GCC_493\Debug\UART_BOOT.o .\CortexM0p\ARM_GCC_493\Debug\UART_UART_BOOT.o .\CortexM0p\ARM_GCC_493\Debug\EZI2C_SCBCLK.o .\CortexM0p\ARM_GCC_493\Debug\EZI2C_sda.o .\CortexM0p\ARM_GCC_493\Debug\EZI2C_sda_PM.o .\CortexM0p\ARM_GCC_493\Debug\EZI2C_scl.o .\CortexM0p\ARM_GCC_493\Debug\EZI2C_scl_PM.o .\CortexM0p\ARM_GCC_493\Debug\EZI2C_SCB_IRQ.o .\CortexM0p\ARM_GCC_493\Debug\UART_SCBCLK.o .\CortexM0p\ARM_GCC_493\Debug\UART_tx.o .\CortexM0p\ARM_GCC_493\Debug\UART_tx_PM.o .\CortexM0p\ARM_GCC_493\Debug\UART_rx.o .\CortexM0p\ARM_GCC_493\Debug\UART_rx_PM.o .\CortexM0p\ARM_GCC_493\Debug\CyBootAsmGnu.o .\CortexM0p\ARM_GCC_493\Debug\CyFlash.o .\CortexM0p\ARM_GCC_493\Debug\CyLib.o .\CortexM0p\ARM_GCC_493\Debug\cyPm.o .\CortexM0p\ARM_GCC_493\Debug\cyutils.o .\CortexM0p\ARM_GCC_493\Debug\CyLFClk.o .\CortexM0p\ARM_GCC_493\Debug\LED.o .\CortexM0p\ARM_GCC_493\Debug\LED_PM.o .\CortexM0p\ARM_GCC_493\Debug\LED2.o .\CortexM0p\ARM_GCC_493\Debug\LED2_PM.o .\CortexM0p\ARM_GCC_493\Debug\LED0.o .\CortexM0p\ARM_GCC_493\Debug\LED0_PM.o .\CortexM0p\ARM_GCC_493\Debug\LED1.o .\CortexM0p\ARM_GCC_493\Debug\LED1_PM.o
+arm-none-eabi-ar.exe: creating .\CortexM0p\ARM_GCC_493\Debug\Spectacle_LED_Control_Board.a
+arm-none-eabi-gcc.exe -Wl,--start-group -o .\CortexM0p\ARM_GCC_493\Debug\Spectacle_LED_Control_Board.elf .\CortexM0p\ARM_GCC_493\Debug\main.o .\CortexM0p\ARM_GCC_493\Debug\cymetadata.o .\CortexM0p\ARM_GCC_493\Debug\Cm0plusStart.o .\CortexM0p\ARM_GCC_493\Debug\Spectacle_LED_Control_Board.a -mcpu=cortex-m0plus -mthumb -g -ffunction-sections -Og -ffat-lto-objects -l m -L Generated_Source\PSoC4 -Wl,-Map,.\CortexM0p\ARM_GCC_493\Debug/Spectacle_LED_Control_Board.map -T Generated_Source\PSoC4\cm0plusgcc.ld -specs=nano.specs -u _printf_float -Wl,--gc-sections -Wl,--end-group
+cyelftool.exe -C C:\Dropbox\Projects\Spectacle\Spectacle_LED_Control_Board\Firmware\Spectacle_LED_Control_Board\Spectacle_LED_Control_Board.cydsn\CortexM0p\ARM_GCC_493\Debug\Spectacle_LED_Control_Board.elf --flash_row_size 128 --flash_size 65536
+cyelftool.exe -S C:\Dropbox\Projects\Spectacle\Spectacle_LED_Control_Board\Firmware\Spectacle_LED_Control_Board\Spectacle_LED_Control_Board.cydsn\CortexM0p\ARM_GCC_493\Debug\Spectacle_LED_Control_Board.elf
+Flash used: 19200 of 65536 bytes (29.3 %).
+SRAM used: 2668 of 8192 bytes (32.6 %). Stack: 2048 bytes. Heap: 128 bytes.
+--------------- Rebuild Succeeded: 09/29/2016 09:17:12 ---------------
