@@ -330,10 +330,7 @@
 </userData>
 </CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
 <Unloaded />
-<OpenDocs>
-<name v=".\Spectacle_LED_Control_Board.cydsn\Spectacle_LED_Control_Board.cydwr" />
-<name v=".\Spectacle_LED_Control_Board.cydsn\TopDesign\TopDesign.cysch" />
-</OpenDocs>
+<OpenDocs />
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
