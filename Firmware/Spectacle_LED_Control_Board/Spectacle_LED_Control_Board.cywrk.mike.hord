@@ -170,6 +170,15 @@
 <v>Spectacle_LED_Control_Board\Spectacle_LED_Control_Board\Generated_Source\PSoC4\cydevicegnu_trm.inc</v>
 <v>Spectacle_LED_Control_Board\Spectacle_LED_Control_Board\Generated_Source\PSoC4\cydeviceiar_trm.inc</v>
 <v>Spectacle_LED_Control_Board\Spectacle_LED_Control_Board\Generated_Source\PSoC4\cydevicerv_trm.inc</v>
+<v>Spectacle_LED_Control_Board\Spectacle_LED_Control_Board\Generated_Source\PSoC4\cydisabledsheets.h</v>
+<v>Spectacle_LED_Control_Board\Spectacle_LED_Control_Board\Generated_Source\PSoC4\cyfitter.h</v>
+<v>Spectacle_LED_Control_Board\Spectacle_LED_Control_Board\Generated_Source\PSoC4\cyfitter_cfg.c</v>
+<v>Spectacle_LED_Control_Board\Spectacle_LED_Control_Board\Generated_Source\PSoC4\cyfitter_cfg.h</v>
+<v>Spectacle_LED_Control_Board\Spectacle_LED_Control_Board\Generated_Source\PSoC4\cyfittergnu.inc</v>
+<v>Spectacle_LED_Control_Board\Spectacle_LED_Control_Board\Generated_Source\PSoC4\cyfitteriar.inc</v>
+<v>Spectacle_LED_Control_Board\Spectacle_LED_Control_Board\Generated_Source\PSoC4\cyfitterrv.inc</v>
+<v>Spectacle_LED_Control_Board\Spectacle_LED_Control_Board\Generated_Source\PSoC4\cymetadata.c</v>
+<v>Spectacle_LED_Control_Board\Spectacle_LED_Control_Board\Generated_Source\PSoC4\project.h</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Spectacle_LED_Control_Board\Spectacle_LED_Control_Board\TopDesign">
@@ -284,6 +293,16 @@
 <v>Spectacle_LED_Control_Board\Spectacle_LED_Control_Board\CortexM0p\ARM_GCC_493\Debug\Listing Files\LED1_PM.lst</v>
 <v>Spectacle_LED_Control_Board\Spectacle_LED_Control_Board\CortexM0p\ARM_GCC_493\Debug\Listing Files\LED2.lst</v>
 <v>Spectacle_LED_Control_Board\Spectacle_LED_Control_Board\CortexM0p\ARM_GCC_493\Debug\Listing Files\LED2_PM.lst</v>
+<v>Spectacle_LED_Control_Board\Spectacle_LED_Control_Board\CortexM0p\ARM_GCC_493\Debug\Listing Files\main.lst</v>
+<v>Spectacle_LED_Control_Board\Spectacle_LED_Control_Board\CortexM0p\ARM_GCC_493\Debug\Listing Files\UART.lst</v>
+<v>Spectacle_LED_Control_Board\Spectacle_LED_Control_Board\CortexM0p\ARM_GCC_493\Debug\Listing Files\UART_BOOT.lst</v>
+<v>Spectacle_LED_Control_Board\Spectacle_LED_Control_Board\CortexM0p\ARM_GCC_493\Debug\Listing Files\UART_PM.lst</v>
+<v>Spectacle_LED_Control_Board\Spectacle_LED_Control_Board\CortexM0p\ARM_GCC_493\Debug\Listing Files\UART_rx.lst</v>
+<v>Spectacle_LED_Control_Board\Spectacle_LED_Control_Board\CortexM0p\ARM_GCC_493\Debug\Listing Files\UART_rx_PM.lst</v>
+<v>Spectacle_LED_Control_Board\Spectacle_LED_Control_Board\CortexM0p\ARM_GCC_493\Debug\Listing Files\UART_SCBCLK.lst</v>
+<v>Spectacle_LED_Control_Board\Spectacle_LED_Control_Board\CortexM0p\ARM_GCC_493\Debug\Listing Files\UART_SPI_UART.lst</v>
+<v>Spectacle_LED_Control_Board\Spectacle_LED_Control_Board\CortexM0p\ARM_GCC_493\Debug\Listing Files\UART_SPI_UART_INT.lst</v>
+<v>Spectacle_LED_Control_Board\Spectacle_LED_Control_Board\CortexM0p\ARM_GCC_493\Debug\Listing Files\UART_tx.lst</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
