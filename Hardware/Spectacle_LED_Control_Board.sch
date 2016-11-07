@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.3.0">
+<eagle version="7.7.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -19086,6 +19086,19 @@ will be further integrated into the Sparkfun Library for other footprints.  It c
 <technology name=""/>
 </technologies>
 </device>
+<device name="NO_SILK_NO_POP" package="1X06_NO_SILK">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="3" pad="3"/>
+<connect gate="G$1" pin="4" pad="4"/>
+<connect gate="G$1" pin="5" pad="5"/>
+<connect gate="G$1" pin="6" pad="6"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
 </devices>
 </deviceset>
 </devicesets>
@@ -20073,9 +20086,15 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="J3" library="SparkFun-Connectors" deviceset="USB-MICROB" device="&quot;" value="USB-MICROB"/>
 <part name="SUPPLY12" library="SparkFun-Aesthetics" deviceset="5V" device=""/>
 <part name="GND2" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
-<part name="J5" library="SparkFun-Connectors" deviceset="M03" device="JST-PTH-VERT"/>
-<part name="J6" library="SparkFun-Connectors" deviceset="M03" device="JST-PTH-VERT"/>
-<part name="J7" library="SparkFun-Connectors" deviceset="M03" device="JST-PTH-VERT"/>
+<part name="J5" library="SparkFun-Connectors" deviceset="M03" device="JST-PTH-VERT">
+<attribute name="PROD_ID" value="CONN-13230"/>
+</part>
+<part name="J6" library="SparkFun-Connectors" deviceset="M03" device="JST-PTH-VERT">
+<attribute name="PROD_ID" value="CONN-13230"/>
+</part>
+<part name="J7" library="SparkFun-Connectors" deviceset="M03" device="JST-PTH-VERT">
+<attribute name="PROD_ID" value="CONN-13230"/>
+</part>
 <part name="SUPPLY13" library="SparkFun-Aesthetics" deviceset="5V" device=""/>
 <part name="SUPPLY14" library="SparkFun-Aesthetics" deviceset="5V" device=""/>
 <part name="GND3" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
@@ -20089,7 +20108,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="FD2" library="SparkFun-Aesthetics" deviceset="FIDUCIAL" device="UFIDUCIAL"/>
 <part name="D5" library="SparkFun-DiscreteSemi" deviceset="DIODE-SCHOTTKY" device="-BAT20J" value="BAT20J"/>
 <part name="SUPPLY10" library="SparkFun-Aesthetics" deviceset="5V" device=""/>
-<part name="J9" library="SparkFun-Connectors" deviceset="M06" device="NO_SILK_FEMALE_PTH"/>
+<part name="J9" library="SparkFun-Connectors" deviceset="M06" device="NO_SILK_NO_POP"/>
 <part name="C9" library="SparkFun-Capacitors" deviceset="0.1UF-16V(+-10%)(0402)" device="" value="0.1uF"/>
 <part name="C10" library="SparkFun-Capacitors" deviceset="0.1UF-16V(+-10%)(0402)" device="" value="0.1uF"/>
 <part name="GND18" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
@@ -20111,7 +20130,7 @@ near U1G4.25</text>
 <wire x1="104.14" y1="185.42" x2="104.14" y2="127" width="0.3048" layer="97" style="longdash"/>
 <wire x1="58.42" y1="86.36" x2="0" y2="86.36" width="0.3048" layer="97" style="longdash"/>
 <text x="165.1" y="7.62" size="2.54" layer="94" font="vector">Dia Campbell and Mike Hord</text>
-<text x="239.268" y="6.604" size="3.81" layer="91" font="vector">01</text>
+<text x="239.268" y="6.604" size="3.81" layer="91" font="vector">02</text>
 <wire x1="104.14" y1="127" x2="248.92" y2="127" width="0.3048" layer="97" style="longdash"/>
 <text x="147.32" y="129.54" size="3.81" layer="97" font="vector">MCU</text>
 <text x="105.156" y="36.068" size="3.81" layer="97" font="vector">Connectors</text>
@@ -20186,9 +20205,15 @@ Supply</text>
 <instance part="J3" gate="G$1" x="119.38" y="96.52" rot="R180"/>
 <instance part="SUPPLY12" gate="G$1" x="142.24" y="101.6"/>
 <instance part="GND2" gate="1" x="127" y="83.82"/>
-<instance part="J5" gate="J$1" x="5.08" y="71.12"/>
-<instance part="J6" gate="J$1" x="5.08" y="55.88"/>
-<instance part="J7" gate="J$1" x="33.02" y="71.12"/>
+<instance part="J5" gate="J$1" x="5.08" y="71.12">
+<attribute name="PROD_ID" x="5.08" y="71.12" size="1.778" layer="96" display="off"/>
+</instance>
+<instance part="J6" gate="J$1" x="5.08" y="55.88">
+<attribute name="PROD_ID" x="5.08" y="55.88" size="1.778" layer="96" display="off"/>
+</instance>
+<instance part="J7" gate="J$1" x="33.02" y="71.12">
+<attribute name="PROD_ID" x="33.02" y="71.12" size="1.778" layer="96" display="off"/>
+</instance>
 <instance part="SUPPLY13" gate="G$1" x="17.78" y="78.74"/>
 <instance part="SUPPLY14" gate="G$1" x="45.72" y="78.74"/>
 <instance part="GND3" gate="1" x="43.18" y="60.96"/>
