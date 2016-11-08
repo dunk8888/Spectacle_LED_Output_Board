@@ -20420,13 +20420,18 @@ Supply</text>
 <pinref part="D5" gate="G$1" pin="A"/>
 <wire x1="205.74" y1="91.44" x2="208.28" y2="91.44" width="0.1524" layer="91"/>
 <junction x="208.28" y="91.44"/>
-<pinref part="D1" gate="G$1" pin="1"/>
-<wire x1="218.44" y1="50.8" x2="213.36" y2="50.8" width="0.1524" layer="91"/>
-<wire x1="213.36" y1="50.8" x2="213.36" y2="60.96" width="0.1524" layer="91"/>
 <wire x1="213.36" y1="60.96" x2="210.82" y2="60.96" width="0.1524" layer="91"/>
 <wire x1="210.82" y1="60.96" x2="210.82" y2="71.12" width="0.1524" layer="91"/>
 <wire x1="210.82" y1="71.12" x2="208.28" y2="71.12" width="0.1524" layer="91"/>
 <junction x="208.28" y="71.12"/>
+<pinref part="D1" gate="G$1" pin="2"/>
+<pinref part="J8" gate="G$1" pin="EARTH"/>
+<wire x1="195.58" y1="48.26" x2="208.28" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="208.28" y1="45.72" x2="208.28" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="208.28" y1="45.72" x2="213.36" y2="45.72" width="0.1524" layer="91"/>
+<wire x1="213.36" y1="45.72" x2="218.44" y2="45.72" width="0.1524" layer="91"/>
+<wire x1="213.36" y1="60.96" x2="213.36" y2="45.72" width="0.1524" layer="91"/>
+<junction x="213.36" y="45.72"/>
 </segment>
 <segment>
 <pinref part="SUPPLY17" gate="G$1" pin="VIN"/>
@@ -20729,15 +20734,6 @@ Supply</text>
 <pinref part="J7" gate="J$1" pin="3"/>
 <wire x1="40.64" y1="73.66" x2="48.26" y2="73.66" width="0.1524" layer="91"/>
 <label x="48.26" y="73.66" size="1.27" layer="95" xref="yes"/>
-</segment>
-</net>
-<net name="N$1" class="0">
-<segment>
-<pinref part="D1" gate="G$1" pin="2"/>
-<pinref part="J8" gate="G$1" pin="EARTH"/>
-<wire x1="195.58" y1="48.26" x2="208.28" y2="48.26" width="0.1524" layer="91"/>
-<wire x1="208.28" y1="45.72" x2="208.28" y2="48.26" width="0.1524" layer="91"/>
-<wire x1="208.28" y1="45.72" x2="218.44" y2="45.72" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="I2C_OUT_EN" class="0">
