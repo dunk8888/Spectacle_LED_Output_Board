@@ -1,7 +1,7 @@
 /*******************************************************************************
 * File Name: project.h
 * 
-* PSoC Creator  3.3 CP3
+* PSoC Creator  4.0
 *
 * Description:
 * It contains references to all generated header files and should not be modified.
@@ -38,6 +38,8 @@
 #include "LED1_aliases.h"
 #include "LED.h"
 #include "LED_aliases.h"
+#include "I2C_OUT_EN.h"
+#include "I2C_OUT_EN_aliases.h"
 #include "EZI2C_SCBCLK.h"
 #include "EZI2C_sda.h"
 #include "EZI2C_sda_aliases.h"

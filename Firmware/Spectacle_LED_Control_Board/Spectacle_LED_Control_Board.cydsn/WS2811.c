@@ -8,12 +8,12 @@ extern int stringLen[3];
 void updateString(uint8 stringID)
 {
   int i = 0;
-  CyGlobalIntDisable;
   for (i = 0; i< stringLen[stringID]; i++)
   {
+  CyGlobalIntDisable;
     pixelOut(buffer[stringID][i], stringID);
-  }
   CyGlobalIntEnable;
+  }
 }
 
 inline void pixelOut(uint32 pixelVal, uint8 stringID)

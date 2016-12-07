@@ -1,5 +1,8 @@
---------------- Clean Started: 09/26/2016 11:59:52 Project: Spectacle_LED_Control_Board, Configuration: ARM GCC 4.9-2015-q1-update Debug ---------------
+--------------- Clean Started: 12/06/2016 15:56:51 Project: Spectacle_LED_Control_Board, Configuration: ARM GCC 4.9-2015-q1-update Debug ---------------
 Deleting file ".\CortexM0p\ARM_GCC_493\Debug\main.o"
+Deleting file ".\CortexM0p\ARM_GCC_493\Debug\WS2811.o"
+Deleting file ".\CortexM0p\ARM_GCC_493\Debug\LED_effects.o"
+Deleting file ".\CortexM0p\ARM_GCC_493\Debug\programming.o"
 Deleting file ".\CortexM0p\ARM_GCC_493\Debug\cyfitter_cfg.o"
 Deleting file ".\CortexM0p\ARM_GCC_493\Debug\cymetadata.o"
 Deleting file ".\CortexM0p\ARM_GCC_493\Debug\EZI2C.o"
@@ -41,12 +44,13 @@ Deleting file ".\CortexM0p\ARM_GCC_493\Debug\LED0.o"
 Deleting file ".\CortexM0p\ARM_GCC_493\Debug\LED0_PM.o"
 Deleting file ".\CortexM0p\ARM_GCC_493\Debug\LED1.o"
 Deleting file ".\CortexM0p\ARM_GCC_493\Debug\LED1_PM.o"
+Deleting file ".\CortexM0p\ARM_GCC_493\Debug\I2C_OUT_EN.o"
+Deleting file ".\CortexM0p\ARM_GCC_493\Debug\I2C_OUT_EN_PM.o"
 Deleting file ".\CortexM0p\ARM_GCC_493\Debug\Spectacle_LED_Control_Board.hex"
 Deleting file ".\CortexM0p\ARM_GCC_493\Debug\Spectacle_LED_Control_Board.elf"
 Deleting file ".\CortexM0p\ARM_GCC_493\Debug\Spectacle_LED_Control_Board.map"
 Deleting file ".\Spectacle_LED_Control_Board.cycdx"
 Deleting file ".\Spectacle_LED_Control_Board.rpt"
-Deleting file ".\CortexM0p\ARM_GCC_493\Debug\.deps\C_FILE.P"
-Deleting file ".\CortexM0p\ARM_GCC_493\Debug\.deps\ARM_C_FILE.P"
-Deleting file ".\CortexM0p\ARM_GCC_493\Debug\.deps\GNU_ARM_ASM_FILE.P"
---------------- Clean Succeeded: 09/26/2016 11:59:52 ---------------
+Deleting file ".\CortexM0p\ARM_GCC_493\Debug\.deps\SOURCE_C__ARM_GCC_GENERIC.P"
+Deleting file ".\CortexM0p\ARM_GCC_493\Debug\.deps\SOURCE_ASM__ARM_GCC_GENERIC.P"
+--------------- Clean Succeeded: 12/06/2016 15:56:51 ---------------

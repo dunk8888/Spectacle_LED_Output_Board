@@ -3,74 +3,87 @@
 #include <math.h>
 #include <stdlib.h>
 #include <stdio.h>
+#include "led.h"
+#include "spectacle.h"
+#include "programming.h"
 #include "LED_effects.h"
 #include "WS2811.h"
 
-#define I2C_BUFFER_SIZE 16
-#define I2C_BUFFER_RW_BOUNDARY 16
+#define I2C_BUFFER_SIZE 256
+#define I2C_BUFFER_RW_BOUNDARY 256
 
+// systemTimer is incremented in the tickISR, which occurs once a millisecond.
+//  It's the timebase for the entire firmware, upon which all other timing
+//  is based.
 volatile int32 systemTimer = 0;
-
-extern bool fading;
-
-int stringLen[3] = {30,10,20};
-
 CY_ISR_PROTO(tickISR);
 
-int brightnessMask;
+// led is a struct which tracks the desired behavior of a single channel. A 
+// single string of LEDs may have more than one channel associated with it,
+// however, only one channel of behavior will be actively displayed at a time.
+//struct led *behaviors;
+struct led behaviors[10];
+// behaviorListLen tracks the number of behaviors that have been uploaded from
+// the director. We cycle through this number of behaviors on every go around
+// of the 100Hz timer.
+int behaviorListLen = 0;
 
+// mailboxes is where our channel data comes in. A spectacle system can have
+// up to 64 channels of behaviors, each of which is an int16.
+int16 mailboxes[128];
+
+// not everything that comes and goes via I2C is "mail", so we also create this
+// general purpose pointer to access the I2C memory area when we don't want to
+// create the impression that we're getting or sending mail.
+volatile uint8 *I2C_Mem;
+
+int stringLen[3] = {60,60,60};
 int main()
 {
   CyGlobalIntEnable; /* Enable global interrupts. */
   
-  uint8 registerSpace[I2C_BUFFER_SIZE];
+  // We need to clear any cruft from the mailboxes to avoid spurious behavior.
+  bzero(mailboxes, 128);
 
-  uint8 *r_change;
-  uint8 *r_mode0;
-  uint8 *r_active0;
-  uint8 *r_red0;
-  uint8 *r_green0;
-  uint8 *r_blue0;
-  uint8 *r_random;
-  uint32 *r_delay0;
-  uint32 tick0=0;
-  bool midFunction0 = false;
-  uint8 iteration0 = 0;
+  // Point our GP I2C memory pointer at the I2C memory area.
+  I2C_Mem = (uint8*)mailboxes;
 
-  r_change = &registerSpace[0];
+  // Clear the programming setup bytes so we don't accidentally go into
+  // programming mode when that becomes available.
+  I2C_Mem[PROG_ENABLE_REG] = 0;
+  I2C_Mem[PROG_READY_REG] = 0;
+  I2C_Mem[DATA_READY_REG] = 0;
 
-  r_mode0 = &registerSpace[1];
-  r_active0 = &registerSpace[2];
-  r_red0 = &registerSpace[3];
-  r_green0 = &registerSpace[4];
-  r_blue0 = &registerSpace[5];
-  r_random = &registerSpace[6];
-  r_delay0 = (uint32*)&registerSpace[7];
-  *r_delay0 = 200;
-  *r_random = 5;
-  *r_mode0 = SET_COLOR;
-  *r_active0 = 0;
-  *r_red0 = 0xff;
-  *r_green0 = 0xff;
-  *r_blue0 = 0xff;
-
+  // This is the startup code for the incoming I2C peripheral. We first enable
+  // the peripheral, then tell it what it needs to know about the memory it
+  // will be looking at for later decision making.
   EZI2C_Start();
-  EZI2C_EzI2CSetBuffer1(I2C_BUFFER_SIZE, I2C_BUFFER_RW_BOUNDARY, registerSpace);
+  EZI2C_EzI2CSetBuffer1(I2C_BUFFER_SIZE, I2C_BUFFER_RW_BOUNDARY, (uint8*)mailboxes);
   
+  // Start the UART. This is only a debugging tool.
   UART_Start();
-  
+  UART_UartPutString("Hello world");
+
+  // ARM devices have an internal system tick which can be used as a timebase
+  // without having to tie up additional system resources. Here we set it up to
+  // point to our system tick ISR and configure it to occur once every 48000
+  // clock ticks, which is once per millisecond on our 48MHz processor.
   CyIntSetSysVector((SysTick_IRQn + 16), tickISR);
   SysTick_Config(48000);
   
+  // Variables used inside main().
   int32 _100HzTick = 0;
   int32 _2HzTick = 0;
   int32 _20HzTick = 0;
-  uint32 rxBuffer = 0;
   int i = 0;
   
-  UART_UartPutString("Hello world");
+  // Assign memory to the "behaviors" array of structs.
+//  behaviors = malloc(64*sizeof(struct led));
+
+  // Turn the LED on. This is a good way to check that initialization has
+  // passed; if the LED is on but not blinking the error is after init.
   LED_Write(1);
-  
+
   for(;;)
   {
     // 100Hz service loop
@@ -78,15 +91,54 @@ int main()
     {
       _100HzTick = systemTimer;
 
-      // Serial RX handler
-      rxBuffer = UART_UartGetChar();
-      if (rxBuffer == 'r')
+      if (I2C_Mem[PROG_ENABLE_REG] == 1)
       {
-        for (i=0; i < I2C_BUFFER_SIZE; i++)
+        program();
+        I2C_OUT_EN_Write(0);
+      }
+      if (I2C_Mem[CONFIGURED_REG] == 1)
+      {
+        EZI2C_EzI2CSetAddress1(I2C_Mem[I2C_ADDR_REG]);
+        I2C_Mem[CONFIGURED_REG] = 0;
+        I2C_OUT_EN_Write(1);
+      }
+      // Behavior loop. We'll cycle through this loop for each behavior that we
+      // received from the director board, checking that behavior's mailbox to
+      // see if any data has been received for that channel. We'll then do
+      // something based on that behavior.
+      for (i = 0; i < behaviorListLen; i++)
+      {
+        switch(behaviors[i].mode)
         {
-          UART_UartPutChar(registerSpace[i]);
+          case SET_COLOR:
+            if (mailboxes[behaviors[i].channel] > behaviors[i].threshold)
+            {
+             //stringLen[behaviors[i].stringID] = behaviors[i].stringLen;
+              setColor(&behaviors[i]);
+            }
+            break;
+          case SET_PIXEL:
+            if (mailboxes[behaviors[i].channel] > behaviors[i].threshold)
+            {
+              setPixel(&behaviors[i]);
+            }
+            break;
+          case FADE_STRING:
+            break;
+          case PARTIAL_FILL:
+            break;
+          case RAINBOW:
+            break;
+          case THEATER_CHASE:
+            break;
+          case SCAN:
+            break;
+          case TWINKLE:
+            break;
+          case LIGHTNING:
+            break;
         }
-      } // End serial RXhandler
+      }
 
     } // End 100Hz service loop
 
@@ -97,11 +149,6 @@ int main()
       updateString(0);
       updateString(1);
       updateString(2);
-      brightnessMask = 255*30/(stringLen[0]+stringLen[1]+stringLen[2]);
-      if (brightnessMask > 255)
-      {
-        brightnessMask = 255;
-      }
     }
 
     // 2Hz service loop
@@ -117,90 +164,6 @@ int main()
         LED_Write(1);
       }
     }
-
-    // NHz service loop, for LED effects
-    if ((systemTimer - *r_delay0) > tick0)
-    {
-      tick0 = systemTimer;
-      if (*r_active0 == 1)
-      {  
-        // TWINKLE mode handler
-        if (*r_mode0 == TWINKLE)
-        {
-          if (midFunction0 == false)
-          {
-            if ((rand() % (*r_random)) == 1)
-            {
-              midFunction0 = true;
-            }
-          }
-          if (midFunction0 == true)
-          {
-            uint32 colorTemp = rgbMake(*r_red0, *r_green0, *r_blue0);
-            midFunction0 = twinkle(colorTemp, 0);
-          }
-        } // END TWINKKLE mode handler
-
-        // LIGHTNING mode handler
-        if (*r_mode0 == LIGHTNING)
-        {
-          if (midFunction0 == false)
-          {
-            if ((rand() % (*r_random)) == 0)
-            {
-              midFunction0 = true;
-            }
-          }
-          if (midFunction0 == true)
-          {
-            uint32 colorTemp = rgbMake(*r_red0, *r_green0, *r_blue0);
-            midFunction0 = lightning(colorTemp, 0);
-          }
-        } // END LIGHTNING mode handler
-
-        // SCAN mode handler
-        if (*r_mode0 == SCAN)
-        {
-          scan(rgbMake(*r_red0, *r_green0, *r_blue0), 0);
-        } // END SCAN mode handler
-
-        // THEATER_CHASE mode handler
-        if (*r_mode0 == THEATER_CHASE)
-        {
-          theaterchase(rgbMake(*r_red0, *r_green0, *r_blue0), 0);
-        } // END THEATER_CHASE mode handler
-
-        // RAINBOW mode handler
-        if (*r_mode0 == RAINBOW)
-        {
-          rainbow(iteration0++, 0);
-        } // END RAINBOW mode handler
-
-        // FADE_STRING mode handler
-        if (*r_mode0 == FADE_STRING)
-        {
-          fadeString(0,rgbMake(*r_red0, *r_green0, *r_blue0), 0);
-        } // END FADE_STRING mode handler
-
-        // PARTIAL_FILL mode handler
-        if (*r_mode0 == PARTIAL_FILL)
-        {
-          partialFill(rgbMake(*r_red0, *r_green0, *r_blue0), *r_random, 0);
-        } // END PARTIAL_FILL mode handler
-
-        // SET_PIXEL mode handler
-        if (*r_mode0 == SET_PIXEL)
-        {
-          setPixel(rgbMake(*r_red0, *r_green0, *r_blue0), *r_random, 0);
-        } // END SET_PIXEL mode handler
-
-        // SET_COLOR mode handler
-        if (*r_mode0 == SET_COLOR)
-        {
-          setColor(rgbMake(*r_red0, *r_green0, *r_blue0), 0);
-        }
-      }
-    }
   }
 }
 
@@ -208,8 +171,6 @@ CY_ISR(tickISR)
 {
   systemTimer++;
 }
-
-
 
 /* [] END OF FILE */
 
