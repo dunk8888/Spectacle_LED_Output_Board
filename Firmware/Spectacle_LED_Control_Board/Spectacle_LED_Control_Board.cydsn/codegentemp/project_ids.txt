@@ -3,3 +3,5 @@ C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\defaul
 C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|ee5f1bc9-1552-4b4e-9e9d-30442f92ce97
 C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|3491a7ac-ff42-486e-9f7d-dbe3bd3ad327
 C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|af4e1c7e-b01f-433a-b19a-d020694cd3c8
+C:\Dropbox\PSoC_Creator\FunWithLEDs\FunWithLEDs\StripLightLib.cylib\StripLightLib.cyprj|928c9d61-abf6-4ec7-b32f-ffc5f8f894fc
+C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\default\CyReferenceLibrary\CyReferenceLibrary.cylib\CyReferenceLibrary.cyprj|b18edd56-4ce5-46d1-b84b-eb8fd5bda01d

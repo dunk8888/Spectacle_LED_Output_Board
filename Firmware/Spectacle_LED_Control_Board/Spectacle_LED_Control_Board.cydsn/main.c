@@ -37,11 +37,19 @@ int16 mailboxes[128];
 // create the impression that we're getting or sending mail.
 volatile uint8 *I2C_Mem;
 
-int stringLen[3] = {60,60,60};
+uint8 fading[3] = {0,0,0};
+int32 fadeTimer[3] = {0,0,0};
+
 int main()
 {
   CyGlobalIntEnable; /* Enable global interrupts. */
-  
+  StripLights_Start(); 
+  StripLights_Dim(0);
+  StripLights_MemClear(0);
+  StripLights_Trigger(1); 
+  while( StripLights_Ready() == 0);
+  StripLights_Trigger(1); 
+
   // We need to clear any cruft from the mailboxes to avoid spurious behavior.
   bzero(mailboxes, 128);
 
@@ -111,44 +119,149 @@ int main()
         switch(behaviors[i].mode)
         {
           case SET_COLOR:
-            if (mailboxes[behaviors[i].channel] > behaviors[i].threshold)
+            if (behaviors[i].inProcess == 1)
             {
-             //stringLen[behaviors[i].stringID] = behaviors[i].stringLen;
-              setColor(&behaviors[i]);
+              if (behaviors[i].ledTimer + behaviors[i].delay < systemTimer)
+              {
+                behaviors[i].inProcess = 0;
+                setColor(behaviors[i].color0, behaviors[i].stringID, 
+                         behaviors[i].stringLen);
+              }
+            }
+            else 
+            {
+              if (mailboxes[behaviors[i].channel] > behaviors[i].threshold)
+              {
+                behaviors[i].ledTimer = systemTimer;
+                behaviors[i].inProcess = 1;
+              }
             }
             break;
           case SET_PIXEL:
             if (mailboxes[behaviors[i].channel] > behaviors[i].threshold)
             {
-              setPixel(&behaviors[i]);
+              setColor(0, behaviors[i].stringID, behaviors[i].stringLen);
+              StripLights_Pixel(behaviors[i].pixel, behaviors[i].stringID, 
+                                behaviors[i].color0);
             }
             break;
           case FADE_STRING:
+            if (fading[behaviors[i].stringID] == 0)
+            {
+              fadeTimer[behaviors[i].stringID] = systemTimer;
+              if (mailboxes[behaviors[i].channel] > behaviors[i].threshold)
+              {
+                fadeString(&behaviors[i]);
+              }
+              else
+              {
+                setColor(0, behaviors[i].stringID, behaviors[i].stringLen);
+              }
+            }
+            else
+            {
+              if (mailboxes[behaviors[i].channel] > behaviors[i].threshold)
+              {
+                if (fadeTimer[behaviors[i].stringID] + behaviors[i].delay < systemTimer)
+                {
+                  fadeTimer[behaviors[i].stringID] = systemTimer;
+                  fadeString(&behaviors[i]);
+                }
+              }
+              else
+              {
+                fading[behaviors[i].stringID] = 0;
+              }
+            }
             break;
           case PARTIAL_FILL:
+            if (behaviors[i].inProcess == 1)
+            {
+              if (behaviors[i].ledTimer + behaviors[i].delay < systemTimer)
+              {
+                behaviors[i].inProcess = 0;
+                setColor(0, behaviors[i].stringID, behaviors[i].stringLen);
+                setColor(behaviors[i].color0, behaviors[i].stringID, 
+                         behaviors[i].pixel);
+              }
+            }
+            else 
+            {
+              if (mailboxes[behaviors[i].channel] > behaviors[i].threshold)
+              {
+                behaviors[i].ledTimer = systemTimer;
+                behaviors[i].inProcess = 1;
+              }
+            }
             break;
           case RAINBOW:
+            if (mailboxes[behaviors[i].channel] > behaviors[i].threshold)
+            {
+              if (behaviors[i].ledTimer + behaviors[i].delay < systemTimer)
+              {
+                behaviors[i].ledTimer = systemTimer;
+                rainbow(&behaviors[i]);
+              }
+            }
+            else
+            {
+              setColor(0, behaviors[i].stringID, behaviors[i].stringLen);
+            }
             break;
           case THEATER_CHASE:
+            if (mailboxes[behaviors[i].channel] > behaviors[i].threshold)
+            {
+              if (behaviors[i].ledTimer + behaviors[i].delay < systemTimer)
+              {
+                behaviors[i].ledTimer = systemTimer;
+                theaterchase(&behaviors[i]);
+              }
+            }
+            else
+            {
+              setColor(0, behaviors[i].stringID, behaviors[i].stringLen);
+            }
             break;
           case SCAN:
+            if (mailboxes[behaviors[i].channel] > behaviors[i].threshold)
+            {
+              if (behaviors[i].ledTimer + behaviors[i].delay < systemTimer)
+              {
+                behaviors[i].ledTimer = systemTimer;
+                scan(&behaviors[i]);
+              }
+            }
+            else
+            {
+              setColor(0, behaviors[i].stringID, behaviors[i].stringLen);
+            }
             break;
           case TWINKLE:
+            if (mailboxes[behaviors[i].channel] > behaviors[i].threshold)
+            {
+              if (behaviors[i].ledTimer + behaviors[i].delay < systemTimer)
+              {
+                behaviors[i].ledTimer = systemTimer;
+                twinkle(&behaviors[i]);
+              }
+            }
+            else
+            {
+              setColor(0, behaviors[i].stringID, behaviors[i].stringLen);
+            }
             break;
           case LIGHTNING:
             break;
         }
       }
 
+      StripLights_Trigger(1); 
     } // End 100Hz service loop
 
     // 20Hz service loop
     if ((systemTimer - 50) > _20HzTick)
     {
       _20HzTick = systemTimer;
-      updateString(0);
-      updateString(1);
-      updateString(2);
     }
 
     // 2Hz service loop

@@ -32,8 +32,8 @@
 #define EZI2C_REMOVE_RX_WAKE_SCL_MOSI_PIN  (1u)
 #define EZI2C_REMOVE_RX_SCL_MOSI_PIN      (1u)
 #define EZI2C_REMOVE_TX_SDA_MISO_PIN      (1u)
-#define EZI2C_REMOVE_CTS_SCLK_PIN      (1u)
-#define EZI2C_REMOVE_RTS_SS0_PIN      (1u)
+#define EZI2C_REMOVE_SCLK_PIN      (1u)
+#define EZI2C_REMOVE_SS0_PIN      (1u)
 #define EZI2C_REMOVE_SS1_PIN                 (1u)
 #define EZI2C_REMOVE_SS2_PIN                 (1u)
 #define EZI2C_REMOVE_SS3_PIN                 (1u)
@@ -62,8 +62,8 @@
 #define EZI2C_RX_WAKE_SCL_MOSI_PIN (0u == EZI2C_REMOVE_RX_WAKE_SCL_MOSI_PIN)
 #define EZI2C_RX_SCL_MOSI_PIN     (0u == EZI2C_REMOVE_RX_SCL_MOSI_PIN)
 #define EZI2C_TX_SDA_MISO_PIN     (0u == EZI2C_REMOVE_TX_SDA_MISO_PIN)
-#define EZI2C_CTS_SCLK_PIN     (0u == EZI2C_REMOVE_CTS_SCLK_PIN)
-#define EZI2C_RTS_SS0_PIN     (0u == EZI2C_REMOVE_RTS_SS0_PIN)
+#define EZI2C_SCLK_PIN     (0u == EZI2C_REMOVE_SCLK_PIN)
+#define EZI2C_SS0_PIN     (0u == EZI2C_REMOVE_SS0_PIN)
 #define EZI2C_SS1_PIN                (0u == EZI2C_REMOVE_SS1_PIN)
 #define EZI2C_SS2_PIN                (0u == EZI2C_REMOVE_SS2_PIN)
 #define EZI2C_SS3_PIN                (0u == EZI2C_REMOVE_SS3_PIN)
@@ -105,13 +105,13 @@
     #include "EZI2C_uart_tx_i2c_sda_spi_miso.h"
 #endif /* (EZI2C_TX_SDA_MISO) */
 
-#if (EZI2C_CTS_SCLK_PIN)
-    #include "EZI2C_uart_cts_spi_sclk.h"
-#endif /* (EZI2C_CTS_SCLK) */
+#if (EZI2C_SCLK_PIN)
+    #include "EZI2C_spi_sclk.h"
+#endif /* (EZI2C_SCLK) */
 
-#if (EZI2C_RTS_SS0_PIN)
-    #include "EZI2C_uart_rts_spi_ss0.h"
-#endif /* (EZI2C_RTS_SS0_PIN) */
+#if (EZI2C_SS0_PIN)
+    #include "EZI2C_spi_ss0.h"
+#endif /* (EZI2C_SS0_PIN) */
 
 #if (EZI2C_SS1_PIN)
     #include "EZI2C_spi_ss1.h"
@@ -245,31 +245,31 @@
     #define EZI2C_TX_SDA_MISO_HSIOM_SEL_UART  (EZI2C_uart_tx_i2c_sda_spi_miso__0__HSIOM_UART)
 #endif /* (EZI2C_TX_SDA_MISO_PIN) */
 
-#if (EZI2C_CTS_SCLK_PIN)
-    #define EZI2C_CTS_SCLK_HSIOM_REG   (*(reg32 *) EZI2C_uart_cts_spi_sclk__0__HSIOM)
-    #define EZI2C_CTS_SCLK_HSIOM_PTR   ( (reg32 *) EZI2C_uart_cts_spi_sclk__0__HSIOM)
+#if (EZI2C_SCLK_PIN)
+    #define EZI2C_SCLK_HSIOM_REG   (*(reg32 *) EZI2C_spi_sclk__0__HSIOM)
+    #define EZI2C_SCLK_HSIOM_PTR   ( (reg32 *) EZI2C_spi_sclk__0__HSIOM)
     
-    #define EZI2C_CTS_SCLK_HSIOM_MASK      (EZI2C_uart_cts_spi_sclk__0__HSIOM_MASK)
-    #define EZI2C_CTS_SCLK_HSIOM_POS       (EZI2C_uart_cts_spi_sclk__0__HSIOM_SHIFT)
-    #define EZI2C_CTS_SCLK_HSIOM_SEL_GPIO  (EZI2C_uart_cts_spi_sclk__0__HSIOM_GPIO)
-    #define EZI2C_CTS_SCLK_HSIOM_SEL_I2C   (EZI2C_uart_cts_spi_sclk__0__HSIOM_I2C)
-    #define EZI2C_CTS_SCLK_HSIOM_SEL_SPI   (EZI2C_uart_cts_spi_sclk__0__HSIOM_SPI)
-    #define EZI2C_CTS_SCLK_HSIOM_SEL_UART  (EZI2C_uart_cts_spi_sclk__0__HSIOM_UART)
-#endif /* (EZI2C_CTS_SCLK_PIN) */
+    #define EZI2C_SCLK_HSIOM_MASK      (EZI2C_spi_sclk__0__HSIOM_MASK)
+    #define EZI2C_SCLK_HSIOM_POS       (EZI2C_spi_sclk__0__HSIOM_SHIFT)
+    #define EZI2C_SCLK_HSIOM_SEL_GPIO  (EZI2C_spi_sclk__0__HSIOM_GPIO)
+    #define EZI2C_SCLK_HSIOM_SEL_I2C   (EZI2C_spi_sclk__0__HSIOM_I2C)
+    #define EZI2C_SCLK_HSIOM_SEL_SPI   (EZI2C_spi_sclk__0__HSIOM_SPI)
+    #define EZI2C_SCLK_HSIOM_SEL_UART  (EZI2C_spi_sclk__0__HSIOM_UART)
+#endif /* (EZI2C_SCLK_PIN) */
 
-#if (EZI2C_RTS_SS0_PIN)
-    #define EZI2C_RTS_SS0_HSIOM_REG   (*(reg32 *) EZI2C_uart_rts_spi_ss0__0__HSIOM)
-    #define EZI2C_RTS_SS0_HSIOM_PTR   ( (reg32 *) EZI2C_uart_rts_spi_ss0__0__HSIOM)
+#if (EZI2C_SS0_PIN)
+    #define EZI2C_SS0_HSIOM_REG   (*(reg32 *) EZI2C_spi_ss0__0__HSIOM)
+    #define EZI2C_SS0_HSIOM_PTR   ( (reg32 *) EZI2C_spi_ss0__0__HSIOM)
     
-    #define EZI2C_RTS_SS0_HSIOM_MASK      (EZI2C_uart_rts_spi_ss0__0__HSIOM_MASK)
-    #define EZI2C_RTS_SS0_HSIOM_POS       (EZI2C_uart_rts_spi_ss0__0__HSIOM_SHIFT)
-    #define EZI2C_RTS_SS0_HSIOM_SEL_GPIO  (EZI2C_uart_rts_spi_ss0__0__HSIOM_GPIO)
-    #define EZI2C_RTS_SS0_HSIOM_SEL_I2C   (EZI2C_uart_rts_spi_ss0__0__HSIOM_I2C)
-    #define EZI2C_RTS_SS0_HSIOM_SEL_SPI   (EZI2C_uart_rts_spi_ss0__0__HSIOM_SPI)
+    #define EZI2C_SS0_HSIOM_MASK      (EZI2C_spi_ss0__0__HSIOM_MASK)
+    #define EZI2C_SS0_HSIOM_POS       (EZI2C_spi_ss0__0__HSIOM_SHIFT)
+    #define EZI2C_SS0_HSIOM_SEL_GPIO  (EZI2C_spi_ss0__0__HSIOM_GPIO)
+    #define EZI2C_SS0_HSIOM_SEL_I2C   (EZI2C_spi_ss0__0__HSIOM_I2C)
+    #define EZI2C_SS0_HSIOM_SEL_SPI   (EZI2C_spi_ss0__0__HSIOM_SPI)
 #if !(EZI2C_CY_SCBIP_V0 || EZI2C_CY_SCBIP_V1)
-    #define EZI2C_RTS_SS0_HSIOM_SEL_UART  (EZI2C_uart_rts_spi_ss0__0__HSIOM_UART)
+    #define EZI2C_SS0_HSIOM_SEL_UART  (EZI2C_spi_ss0__0__HSIOM_UART)
 #endif /* !(EZI2C_CY_SCBIP_V0 || EZI2C_CY_SCBIP_V1) */
-#endif /* (EZI2C_RTS_SS0_PIN) */
+#endif /* (EZI2C_SS0_PIN) */
 
 #if (EZI2C_SS1_PIN)
     #define EZI2C_SS1_HSIOM_REG  (*(reg32 *) EZI2C_spi_ss1__0__HSIOM)
@@ -511,8 +511,8 @@
 #define EZI2C_RX_WAKE_SCL_MOSI_PIN_INDEX   (0u)
 #define EZI2C_RX_SCL_MOSI_PIN_INDEX       (0u)
 #define EZI2C_TX_SDA_MISO_PIN_INDEX       (1u)
-#define EZI2C_CTS_SCLK_PIN_INDEX       (2u)
-#define EZI2C_RTS_SS0_PIN_INDEX       (3u)
+#define EZI2C_SCLK_PIN_INDEX       (2u)
+#define EZI2C_SS0_PIN_INDEX       (3u)
 #define EZI2C_SS1_PIN_INDEX                  (4u)
 #define EZI2C_SS2_PIN_INDEX                  (5u)
 #define EZI2C_SS3_PIN_INDEX                  (6u)
@@ -521,8 +521,8 @@
 #define EZI2C_RX_WAKE_SCL_MOSI_PIN_MASK ((uint32) 0x01u << EZI2C_RX_WAKE_SCL_MOSI_PIN_INDEX)
 #define EZI2C_RX_SCL_MOSI_PIN_MASK     ((uint32) 0x01u << EZI2C_RX_SCL_MOSI_PIN_INDEX)
 #define EZI2C_TX_SDA_MISO_PIN_MASK     ((uint32) 0x01u << EZI2C_TX_SDA_MISO_PIN_INDEX)
-#define EZI2C_CTS_SCLK_PIN_MASK     ((uint32) 0x01u << EZI2C_CTS_SCLK_PIN_INDEX)
-#define EZI2C_RTS_SS0_PIN_MASK     ((uint32) 0x01u << EZI2C_RTS_SS0_PIN_INDEX)
+#define EZI2C_SCLK_PIN_MASK     ((uint32) 0x01u << EZI2C_SCLK_PIN_INDEX)
+#define EZI2C_SS0_PIN_MASK     ((uint32) 0x01u << EZI2C_SS0_PIN_INDEX)
 #define EZI2C_SS1_PIN_MASK                ((uint32) 0x01u << EZI2C_SS1_PIN_INDEX)
 #define EZI2C_SS2_PIN_MASK                ((uint32) 0x01u << EZI2C_SS2_PIN_INDEX)
 #define EZI2C_SS3_PIN_MASK                ((uint32) 0x01u << EZI2C_SS3_PIN_INDEX)
@@ -556,12 +556,12 @@
                                                    EZI2C_uart_tx_i2c_sda_spi_miso_SHIFT))
 #endif /* (EZI2C_TX_SDA_MISO_PIN) */
 
-#if (EZI2C_RTS_SS0_PIN)
-    #define EZI2C_CHECK_RTS_SS0_PIN_USED \
+#if (EZI2C_SS0_PIN)
+    #define EZI2C_CHECK_SS0_PIN_USED \
                 (EZI2C_PIN_DM_ALG_HIZ != \
-                    EZI2C_GET_P4_PIN_DM(EZI2C_uart_rts_spi_ss0_PC, \
-                                                   EZI2C_uart_rts_spi_ss0_SHIFT))
-#endif /* (EZI2C_RTS_SS0_PIN) */
+                    EZI2C_GET_P4_PIN_DM(EZI2C_spi_ss0_PC, \
+                                                   EZI2C_spi_ss0_SHIFT))
+#endif /* (EZI2C_SS0_PIN) */
 
 /* Set bits-mask in register */
 #define EZI2C_SET_REGISTER_BITS(reg, mask, pos, mode) \
@@ -667,10 +667,10 @@
 #define EZI2C_REMOVE_MOSI_SCL_RX_PIN         EZI2C_REMOVE_RX_SCL_MOSI_PIN
 #define EZI2C_REMOVE_MISO_SDA_TX_PIN         EZI2C_REMOVE_TX_SDA_MISO_PIN
 #ifndef EZI2C_REMOVE_SCLK_PIN
-#define EZI2C_REMOVE_SCLK_PIN                EZI2C_REMOVE_CTS_SCLK_PIN
+#define EZI2C_REMOVE_SCLK_PIN                EZI2C_REMOVE_SCLK_PIN
 #endif /* EZI2C_REMOVE_SCLK_PIN */
 #ifndef EZI2C_REMOVE_SS0_PIN
-#define EZI2C_REMOVE_SS0_PIN                 EZI2C_REMOVE_RTS_SS0_PIN
+#define EZI2C_REMOVE_SS0_PIN                 EZI2C_REMOVE_SS0_PIN
 #endif /* EZI2C_REMOVE_SS0_PIN */
 
 /* Unconfigured pins */
@@ -678,10 +678,10 @@
 #define EZI2C_MOSI_SCL_RX_PIN        EZI2C_RX_SCL_MOSI_PIN
 #define EZI2C_MISO_SDA_TX_PIN        EZI2C_TX_SDA_MISO_PIN
 #ifndef EZI2C_SCLK_PIN
-#define EZI2C_SCLK_PIN               EZI2C_CTS_SCLK_PIN
+#define EZI2C_SCLK_PIN               EZI2C_SCLK_PIN
 #endif /* EZI2C_SCLK_PIN */
 #ifndef EZI2C_SS0_PIN
-#define EZI2C_SS0_PIN                EZI2C_RTS_SS0_PIN
+#define EZI2C_SS0_PIN                EZI2C_SS0_PIN
 #endif /* EZI2C_SS0_PIN */
 
 #if (EZI2C_MOSI_SCL_RX_WAKE_PIN)
@@ -713,19 +713,19 @@
 
 #if (EZI2C_SCLK_PIN)
     #ifndef EZI2C_SCLK_HSIOM_REG
-    #define EZI2C_SCLK_HSIOM_REG     EZI2C_CTS_SCLK_HSIOM_REG
-    #define EZI2C_SCLK_HSIOM_PTR     EZI2C_CTS_SCLK_HSIOM_PTR
-    #define EZI2C_SCLK_HSIOM_MASK    EZI2C_CTS_SCLK_HSIOM_MASK
-    #define EZI2C_SCLK_HSIOM_POS     EZI2C_CTS_SCLK_HSIOM_POS
+    #define EZI2C_SCLK_HSIOM_REG     EZI2C_SCLK_HSIOM_REG
+    #define EZI2C_SCLK_HSIOM_PTR     EZI2C_SCLK_HSIOM_PTR
+    #define EZI2C_SCLK_HSIOM_MASK    EZI2C_SCLK_HSIOM_MASK
+    #define EZI2C_SCLK_HSIOM_POS     EZI2C_SCLK_HSIOM_POS
     #endif /* EZI2C_SCLK_HSIOM_REG */
 #endif /* (EZI2C_SCLK_PIN) */
 
 #if (EZI2C_SS0_PIN)
     #ifndef EZI2C_SS0_HSIOM_REG
-    #define EZI2C_SS0_HSIOM_REG      EZI2C_RTS_SS0_HSIOM_REG
-    #define EZI2C_SS0_HSIOM_PTR      EZI2C_RTS_SS0_HSIOM_PTR
-    #define EZI2C_SS0_HSIOM_MASK     EZI2C_RTS_SS0_HSIOM_MASK
-    #define EZI2C_SS0_HSIOM_POS      EZI2C_RTS_SS0_HSIOM_POS
+    #define EZI2C_SS0_HSIOM_REG      EZI2C_SS0_HSIOM_REG
+    #define EZI2C_SS0_HSIOM_PTR      EZI2C_SS0_HSIOM_PTR
+    #define EZI2C_SS0_HSIOM_MASK     EZI2C_SS0_HSIOM_MASK
+    #define EZI2C_SS0_HSIOM_POS      EZI2C_SS0_HSIOM_POS
     #endif /* EZI2C_SS0_HSIOM_REG */
 #endif /* (EZI2C_SS0_PIN) */
 
@@ -733,20 +733,20 @@
 #define EZI2C_MOSI_SCL_RX_PIN_INDEX      EZI2C_RX_SCL_MOSI_PIN_INDEX
 #define EZI2C_MISO_SDA_TX_PIN_INDEX      EZI2C_TX_SDA_MISO_PIN_INDEX
 #ifndef EZI2C_SCLK_PIN_INDEX
-#define EZI2C_SCLK_PIN_INDEX             EZI2C_CTS_SCLK_PIN_INDEX
+#define EZI2C_SCLK_PIN_INDEX             EZI2C_SCLK_PIN_INDEX
 #endif /* EZI2C_SCLK_PIN_INDEX */
 #ifndef EZI2C_SS0_PIN_INDEX
-#define EZI2C_SS0_PIN_INDEX              EZI2C_RTS_SS0_PIN_INDEX
+#define EZI2C_SS0_PIN_INDEX              EZI2C_SS0_PIN_INDEX
 #endif /* EZI2C_SS0_PIN_INDEX */
 
 #define EZI2C_MOSI_SCL_RX_WAKE_PIN_MASK EZI2C_RX_WAKE_SCL_MOSI_PIN_MASK
 #define EZI2C_MOSI_SCL_RX_PIN_MASK      EZI2C_RX_SCL_MOSI_PIN_MASK
 #define EZI2C_MISO_SDA_TX_PIN_MASK      EZI2C_TX_SDA_MISO_PIN_MASK
 #ifndef EZI2C_SCLK_PIN_MASK
-#define EZI2C_SCLK_PIN_MASK             EZI2C_CTS_SCLK_PIN_MASK
+#define EZI2C_SCLK_PIN_MASK             EZI2C_SCLK_PIN_MASK
 #endif /* EZI2C_SCLK_PIN_MASK */
 #ifndef EZI2C_SS0_PIN_MASK
-#define EZI2C_SS0_PIN_MASK              EZI2C_RTS_SS0_PIN_MASK
+#define EZI2C_SS0_PIN_MASK              EZI2C_SS0_PIN_MASK
 #endif /* EZI2C_SS0_PIN_MASK */
 
 #endif /* (CY_SCB_PINS_EZI2C_H) */

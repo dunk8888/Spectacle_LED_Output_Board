@@ -28,7 +28,7 @@
 #include "cyfitter.h"
 #include "cycodeshareimport.scat"
 
-#define CY_FLASH_SIZE                   65536
+#define CY_FLASH_SIZE                   32768
 #define CY_APPL_ORIGIN                  0
 #define CY_FLASH_ROW_SIZE               128
 #define CY_METADATA_SIZE                64
@@ -116,11 +116,11 @@ APPLICATION APPL_START (CY_FLASH_SIZE - APPL_START)
         .ANY (+RW, +ZI)
     }
 
-    ARM_LIB_HEAP (0x20000000 + 8192 - 0x100 - 0x0400) EMPTY 0x100
+    ARM_LIB_HEAP (0x20000000 + 4096 - 0x100 - 0x0400) EMPTY 0x100
     {
     }
 
-    ARM_LIB_STACK (0x20000000 + 8192) EMPTY -0x0400
+    ARM_LIB_STACK (0x20000000 + 4096) EMPTY -0x0400
     {
     }
 }

@@ -539,22 +539,22 @@ static void EZI2C_ScbModeStop(void)
             hsiomSel[EZI2C_TX_SDA_MISO_PIN_INDEX] = EZI2C_TX_SDA_MISO_HSIOM_SEL_SPI;
         #endif /* (EZI2C_TX_SDA_MISO_PIN) */
         
-        #if (EZI2C_CTS_SCLK_PIN)
-            hsiomSel[EZI2C_CTS_SCLK_PIN_INDEX] = EZI2C_CTS_SCLK_HSIOM_SEL_SPI;
-        #endif /* (EZI2C_CTS_SCLK_PIN) */
+        #if (EZI2C_SCLK_PIN)
+            hsiomSel[EZI2C_SCLK_PIN_INDEX] = EZI2C_SCLK_HSIOM_SEL_SPI;
+        #endif /* (EZI2C_SCLK_PIN) */
 
             if (EZI2C_SPI_SLAVE == subMode)
             {
                 /* Slave */
                 pinsDm[EZI2C_RX_SCL_MOSI_PIN_INDEX] = EZI2C_PIN_DM_DIG_HIZ;
                 pinsDm[EZI2C_TX_SDA_MISO_PIN_INDEX] = EZI2C_PIN_DM_STRONG;
-                pinsDm[EZI2C_CTS_SCLK_PIN_INDEX] = EZI2C_PIN_DM_DIG_HIZ;
+                pinsDm[EZI2C_SCLK_PIN_INDEX] = EZI2C_PIN_DM_DIG_HIZ;
 
-            #if (EZI2C_RTS_SS0_PIN)
+            #if (EZI2C_SS0_PIN)
                 /* Only SS0 is valid choice for Slave */
-                hsiomSel[EZI2C_RTS_SS0_PIN_INDEX] = EZI2C_RTS_SS0_HSIOM_SEL_SPI;
-                pinsDm  [EZI2C_RTS_SS0_PIN_INDEX] = EZI2C_PIN_DM_DIG_HIZ;
-            #endif /* (EZI2C_RTS_SS0_PIN) */
+                hsiomSel[EZI2C_SS0_PIN_INDEX] = EZI2C_SS0_HSIOM_SEL_SPI;
+                pinsDm  [EZI2C_SS0_PIN_INDEX] = EZI2C_PIN_DM_DIG_HIZ;
+            #endif /* (EZI2C_SS0_PIN) */
 
             #if (EZI2C_TX_SDA_MISO_PIN)
                 /* Disable input buffer */
@@ -566,13 +566,13 @@ static void EZI2C_ScbModeStop(void)
                 /* (Master) */
                 pinsDm[EZI2C_RX_SCL_MOSI_PIN_INDEX] = EZI2C_PIN_DM_STRONG;
                 pinsDm[EZI2C_TX_SDA_MISO_PIN_INDEX] = EZI2C_PIN_DM_DIG_HIZ;
-                pinsDm[EZI2C_CTS_SCLK_PIN_INDEX] = EZI2C_PIN_DM_STRONG;
+                pinsDm[EZI2C_SCLK_PIN_INDEX] = EZI2C_PIN_DM_STRONG;
 
-            #if (EZI2C_RTS_SS0_PIN)
-                hsiomSel [EZI2C_RTS_SS0_PIN_INDEX] = EZI2C_RTS_SS0_HSIOM_SEL_SPI;
-                pinsDm   [EZI2C_RTS_SS0_PIN_INDEX] = EZI2C_PIN_DM_STRONG;
-                pinsInBuf |= EZI2C_RTS_SS0_PIN_MASK;
-            #endif /* (EZI2C_RTS_SS0_PIN) */
+            #if (EZI2C_SS0_PIN)
+                hsiomSel [EZI2C_SS0_PIN_INDEX] = EZI2C_SS0_HSIOM_SEL_SPI;
+                pinsDm   [EZI2C_SS0_PIN_INDEX] = EZI2C_PIN_DM_STRONG;
+                pinsInBuf |= EZI2C_SS0_PIN_MASK;
+            #endif /* (EZI2C_SS0_PIN) */
 
             #if (EZI2C_SS1_PIN)
                 hsiomSel [EZI2C_SS1_PIN_INDEX] = EZI2C_SS1_HSIOM_SEL_SPI;
@@ -600,9 +600,9 @@ static void EZI2C_ScbModeStop(void)
             #else
             #endif /* (EZI2C_RX_SCL_MOSI_PIN) */
 
-            #if (EZI2C_CTS_SCLK_PIN)
-                pinsInBuf |= EZI2C_CTS_SCLK_PIN_MASK;
-            #endif /* (EZI2C_CTS_SCLK_PIN) */
+            #if (EZI2C_SCLK_PIN)
+                pinsInBuf |= EZI2C_SCLK_PIN_MASK;
+            #endif /* (EZI2C_SCLK_PIN) */
             }
         }
         else /* UART */
@@ -646,22 +646,22 @@ static void EZI2C_ScbModeStop(void)
                     if (0u != (EZI2C_UART_CTS_PIN_ENABLE & uartEnableMask))
                     {
                         /* CTS input is multiplexed with SCLK */
-                    #if (EZI2C_CTS_SCLK_PIN)
-                        hsiomSel[EZI2C_CTS_SCLK_PIN_INDEX] = EZI2C_CTS_SCLK_HSIOM_SEL_UART;
-                        pinsDm  [EZI2C_CTS_SCLK_PIN_INDEX] = EZI2C_PIN_DM_DIG_HIZ;
-                    #endif /* (EZI2C_CTS_SCLK_PIN) */
+                    #if (EZI2C_SCLK_PIN)
+                        hsiomSel[EZI2C_SCLK_PIN_INDEX] = EZI2C_SCLK_HSIOM_SEL_UART;
+                        pinsDm  [EZI2C_SCLK_PIN_INDEX] = EZI2C_PIN_DM_DIG_HIZ;
+                    #endif /* (EZI2C_SCLK_PIN) */
                     }
 
                     if (0u != (EZI2C_UART_RTS_PIN_ENABLE & uartEnableMask))
                     {
                         /* RTS output is multiplexed with SS0 */
-                    #if (EZI2C_RTS_SS0_PIN)
-                        hsiomSel[EZI2C_RTS_SS0_PIN_INDEX] = EZI2C_RTS_SS0_HSIOM_SEL_UART;
-                        pinsDm  [EZI2C_RTS_SS0_PIN_INDEX] = EZI2C_PIN_DM_STRONG;
+                    #if (EZI2C_SS0_PIN)
+                        hsiomSel[EZI2C_SS0_PIN_INDEX] = EZI2C_SS0_HSIOM_SEL_UART;
+                        pinsDm  [EZI2C_SS0_PIN_INDEX] = EZI2C_PIN_DM_STRONG;
                         
                         /* Disable input buffer */
-                        pinsInBuf |= EZI2C_RTS_SS0_PIN_MASK;
-                    #endif /* (EZI2C_RTS_SS0_PIN) */
+                        pinsInBuf |= EZI2C_SS0_PIN_MASK;
+                    #endif /* (EZI2C_SS0_PIN) */
                     }
                 }
             #endif /* !(EZI2C_CY_SCBIP_V0 || EZI2C_CY_SCBIP_V1) */
@@ -722,31 +722,31 @@ static void EZI2C_ScbModeStop(void)
     #endif /* (!EZI2C_CY_SCBIP_V1) */
     #endif /* (EZI2C_RX_SCL_MOSI_PIN) */
 
-    #if (EZI2C_CTS_SCLK_PIN)
-        EZI2C_SET_HSIOM_SEL(EZI2C_CTS_SCLK_HSIOM_REG,
-                                       EZI2C_CTS_SCLK_HSIOM_MASK,
-                                       EZI2C_CTS_SCLK_HSIOM_POS,
-                                       hsiomSel[EZI2C_CTS_SCLK_PIN_INDEX]);
+    #if (EZI2C_SCLK_PIN)
+        EZI2C_SET_HSIOM_SEL(EZI2C_SCLK_HSIOM_REG,
+                                       EZI2C_SCLK_HSIOM_MASK,
+                                       EZI2C_SCLK_HSIOM_POS,
+                                       hsiomSel[EZI2C_SCLK_PIN_INDEX]);
 
-        EZI2C_uart_cts_spi_sclk_SetDriveMode((uint8) pinsDm[EZI2C_CTS_SCLK_PIN_INDEX]);
+        EZI2C_spi_sclk_SetDriveMode((uint8) pinsDm[EZI2C_SCLK_PIN_INDEX]);
 
-        EZI2C_SET_INP_DIS(EZI2C_uart_cts_spi_sclk_INP_DIS,
-                                     EZI2C_uart_cts_spi_sclk_MASK,
-                                     (0u != (pinsInBuf & EZI2C_CTS_SCLK_PIN_MASK)));
-    #endif /* (EZI2C_CTS_SCLK_PIN) */
+        EZI2C_SET_INP_DIS(EZI2C_spi_sclk_INP_DIS,
+                                     EZI2C_spi_sclk_MASK,
+                                     (0u != (pinsInBuf & EZI2C_SCLK_PIN_MASK)));
+    #endif /* (EZI2C_SCLK_PIN) */
 
-    #if (EZI2C_RTS_SS0_PIN)
-        EZI2C_SET_HSIOM_SEL(EZI2C_RTS_SS0_HSIOM_REG,
-                                       EZI2C_RTS_SS0_HSIOM_MASK,
-                                       EZI2C_RTS_SS0_HSIOM_POS,
-                                       hsiomSel[EZI2C_RTS_SS0_PIN_INDEX]);
+    #if (EZI2C_SS0_PIN)
+        EZI2C_SET_HSIOM_SEL(EZI2C_SS0_HSIOM_REG,
+                                       EZI2C_SS0_HSIOM_MASK,
+                                       EZI2C_SS0_HSIOM_POS,
+                                       hsiomSel[EZI2C_SS0_PIN_INDEX]);
 
-        EZI2C_uart_rts_spi_ss0_SetDriveMode((uint8) pinsDm[EZI2C_RTS_SS0_PIN_INDEX]);
+        EZI2C_spi_ss0_SetDriveMode((uint8) pinsDm[EZI2C_SS0_PIN_INDEX]);
 
-        EZI2C_SET_INP_DIS(EZI2C_uart_rts_spi_ss0_INP_DIS,
-                                     EZI2C_uart_rts_spi_ss0_MASK,
-                                     (0u != (pinsInBuf & EZI2C_RTS_SS0_PIN_MASK)));
-    #endif /* (EZI2C_RTS_SS0_PIN) */
+        EZI2C_SET_INP_DIS(EZI2C_spi_ss0_INP_DIS,
+                                     EZI2C_spi_ss0_MASK,
+                                     (0u != (pinsInBuf & EZI2C_SS0_PIN_MASK)));
+    #endif /* (EZI2C_SS0_PIN) */
 
     #if (EZI2C_SS1_PIN)
         EZI2C_SET_HSIOM_SEL(EZI2C_SS1_HSIOM_REG,

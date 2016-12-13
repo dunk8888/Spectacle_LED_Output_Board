@@ -1,15 +1,14 @@
-/***************************************************************************//**
-* \file core_cm0plus_psoc4.h
+/*******************************************************************************
+* \file core_cm0_psoc4.h
 * \version 5.40
 *
 * \brief Provides important type information for the  PSOC4 device family.
 * This includes types necessary for core_cm0.h.
 *
 * \note Documentation of the API's in this file is located in the
-*   System Reference Guide provided with PSoC Creator.
+* System Reference Guide provided with PSoC Creator.
 *
 ********************************************************************************
-* \copyright
 * Copyright 2008-2016, Cypress Semiconductor Corporation.  All rights reserved.
 * You may use this file only in accordance with the license, terms, conditions,
 * disclaimers, and limitations in the end user license agreement accompanying
@@ -35,12 +34,10 @@ typedef enum IRQn
 
 #define __CHECK_DEVICE_DEFINES
 
-#define __CM0PLUS_REV             0x0000
-#define __VTOR_PRESENT            0U
-#define __MPU_PRESENT             1U
+#define __CM0_REV                 0x0000
 #define __NVIC_PRIO_BITS          2
 #define __Vendor_SysTickConfig    0
 
-#include <core_cm0plus.h>
+#include <core_cm0.h>
 
 #endif /* CY_BOOT_CORE_CM0_PSOC4_H */

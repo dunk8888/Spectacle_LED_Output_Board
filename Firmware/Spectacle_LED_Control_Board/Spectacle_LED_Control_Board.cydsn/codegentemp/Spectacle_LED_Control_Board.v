@@ -1,9 +1,43 @@
 // ======================================================================
 // Spectacle_LED_Control_Board.v generated from TopDesign.cysch
-// 12/06/2016 at 15:57
+// 12/08/2016 at 16:37
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 
+/* -- WARNING: The following section of defines are deprecated and will be removed in a future release -- */
+`define CYDEV_CHIP_DIE_LEOPARD 1
+`define CYDEV_CHIP_REV_LEOPARD_PRODUCTION 3
+`define CYDEV_CHIP_REV_LEOPARD_ES3 3
+`define CYDEV_CHIP_REV_LEOPARD_ES2 1
+`define CYDEV_CHIP_REV_LEOPARD_ES1 0
+`define CYDEV_CHIP_DIE_TMA4 2
+`define CYDEV_CHIP_REV_TMA4_PRODUCTION 17
+`define CYDEV_CHIP_REV_TMA4_ES 17
+`define CYDEV_CHIP_REV_TMA4_ES2 33
+`define CYDEV_CHIP_DIE_PSOC4A 3
+`define CYDEV_CHIP_REV_PSOC4A_PRODUCTION 17
+`define CYDEV_CHIP_REV_PSOC4A_ES0 17
+`define CYDEV_CHIP_DIE_PSOC5LP 4
+`define CYDEV_CHIP_REV_PSOC5LP_PRODUCTION 0
+`define CYDEV_CHIP_REV_PSOC5LP_ES0 0
+`define CYDEV_CHIP_DIE_PSOC5TM 5
+`define CYDEV_CHIP_REV_PSOC5TM_PRODUCTION 1
+`define CYDEV_CHIP_REV_PSOC5TM_ES1 1
+`define CYDEV_CHIP_REV_PSOC5TM_ES0 0
+`define CYDEV_CHIP_DIE_VOLANS 6
+`define CYDEV_CHIP_REV_VOLANS_PRODUCTION 0
+`define CYDEV_CHIP_DIE_BERRYPECKER 7
+`define CYDEV_CHIP_REV_BERRYPECKER_PRODUCTION 0
+`define CYDEV_CHIP_DIE_CRANE 8
+`define CYDEV_CHIP_REV_CRANE_PRODUCTION 0
+`define CYDEV_CHIP_DIE_FM3 9
+`define CYDEV_CHIP_REV_FM3_PRODUCTION 0
+`define CYDEV_CHIP_DIE_FM4 10
+`define CYDEV_CHIP_REV_FM4_PRODUCTION 0
+`define CYDEV_CHIP_DIE_EXPECT 3
+`define CYDEV_CHIP_REV_EXPECT 17
+`define CYDEV_CHIP_DIE_ACTUAL 3
+/* -- WARNING: The previous section of defines are deprecated and will be removed in a future release -- */
 `define CYDEV_CHIP_FAMILY_PSOC3 1
 `define CYDEV_CHIP_FAMILY_PSOC4 2
 `define CYDEV_CHIP_FAMILY_PSOC5 3
@@ -74,8 +108,8 @@
 `define CYDEV_CHIP_MEMBER_FM4 25
 `define CYDEV_CHIP_REVISION_FM4_PRODUCTION 0
 `define CYDEV_CHIP_FAMILY_USED 2
-`define CYDEV_CHIP_MEMBER_USED 10
-`define CYDEV_CHIP_REVISION_USED 0
+`define CYDEV_CHIP_MEMBER_USED 12
+`define CYDEV_CHIP_REVISION_USED 17
 // Component: cy_virtualmux_v1_0
 `ifdef CY_BLK_DIR
 `undef CY_BLK_DIR
@@ -115,7 +149,7 @@
 `include "C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\or_v1_0\or_v1_0.v"
 `endif
 
-// SCB_P4_v3_20(ApplySbClockParam=false, BitWidthReplacementStringRx=uint8, BitWidthReplacementStringTx=uint8, BufNum=1, Cond=#, DBGW_SCB_IP_V0=false, DBGW_SCB_IP_V1=false, DBGW_SCB_IP_V2=true, DW_Hide_i2c=false, DW_Hide_Scbv0Feature=true, DW_Hide_Scbv2Feature=false, DW_Hide_Spi=true, DW_Hide_Uart=true, DW_Hide_UartFlowControl=true, DW_INTR_SPI_EC=, DW_INTR_SPI_EC_MASK=, DW_INTR_SPI_EC_MASKED=, DW_SPI_CTRL=, DW_SPI_STATUS=, DW_UART_CTRL=, DW_UART_FLOW_CTRL=, DW_UART_RX_CTRL=, DW_UART_TX_CTRL=, EndCond=#endif, EzI2cBitWidthReplacementString=uint8, EzI2cBusVoltage=3.3, EzI2cByteModeEnable=false, EzI2cClkFreqDes=7820, EzI2cClockFromTerm=false, EzI2cClockStretching=false, EzI2cDataRate=400, EzI2cIsPrimarySlaveAddressHex=true, EzI2cIsSecondarySlaveAddressHex=true, EzI2cMedianFilterEnable=true, EzI2cNumberOfAddresses=0, EzI2cOvsFactor=16, EzI2cPrimarySlaveAddress=8, EzI2cSecondarySlaveAddress=9, EzI2cSlaveAddressMask=254, EzI2cSlewRate=0, EzI2cSubAddressSize=0, EzI2cWakeEnable=false, I2cAcceptAddress=false, I2cAcceptGeneralCall=false, I2cBusVoltage=3.3, I2cBusVoltageLevel=, I2cByteModeEnable=false, I2cClkFreqDes=1550, I2cClockFromTerm=false, I2cDataRate=100, I2cExternIntrHandler=false, I2cIsSlaveAddressHex=true, I2cIsSlaveAddressMaskHex=true, I2cManualOversampleControl=true, I2cMedianFilterEnable=true, I2cMode=1, I2cOvsFactor=16, I2cOvsFactorHigh=8, I2cOvsFactorLow=8, I2cSlaveAddress=8, I2cSlaveAddressMask=254, I2cSlewRate=0, I2cSlewRateSettings=0, I2cWakeEnable=false, PinLocationP4A=true, PinName0Unconfig=uart_rx_i2c_scl_spi_mosi, PinName0UnconfigWake=uart_rx_wake_i2c_scl_spi_mosi, PinName1Unconfig=uart_tx_i2c_sda_spi_miso, PinName2Unconfig=uart_cts_spi_sclk, PinName3Unconfig=uart_rts_spi_ss0, Pn0Unconfig=RX_SCL_MOSI, Pn0UnconfigWake=RX_WAKE_SCL_MOSI, Pn1Unconfig=TX_SDA_MISO, Pn2Unconfig=CTS_SCLK, Pn3Unconfig=RTS_SS0, RemoveI2cPins=false, RemoveMisoSdaTx=true, RemoveMosiSclRx=true, RemoveMosiSclRxWake=true, RemoveScbClk=false, RemoveScbIrq=false, RemoveSpiMasterMiso=true, RemoveSpiMasterMosi=true, RemoveSpiMasterPins=true, RemoveSpiMasterSclk=true, RemoveSpiMasterSs0Pin=true, RemoveSpiMasterSs1Pin=true, RemoveSpiMasterSs2Pin=true, RemoveSpiMasterSs3Pin=true, RemoveSpiSclk=true, RemoveSpiSlaveMiso=true, RemoveSpiSlaveMosi=true, RemoveSpiSlavePins=true, RemoveSpiSs0=true, RemoveSpiSs1=true, RemoveSpiSs2=true, RemoveSpiSs3=true, RemoveUartCtsPin=true, RemoveUartRtsPin=true, RemoveUartRxPin=true, RemoveUartRxTxPin=true, RemoveUartRxWake=true, RemoveUartRxWakeupIrq=true, RemoveUartTxPin=true, RxTriggerOutputEnable=false, ScbClkFreqDes=7820, ScbClkMinusTolerance=0, ScbClkPlusTolerance=96.6751918158568, ScbClockSelect=1, ScbClockTermEnable=false, ScbCustomIntrHandlerEnable=true, ScbInterruptTermEnable=false, ScbMisoSdaTxEnable=true, ScbMode=8, ScbModeHw=0, ScbMosiSclRxEnable=true, ScbRxWakeIrqEnable=false, ScbSclkEnable=false, ScbSs0Enable=false, ScbSs1Enable=false, ScbSs2Enable=false, ScbSs3Enable=false, ScbSymbolVisibility=0, SpiBitRate=1000, SpiBitsOrder=1, SpiByteModeEnable=false, SpiClkFreqDes=16000, SpiClockFromTerm=false, SpiFreeRunningSclk=false, SpiInterruptMode=0, SpiIntrMasterSpiDone=false, SpiIntrRxFull=false, SpiIntrRxNotEmpty=false, SpiIntrRxOverflow=false, SpiIntrRxTrigger=false, SpiIntrRxUnderflow=false, SpiIntrSlaveBusError=false, SpiIntrTxEmpty=false, SpiIntrTxNotFull=false, SpiIntrTxOverflow=false, SpiIntrTxTrigger=false, SpiIntrTxUnderflow=false, SpiLateMisoSampleEnable=false, SpiManualOversampleControl=true, SpiMasterMode=false, SpiMedianFilterEnable=false, SpimMisoTermEnable=false, SpimMosiTermEnable=false, SpiMode=0, SpimSclkTermEnable=false, SpimSs0TermEnable=false, SpimSs1TermEnable=false, SpimSs2TermEnable=false, SpimSs3TermEnable=false, SpiNumberOfRxDataBits=8, SpiNumberOfSelectLines=1, SpiNumberOfTxDataBits=8, SpiOvsFactor=16, SpiRemoveMiso=false, SpiRemoveMosi=false, SpiRemoveSclk=false, SpiRxBufferSize=8, SpiRxIntrMask=0, SpiRxOutputEnable=false, SpiRxTriggerLevel=7, SpiSclkMode=0, SpiSlaveMode=false, SpiSmartioEnable=false, SpisMisoTermEnable=false, SpisMosiTermEnable=false, SpiSs0Polarity=0, SpiSs1Polarity=0, SpiSs2Polarity=0, SpiSs3Polarity=0, SpisSclkTermEnable=false, SpisSsTermEnable=false, SpiSubMode=0, SpiTransferSeparation=1, SpiTxBufferSize=8, SpiTxIntrMask=0, SpiTxOutputEnable=false, SpiTxTriggerLevel=0, SpiWakeEnable=false, TermMode_clock=0, TermMode_interrupt=0, TermVisibility_clock=false, TermVisibility_interrupt=false, TriggerOutputEnable=false, TxTriggerOutputEnable=false, UartByteModeEnable=false, UartClkFreqDes=1382.4, UartClockFromTerm=false, UartCtsEnable=false, UartCtsPolarity=0, UartCtsTermEnable=false, UartDataRate=115200, UartDirection=3, UartDropOnFrameErr=false, UartDropOnParityErr=false, UartInterruptMode=0, UartIntrRxFrameErr=false, UartIntrRxFull=false, UartIntrRxNotEmpty=false, UartIntrRxOverflow=false, UartIntrRxParityErr=false, UartIntrRxTrigger=false, UartIntrRxUnderflow=false, UartIntrTxEmpty=false, UartIntrTxNotFull=false, UartIntrTxOverflow=false, UartIntrTxTrigger=false, UartIntrTxUartDone=false, UartIntrTxUartLostArb=false, UartIntrTxUartNack=false, UartIntrTxUnderflow=false, UartIrdaLowPower=false, UartIrdaPolarity=0, UartMedianFilterEnable=false, UartMpEnable=false, UartMpRxAcceptAddress=false, UartMpRxAddress=2, UartMpRxAddressMask=255, UartNumberOfDataBits=8, UartNumberOfStopBits=2, UartOvsFactor=12, UartParityType=2, UartRtsEnable=false, UartRtsPolarity=0, UartRtsTermEnable=false, UartRtsTriggerLevel=4, UartRxBufferSize=8, UartRxEnable=false, UartRxIntrMask=0, UartRxOutputEnable=false, UartRxTermEnable=false, UartRxTriggerLevel=7, UartSmartioEnable=false, UartSmCardRetryOnNack=false, UartSubMode=0, UartTxBufferSize=8, UartTxEnable=false, UartTxIntrMask=0, UartTxOutputEnable=false, UartTxTermEnable=false, UartTxTriggerLevel=0, UartWakeEnable=false, CY_API_CALLBACK_HEADER_INCLUDE=#include "cyapicallbacks.h", CY_COMPONENT_NAME=SCB_P4_v3_20, CY_CONST_CONFIG=true, CY_CONTROL_FILE=<:default:>, CY_DATASHEET_FILE=<:default:>, CY_FITTER_NAME=EZI2C, CY_INSTANCE_SHORT_NAME=EZI2C, CY_MAJOR_VERSION=3, CY_MINOR_VERSION=20, CY_PDL_DRIVER_NAME=, CY_PDL_DRIVER_REQ_VERSION=, CY_PDL_DRIVER_SUBGROUP=, CY_PDL_DRIVER_VARIANT=, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=PSoC Creator  4.0, INSTANCE_NAME=EZI2C, )
+// SCB_P4_v3_20(ApplySbClockParam=false, BitWidthReplacementStringRx=uint8, BitWidthReplacementStringTx=uint8, BufNum=1, Cond=#, DBGW_SCB_IP_V0=true, DBGW_SCB_IP_V1=false, DBGW_SCB_IP_V2=false, DW_Hide_i2c=false, DW_Hide_Scbv0Feature=false, DW_Hide_Scbv2Feature=true, DW_Hide_Spi=true, DW_Hide_Uart=true, DW_Hide_UartFlowControl=true, DW_INTR_SPI_EC=, DW_INTR_SPI_EC_MASK=, DW_INTR_SPI_EC_MASKED=, DW_SPI_CTRL=, DW_SPI_STATUS=, DW_UART_CTRL=, DW_UART_FLOW_CTRL=, DW_UART_RX_CTRL=, DW_UART_TX_CTRL=, EndCond=#endif, EzI2cBitWidthReplacementString=uint8, EzI2cBusVoltage=3.3, EzI2cByteModeEnable=false, EzI2cClkFreqDes=7820, EzI2cClockFromTerm=false, EzI2cClockStretching=false, EzI2cDataRate=400, EzI2cIsPrimarySlaveAddressHex=true, EzI2cIsSecondarySlaveAddressHex=true, EzI2cMedianFilterEnable=true, EzI2cNumberOfAddresses=0, EzI2cOvsFactor=16, EzI2cPrimarySlaveAddress=8, EzI2cSecondarySlaveAddress=9, EzI2cSlaveAddressMask=254, EzI2cSlewRate=0, EzI2cSubAddressSize=0, EzI2cWakeEnable=false, I2cAcceptAddress=false, I2cAcceptGeneralCall=false, I2cBusVoltage=3.3, I2cBusVoltageLevel=, I2cByteModeEnable=false, I2cClkFreqDes=1550, I2cClockFromTerm=false, I2cDataRate=100, I2cExternIntrHandler=false, I2cIsSlaveAddressHex=true, I2cIsSlaveAddressMaskHex=true, I2cManualOversampleControl=true, I2cMedianFilterEnable=true, I2cMode=1, I2cOvsFactor=16, I2cOvsFactorHigh=8, I2cOvsFactorLow=8, I2cSlaveAddress=8, I2cSlaveAddressMask=254, I2cSlewRate=0, I2cSlewRateSettings=0, I2cWakeEnable=false, PinLocationP4A=true, PinName0Unconfig=uart_rx_i2c_scl_spi_mosi, PinName0UnconfigWake=uart_rx_wake_i2c_scl_spi_mosi, PinName1Unconfig=uart_tx_i2c_sda_spi_miso, PinName2Unconfig=spi_sclk, PinName3Unconfig=spi_ss0, Pn0Unconfig=RX_SCL_MOSI, Pn0UnconfigWake=RX_WAKE_SCL_MOSI, Pn1Unconfig=TX_SDA_MISO, Pn2Unconfig=SCLK, Pn3Unconfig=SS0, RemoveI2cPins=false, RemoveMisoSdaTx=true, RemoveMosiSclRx=true, RemoveMosiSclRxWake=true, RemoveScbClk=false, RemoveScbIrq=false, RemoveSpiMasterMiso=true, RemoveSpiMasterMosi=true, RemoveSpiMasterPins=true, RemoveSpiMasterSclk=true, RemoveSpiMasterSs0Pin=true, RemoveSpiMasterSs1Pin=true, RemoveSpiMasterSs2Pin=true, RemoveSpiMasterSs3Pin=true, RemoveSpiSclk=true, RemoveSpiSlaveMiso=true, RemoveSpiSlaveMosi=true, RemoveSpiSlavePins=true, RemoveSpiSs0=true, RemoveSpiSs1=true, RemoveSpiSs2=true, RemoveSpiSs3=true, RemoveUartCtsPin=true, RemoveUartRtsPin=true, RemoveUartRxPin=true, RemoveUartRxTxPin=true, RemoveUartRxWake=true, RemoveUartRxWakeupIrq=true, RemoveUartTxPin=true, RxTriggerOutputEnable=false, ScbClkFreqDes=7820, ScbClkMinusTolerance=0, ScbClkPlusTolerance=96.6751918158568, ScbClockSelect=1, ScbClockTermEnable=false, ScbCustomIntrHandlerEnable=true, ScbInterruptTermEnable=false, ScbMisoSdaTxEnable=true, ScbMode=8, ScbModeHw=0, ScbMosiSclRxEnable=true, ScbRxWakeIrqEnable=false, ScbSclkEnable=false, ScbSs0Enable=false, ScbSs1Enable=false, ScbSs2Enable=false, ScbSs3Enable=false, ScbSymbolVisibility=0, SpiBitRate=1000, SpiBitsOrder=1, SpiByteModeEnable=false, SpiClkFreqDes=16000, SpiClockFromTerm=false, SpiFreeRunningSclk=false, SpiInterruptMode=0, SpiIntrMasterSpiDone=false, SpiIntrRxFull=false, SpiIntrRxNotEmpty=false, SpiIntrRxOverflow=false, SpiIntrRxTrigger=false, SpiIntrRxUnderflow=false, SpiIntrSlaveBusError=false, SpiIntrTxEmpty=false, SpiIntrTxNotFull=false, SpiIntrTxOverflow=false, SpiIntrTxTrigger=false, SpiIntrTxUnderflow=false, SpiLateMisoSampleEnable=false, SpiManualOversampleControl=true, SpiMasterMode=false, SpiMedianFilterEnable=false, SpimMisoTermEnable=false, SpimMosiTermEnable=false, SpiMode=0, SpimSclkTermEnable=false, SpimSs0TermEnable=false, SpimSs1TermEnable=false, SpimSs2TermEnable=false, SpimSs3TermEnable=false, SpiNumberOfRxDataBits=8, SpiNumberOfSelectLines=1, SpiNumberOfTxDataBits=8, SpiOvsFactor=16, SpiRemoveMiso=false, SpiRemoveMosi=false, SpiRemoveSclk=false, SpiRxBufferSize=8, SpiRxIntrMask=0, SpiRxOutputEnable=false, SpiRxTriggerLevel=7, SpiSclkMode=0, SpiSlaveMode=false, SpiSmartioEnable=false, SpisMisoTermEnable=false, SpisMosiTermEnable=false, SpiSs0Polarity=0, SpiSs1Polarity=0, SpiSs2Polarity=0, SpiSs3Polarity=0, SpisSclkTermEnable=false, SpisSsTermEnable=false, SpiSubMode=0, SpiTransferSeparation=1, SpiTxBufferSize=8, SpiTxIntrMask=0, SpiTxOutputEnable=false, SpiTxTriggerLevel=0, SpiWakeEnable=false, TermMode_clock=0, TermMode_interrupt=0, TermVisibility_clock=false, TermVisibility_interrupt=false, TriggerOutputEnable=false, TxTriggerOutputEnable=false, UartByteModeEnable=false, UartClkFreqDes=1382.4, UartClockFromTerm=false, UartCtsEnable=false, UartCtsPolarity=0, UartCtsTermEnable=false, UartDataRate=115200, UartDirection=3, UartDropOnFrameErr=false, UartDropOnParityErr=false, UartInterruptMode=0, UartIntrRxFrameErr=false, UartIntrRxFull=false, UartIntrRxNotEmpty=false, UartIntrRxOverflow=false, UartIntrRxParityErr=false, UartIntrRxTrigger=false, UartIntrRxUnderflow=false, UartIntrTxEmpty=false, UartIntrTxNotFull=false, UartIntrTxOverflow=false, UartIntrTxTrigger=false, UartIntrTxUartDone=false, UartIntrTxUartLostArb=false, UartIntrTxUartNack=false, UartIntrTxUnderflow=false, UartIrdaLowPower=false, UartIrdaPolarity=0, UartMedianFilterEnable=false, UartMpEnable=false, UartMpRxAcceptAddress=false, UartMpRxAddress=2, UartMpRxAddressMask=255, UartNumberOfDataBits=8, UartNumberOfStopBits=2, UartOvsFactor=12, UartParityType=2, UartRtsEnable=false, UartRtsPolarity=0, UartRtsTermEnable=false, UartRtsTriggerLevel=4, UartRxBufferSize=8, UartRxEnable=false, UartRxIntrMask=0, UartRxOutputEnable=false, UartRxTermEnable=false, UartRxTriggerLevel=7, UartSmartioEnable=false, UartSmCardRetryOnNack=false, UartSubMode=0, UartTxBufferSize=8, UartTxEnable=false, UartTxIntrMask=0, UartTxOutputEnable=false, UartTxTermEnable=false, UartTxTriggerLevel=0, UartWakeEnable=false, CY_API_CALLBACK_HEADER_INCLUDE=#include "cyapicallbacks.h", CY_COMPONENT_NAME=SCB_P4_v3_20, CY_CONST_CONFIG=true, CY_CONTROL_FILE=<:default:>, CY_DATASHEET_FILE=<:default:>, CY_FITTER_NAME=EZI2C, CY_INSTANCE_SHORT_NAME=EZI2C, CY_MAJOR_VERSION=3, CY_MINOR_VERSION=20, CY_PDL_DRIVER_NAME=, CY_PDL_DRIVER_REQ_VERSION=, CY_PDL_DRIVER_SUBGROUP=, CY_PDL_DRIVER_VARIANT=, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=PSoC Creator  4.0, INSTANCE_NAME=EZI2C, )
 module SCB_P4_v3_20_0 (
     cts_in,
     tx_out,
@@ -440,7 +474,7 @@ module SCB_P4_v3_20_0 (
 
 endmodule
 
-// SCB_P4_v3_20(ApplySbClockParam=false, BitWidthReplacementStringRx=uint8, BitWidthReplacementStringTx=uint8, BufNum=1, Cond=#, DBGW_SCB_IP_V0=false, DBGW_SCB_IP_V1=false, DBGW_SCB_IP_V2=true, DW_Hide_i2c=true, DW_Hide_Scbv0Feature=true, DW_Hide_Scbv2Feature=false, DW_Hide_Spi=true, DW_Hide_Uart=false, DW_Hide_UartFlowControl=false, DW_INTR_SPI_EC=, DW_INTR_SPI_EC_MASK=, DW_INTR_SPI_EC_MASKED=, DW_SPI_CTRL=, DW_SPI_STATUS=, DW_UART_CTRL=UART_SCB__UART_CTRL, DW_UART_FLOW_CTRL=UART_SCB__UART_FLOW_CTRL, DW_UART_RX_CTRL=UART_SCB__UART_RX_CTRL, DW_UART_TX_CTRL=UART_SCB__UART_TX_CTRL, EndCond=#endif, EzI2cBitWidthReplacementString=uint16, EzI2cBusVoltage=3.3, EzI2cByteModeEnable=false, EzI2cClkFreqDes=1550, EzI2cClockFromTerm=false, EzI2cClockStretching=true, EzI2cDataRate=100, EzI2cIsPrimarySlaveAddressHex=true, EzI2cIsSecondarySlaveAddressHex=true, EzI2cMedianFilterEnable=true, EzI2cNumberOfAddresses=0, EzI2cOvsFactor=16, EzI2cPrimarySlaveAddress=8, EzI2cSecondarySlaveAddress=9, EzI2cSlaveAddressMask=254, EzI2cSlewRate=0, EzI2cSubAddressSize=0, EzI2cWakeEnable=false, I2cAcceptAddress=false, I2cAcceptGeneralCall=false, I2cBusVoltage=3.3, I2cBusVoltageLevel=, I2cByteModeEnable=false, I2cClkFreqDes=1550, I2cClockFromTerm=false, I2cDataRate=100, I2cExternIntrHandler=false, I2cIsSlaveAddressHex=true, I2cIsSlaveAddressMaskHex=true, I2cManualOversampleControl=true, I2cMedianFilterEnable=true, I2cMode=1, I2cOvsFactor=16, I2cOvsFactorHigh=8, I2cOvsFactorLow=8, I2cSlaveAddress=8, I2cSlaveAddressMask=254, I2cSlewRate=0, I2cSlewRateSettings=0, I2cWakeEnable=false, PinLocationP4A=true, PinName0Unconfig=uart_rx_i2c_scl_spi_mosi, PinName0UnconfigWake=uart_rx_wake_i2c_scl_spi_mosi, PinName1Unconfig=uart_tx_i2c_sda_spi_miso, PinName2Unconfig=uart_cts_spi_sclk, PinName3Unconfig=uart_rts_spi_ss0, Pn0Unconfig=RX_SCL_MOSI, Pn0UnconfigWake=RX_WAKE_SCL_MOSI, Pn1Unconfig=TX_SDA_MISO, Pn2Unconfig=CTS_SCLK, Pn3Unconfig=RTS_SS0, RemoveI2cPins=true, RemoveMisoSdaTx=true, RemoveMosiSclRx=true, RemoveMosiSclRxWake=true, RemoveScbClk=false, RemoveScbIrq=true, RemoveSpiMasterMiso=true, RemoveSpiMasterMosi=true, RemoveSpiMasterPins=true, RemoveSpiMasterSclk=true, RemoveSpiMasterSs0Pin=true, RemoveSpiMasterSs1Pin=true, RemoveSpiMasterSs2Pin=true, RemoveSpiMasterSs3Pin=true, RemoveSpiSclk=true, RemoveSpiSlaveMiso=true, RemoveSpiSlaveMosi=true, RemoveSpiSlavePins=true, RemoveSpiSs0=true, RemoveSpiSs1=true, RemoveSpiSs2=true, RemoveSpiSs3=true, RemoveUartCtsPin=true, RemoveUartRtsPin=true, RemoveUartRxPin=false, RemoveUartRxTxPin=true, RemoveUartRxWake=true, RemoveUartRxWakeupIrq=true, RemoveUartTxPin=false, RxTriggerOutputEnable=false, ScbClkFreqDes=1382.4, ScbClkMinusTolerance=5, ScbClkPlusTolerance=5, ScbClockSelect=1, ScbClockTermEnable=false, ScbCustomIntrHandlerEnable=true, ScbInterruptTermEnable=false, ScbMisoSdaTxEnable=true, ScbMode=4, ScbModeHw=2, ScbMosiSclRxEnable=true, ScbRxWakeIrqEnable=false, ScbSclkEnable=false, ScbSs0Enable=false, ScbSs1Enable=false, ScbSs2Enable=false, ScbSs3Enable=false, ScbSymbolVisibility=0, SpiBitRate=1000, SpiBitsOrder=1, SpiByteModeEnable=false, SpiClkFreqDes=16000, SpiClockFromTerm=false, SpiFreeRunningSclk=false, SpiInterruptMode=0, SpiIntrMasterSpiDone=false, SpiIntrRxFull=false, SpiIntrRxNotEmpty=false, SpiIntrRxOverflow=false, SpiIntrRxTrigger=false, SpiIntrRxUnderflow=false, SpiIntrSlaveBusError=false, SpiIntrTxEmpty=false, SpiIntrTxNotFull=false, SpiIntrTxOverflow=false, SpiIntrTxTrigger=false, SpiIntrTxUnderflow=false, SpiLateMisoSampleEnable=false, SpiManualOversampleControl=true, SpiMasterMode=false, SpiMedianFilterEnable=false, SpimMisoTermEnable=false, SpimMosiTermEnable=false, SpiMode=0, SpimSclkTermEnable=false, SpimSs0TermEnable=false, SpimSs1TermEnable=false, SpimSs2TermEnable=false, SpimSs3TermEnable=false, SpiNumberOfRxDataBits=8, SpiNumberOfSelectLines=1, SpiNumberOfTxDataBits=8, SpiOvsFactor=16, SpiRemoveMiso=false, SpiRemoveMosi=false, SpiRemoveSclk=false, SpiRxBufferSize=8, SpiRxIntrMask=0, SpiRxOutputEnable=false, SpiRxTriggerLevel=7, SpiSclkMode=0, SpiSlaveMode=false, SpiSmartioEnable=false, SpisMisoTermEnable=false, SpisMosiTermEnable=false, SpiSs0Polarity=0, SpiSs1Polarity=0, SpiSs2Polarity=0, SpiSs3Polarity=0, SpisSclkTermEnable=false, SpisSsTermEnable=false, SpiSubMode=0, SpiTransferSeparation=1, SpiTxBufferSize=8, SpiTxIntrMask=0, SpiTxOutputEnable=false, SpiTxTriggerLevel=0, SpiWakeEnable=false, TermMode_clock=0, TermMode_interrupt=0, TermVisibility_clock=false, TermVisibility_interrupt=false, TriggerOutputEnable=false, TxTriggerOutputEnable=false, UartByteModeEnable=false, UartClkFreqDes=1382.4, UartClockFromTerm=false, UartCtsEnable=false, UartCtsPolarity=0, UartCtsTermEnable=false, UartDataRate=115200, UartDirection=3, UartDropOnFrameErr=false, UartDropOnParityErr=false, UartInterruptMode=0, UartIntrRxFrameErr=false, UartIntrRxFull=false, UartIntrRxNotEmpty=false, UartIntrRxOverflow=false, UartIntrRxParityErr=false, UartIntrRxTrigger=false, UartIntrRxUnderflow=false, UartIntrTxEmpty=false, UartIntrTxNotFull=false, UartIntrTxOverflow=false, UartIntrTxTrigger=false, UartIntrTxUartDone=false, UartIntrTxUartLostArb=false, UartIntrTxUartNack=false, UartIntrTxUnderflow=false, UartIrdaLowPower=false, UartIrdaPolarity=0, UartMedianFilterEnable=false, UartMpEnable=false, UartMpRxAcceptAddress=false, UartMpRxAddress=2, UartMpRxAddressMask=255, UartNumberOfDataBits=8, UartNumberOfStopBits=2, UartOvsFactor=12, UartParityType=2, UartRtsEnable=false, UartRtsPolarity=0, UartRtsTermEnable=false, UartRtsTriggerLevel=4, UartRxBufferSize=8, UartRxEnable=true, UartRxIntrMask=0, UartRxOutputEnable=false, UartRxTermEnable=false, UartRxTriggerLevel=7, UartSmartioEnable=false, UartSmCardRetryOnNack=false, UartSubMode=0, UartTxBufferSize=8, UartTxEnable=true, UartTxIntrMask=0, UartTxOutputEnable=false, UartTxTermEnable=false, UartTxTriggerLevel=0, UartWakeEnable=false, CY_API_CALLBACK_HEADER_INCLUDE=#include "cyapicallbacks.h", CY_COMPONENT_NAME=SCB_P4_v3_20, CY_CONST_CONFIG=true, CY_CONTROL_FILE=<:default:>, CY_DATASHEET_FILE=<:default:>, CY_FITTER_NAME=UART, CY_INSTANCE_SHORT_NAME=UART, CY_MAJOR_VERSION=3, CY_MINOR_VERSION=20, CY_PDL_DRIVER_NAME=, CY_PDL_DRIVER_REQ_VERSION=, CY_PDL_DRIVER_SUBGROUP=, CY_PDL_DRIVER_VARIANT=, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=PSoC Creator  4.0, INSTANCE_NAME=UART, )
+// SCB_P4_v3_20(ApplySbClockParam=false, BitWidthReplacementStringRx=uint8, BitWidthReplacementStringTx=uint8, BufNum=1, Cond=#, DBGW_SCB_IP_V0=true, DBGW_SCB_IP_V1=false, DBGW_SCB_IP_V2=false, DW_Hide_i2c=true, DW_Hide_Scbv0Feature=false, DW_Hide_Scbv2Feature=true, DW_Hide_Spi=true, DW_Hide_Uart=false, DW_Hide_UartFlowControl=true, DW_INTR_SPI_EC=, DW_INTR_SPI_EC_MASK=, DW_INTR_SPI_EC_MASKED=, DW_SPI_CTRL=, DW_SPI_STATUS=, DW_UART_CTRL=UART_SCB__UART_CTRL, DW_UART_FLOW_CTRL=, DW_UART_RX_CTRL=UART_SCB__UART_RX_CTRL, DW_UART_TX_CTRL=UART_SCB__UART_TX_CTRL, EndCond=#endif, EzI2cBitWidthReplacementString=uint16, EzI2cBusVoltage=3.3, EzI2cByteModeEnable=false, EzI2cClkFreqDes=1550, EzI2cClockFromTerm=false, EzI2cClockStretching=true, EzI2cDataRate=100, EzI2cIsPrimarySlaveAddressHex=true, EzI2cIsSecondarySlaveAddressHex=true, EzI2cMedianFilterEnable=true, EzI2cNumberOfAddresses=0, EzI2cOvsFactor=16, EzI2cPrimarySlaveAddress=8, EzI2cSecondarySlaveAddress=9, EzI2cSlaveAddressMask=254, EzI2cSlewRate=0, EzI2cSubAddressSize=0, EzI2cWakeEnable=false, I2cAcceptAddress=false, I2cAcceptGeneralCall=false, I2cBusVoltage=3.3, I2cBusVoltageLevel=, I2cByteModeEnable=false, I2cClkFreqDes=1550, I2cClockFromTerm=false, I2cDataRate=100, I2cExternIntrHandler=false, I2cIsSlaveAddressHex=true, I2cIsSlaveAddressMaskHex=true, I2cManualOversampleControl=true, I2cMedianFilterEnable=true, I2cMode=1, I2cOvsFactor=16, I2cOvsFactorHigh=8, I2cOvsFactorLow=8, I2cSlaveAddress=8, I2cSlaveAddressMask=254, I2cSlewRate=0, I2cSlewRateSettings=0, I2cWakeEnable=false, PinLocationP4A=true, PinName0Unconfig=uart_rx_i2c_scl_spi_mosi, PinName0UnconfigWake=uart_rx_wake_i2c_scl_spi_mosi, PinName1Unconfig=uart_tx_i2c_sda_spi_miso, PinName2Unconfig=spi_sclk, PinName3Unconfig=spi_ss0, Pn0Unconfig=RX_SCL_MOSI, Pn0UnconfigWake=RX_WAKE_SCL_MOSI, Pn1Unconfig=TX_SDA_MISO, Pn2Unconfig=SCLK, Pn3Unconfig=SS0, RemoveI2cPins=true, RemoveMisoSdaTx=true, RemoveMosiSclRx=true, RemoveMosiSclRxWake=true, RemoveScbClk=false, RemoveScbIrq=true, RemoveSpiMasterMiso=true, RemoveSpiMasterMosi=true, RemoveSpiMasterPins=true, RemoveSpiMasterSclk=true, RemoveSpiMasterSs0Pin=true, RemoveSpiMasterSs1Pin=true, RemoveSpiMasterSs2Pin=true, RemoveSpiMasterSs3Pin=true, RemoveSpiSclk=true, RemoveSpiSlaveMiso=true, RemoveSpiSlaveMosi=true, RemoveSpiSlavePins=true, RemoveSpiSs0=true, RemoveSpiSs1=true, RemoveSpiSs2=true, RemoveSpiSs3=true, RemoveUartCtsPin=true, RemoveUartRtsPin=true, RemoveUartRxPin=false, RemoveUartRxTxPin=true, RemoveUartRxWake=true, RemoveUartRxWakeupIrq=true, RemoveUartTxPin=false, RxTriggerOutputEnable=false, ScbClkFreqDes=1382.4, ScbClkMinusTolerance=5, ScbClkPlusTolerance=5, ScbClockSelect=1, ScbClockTermEnable=false, ScbCustomIntrHandlerEnable=true, ScbInterruptTermEnable=false, ScbMisoSdaTxEnable=true, ScbMode=4, ScbModeHw=2, ScbMosiSclRxEnable=true, ScbRxWakeIrqEnable=false, ScbSclkEnable=false, ScbSs0Enable=false, ScbSs1Enable=false, ScbSs2Enable=false, ScbSs3Enable=false, ScbSymbolVisibility=0, SpiBitRate=1000, SpiBitsOrder=1, SpiByteModeEnable=false, SpiClkFreqDes=16000, SpiClockFromTerm=false, SpiFreeRunningSclk=false, SpiInterruptMode=0, SpiIntrMasterSpiDone=false, SpiIntrRxFull=false, SpiIntrRxNotEmpty=false, SpiIntrRxOverflow=false, SpiIntrRxTrigger=false, SpiIntrRxUnderflow=false, SpiIntrSlaveBusError=false, SpiIntrTxEmpty=false, SpiIntrTxNotFull=false, SpiIntrTxOverflow=false, SpiIntrTxTrigger=false, SpiIntrTxUnderflow=false, SpiLateMisoSampleEnable=false, SpiManualOversampleControl=true, SpiMasterMode=false, SpiMedianFilterEnable=false, SpimMisoTermEnable=false, SpimMosiTermEnable=false, SpiMode=0, SpimSclkTermEnable=false, SpimSs0TermEnable=false, SpimSs1TermEnable=false, SpimSs2TermEnable=false, SpimSs3TermEnable=false, SpiNumberOfRxDataBits=8, SpiNumberOfSelectLines=1, SpiNumberOfTxDataBits=8, SpiOvsFactor=16, SpiRemoveMiso=false, SpiRemoveMosi=false, SpiRemoveSclk=false, SpiRxBufferSize=8, SpiRxIntrMask=0, SpiRxOutputEnable=false, SpiRxTriggerLevel=7, SpiSclkMode=0, SpiSlaveMode=false, SpiSmartioEnable=false, SpisMisoTermEnable=false, SpisMosiTermEnable=false, SpiSs0Polarity=0, SpiSs1Polarity=0, SpiSs2Polarity=0, SpiSs3Polarity=0, SpisSclkTermEnable=false, SpisSsTermEnable=false, SpiSubMode=0, SpiTransferSeparation=1, SpiTxBufferSize=8, SpiTxIntrMask=0, SpiTxOutputEnable=false, SpiTxTriggerLevel=0, SpiWakeEnable=false, TermMode_clock=0, TermMode_interrupt=0, TermVisibility_clock=false, TermVisibility_interrupt=false, TriggerOutputEnable=false, TxTriggerOutputEnable=false, UartByteModeEnable=false, UartClkFreqDes=1382.4, UartClockFromTerm=false, UartCtsEnable=false, UartCtsPolarity=0, UartCtsTermEnable=false, UartDataRate=115200, UartDirection=3, UartDropOnFrameErr=false, UartDropOnParityErr=false, UartInterruptMode=0, UartIntrRxFrameErr=false, UartIntrRxFull=false, UartIntrRxNotEmpty=false, UartIntrRxOverflow=false, UartIntrRxParityErr=false, UartIntrRxTrigger=false, UartIntrRxUnderflow=false, UartIntrTxEmpty=false, UartIntrTxNotFull=false, UartIntrTxOverflow=false, UartIntrTxTrigger=false, UartIntrTxUartDone=false, UartIntrTxUartLostArb=false, UartIntrTxUartNack=false, UartIntrTxUnderflow=false, UartIrdaLowPower=false, UartIrdaPolarity=0, UartMedianFilterEnable=false, UartMpEnable=false, UartMpRxAcceptAddress=false, UartMpRxAddress=2, UartMpRxAddressMask=255, UartNumberOfDataBits=8, UartNumberOfStopBits=2, UartOvsFactor=12, UartParityType=2, UartRtsEnable=false, UartRtsPolarity=0, UartRtsTermEnable=false, UartRtsTriggerLevel=4, UartRxBufferSize=8, UartRxEnable=true, UartRxIntrMask=0, UartRxOutputEnable=false, UartRxTermEnable=false, UartRxTriggerLevel=7, UartSmartioEnable=false, UartSmCardRetryOnNack=false, UartSubMode=0, UartTxBufferSize=8, UartTxEnable=true, UartTxIntrMask=0, UartTxOutputEnable=false, UartTxTermEnable=false, UartTxTriggerLevel=0, UartWakeEnable=false, CY_API_CALLBACK_HEADER_INCLUDE=#include "cyapicallbacks.h", CY_COMPONENT_NAME=SCB_P4_v3_20, CY_CONST_CONFIG=true, CY_CONTROL_FILE=<:default:>, CY_DATASHEET_FILE=<:default:>, CY_FITTER_NAME=UART, CY_INSTANCE_SHORT_NAME=UART, CY_MAJOR_VERSION=3, CY_MINOR_VERSION=20, CY_PDL_DRIVER_NAME=, CY_PDL_DRIVER_REQ_VERSION=, CY_PDL_DRIVER_SUBGROUP=, CY_PDL_DRIVER_VARIANT=, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=PSoC Creator  4.0, INSTANCE_NAME=UART, )
 module SCB_P4_v3_20_1 (
     cts_in,
     tx_out,
@@ -759,9 +793,526 @@ module SCB_P4_v3_20_1 (
 
 endmodule
 
+// Component: demux_v1_10
+`ifdef CY_BLK_DIR
+`undef CY_BLK_DIR
+`endif
+
+`ifdef WARP
+`define CY_BLK_DIR "C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\demux_v1_10"
+`include "C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\demux_v1_10\demux_v1_10.v"
+`else
+`define CY_BLK_DIR "C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\demux_v1_10"
+`include "C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\demux_v1_10\demux_v1_10.v"
+`endif
+
+// Component: CyControlReg_v1_80
+`ifdef CY_BLK_DIR
+`undef CY_BLK_DIR
+`endif
+
+`ifdef WARP
+`define CY_BLK_DIR "C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyControlReg_v1_80"
+`include "C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyControlReg_v1_80\CyControlReg_v1_80.v"
+`else
+`define CY_BLK_DIR "C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyControlReg_v1_80"
+`include "C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyControlReg_v1_80\CyControlReg_v1_80.v"
+`endif
+
+// Component: B_WS2811_v1_3
+`ifdef CY_BLK_DIR
+`undef CY_BLK_DIR
+`endif
+
+`ifdef WARP
+`define CY_BLK_DIR "C:\Dropbox\Projects\Spectacle\Spectacle_LED_Control_Board\Firmware\Spectacle_LED_Control_Board\Spectacle_LED_Control_Board.cydsn\B_WS2811_v1_3"
+`include "C:\Dropbox\Projects\Spectacle\Spectacle_LED_Control_Board\Firmware\Spectacle_LED_Control_Board\Spectacle_LED_Control_Board.cydsn\B_WS2811_v1_3\B_WS2811_v1_3.v"
+`else
+`define CY_BLK_DIR "C:\Dropbox\Projects\Spectacle\Spectacle_LED_Control_Board\Firmware\Spectacle_LED_Control_Board\Spectacle_LED_Control_Board.cydsn\B_WS2811_v1_3"
+`include "C:\Dropbox\Projects\Spectacle\Spectacle_LED_Control_Board\Firmware\Spectacle_LED_Control_Board\Spectacle_LED_Control_Board.cydsn\B_WS2811_v1_3\B_WS2811_v1_3.v"
+`endif
+
+// StripLights_v2_2(Channels=3, ClockSpeedKhz=800, Display_Memory=0, LEDs_per_Strip=60, Speed=1, Transfer_Method=1, WS281x_Type=2, CY_API_CALLBACK_HEADER_INCLUDE=#include "cyapicallbacks.h", CY_COMPONENT_NAME=StripLights_v2_2, CY_CONST_CONFIG=true, CY_CONTROL_FILE=<:default:>, CY_DATASHEET_FILE=<:default:>, CY_FITTER_NAME=StripLights, CY_INSTANCE_SHORT_NAME=StripLights, CY_MAJOR_VERSION=2, CY_MINOR_VERSION=2, CY_PDL_DRIVER_NAME=, CY_PDL_DRIVER_REQ_VERSION=, CY_PDL_DRIVER_SUBGROUP=, CY_PDL_DRIVER_VARIANT=, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=PSoC Creator  4.0, INSTANCE_NAME=StripLights, )
+module StripLights_v2_2_2 (
+    rdy,
+    S0,
+    S1,
+    S2,
+    S3,
+    S4,
+    S5,
+    S6,
+    S7,
+    S8,
+    S9,
+    S10,
+    S11,
+    S12,
+    S13,
+    S14,
+    S15);
+    output      rdy;
+    output      S0;
+    output      S1;
+    output      S2;
+    output      S3;
+    output      S4;
+    output      S5;
+    output      S6;
+    output      S7;
+    output      S8;
+    output      S9;
+    output      S10;
+    output      S11;
+    output      S12;
+    output      S13;
+    output      S14;
+    output      S15;
+
+
+          wire  Net_163;
+          wire  Net_144;
+          wire  Net_143;
+          wire  Net_142;
+          wire  Net_141;
+          wire  Net_140;
+          wire  Net_139;
+          wire  Net_166;
+          wire  Net_159;
+          wire [3:0] saddr;
+          wire  Net_64;
+          wire  Net_18;
+          wire  Net_7;
+
+    ZeroTerminal ZeroTerminal_1 (
+        .z(Net_7));
+
+
+	cy_clock_v1_0
+		#(.id("dc5f5473-e9a5-463c-9606-aacaa73f8fb9/e530a9ee-27b4-444b-91b5-72801be8ada4"),
+		  .source_clock_id("413DE2EF-D9F2-4233-A808-DFAF137FD877"),
+		  .divisor(0),
+		  .period("0"),
+		  .is_direct(1),
+		  .is_digital(0))
+		HFCLK
+		 (.clock_out(Net_18));
+
+
+
+	cy_isr_v1_0
+		#(.int_type(2'b00))
+		cisr
+		 (.int_signal(rdy));
+
+
+
+	cy_isr_v1_0
+		#(.int_type(2'b00))
+		fisr
+		 (.int_signal(Net_159));
+
+
+    // -- De Mux start --
+    if (1)
+    begin : demux_1
+        reg  tmp__demux_1_0_reg;
+        reg  tmp__demux_1_1_reg;
+        reg  tmp__demux_1_2_reg;
+        reg  tmp__demux_1_3_reg;
+        reg  tmp__demux_1_4_reg;
+        reg  tmp__demux_1_5_reg;
+        reg  tmp__demux_1_6_reg;
+        reg  tmp__demux_1_7_reg;
+        reg  tmp__demux_1_8_reg;
+        reg  tmp__demux_1_9_reg;
+        reg  tmp__demux_1_10_reg;
+        reg  tmp__demux_1_11_reg;
+        reg  tmp__demux_1_12_reg;
+        reg  tmp__demux_1_13_reg;
+        reg  tmp__demux_1_14_reg;
+        reg  tmp__demux_1_15_reg;
+        always @(Net_64 or saddr)
+        begin
+            case (saddr[3:0])
+                4'b0000:
+                begin
+                    tmp__demux_1_0_reg = Net_64;
+                    tmp__demux_1_1_reg = 1'b0;
+                    tmp__demux_1_2_reg = 1'b0;
+                    tmp__demux_1_3_reg = 1'b0;
+                    tmp__demux_1_4_reg = 1'b0;
+                    tmp__demux_1_5_reg = 1'b0;
+                    tmp__demux_1_6_reg = 1'b0;
+                    tmp__demux_1_7_reg = 1'b0;
+                    tmp__demux_1_8_reg = 1'b0;
+                    tmp__demux_1_9_reg = 1'b0;
+                    tmp__demux_1_10_reg = 1'b0;
+                    tmp__demux_1_11_reg = 1'b0;
+                    tmp__demux_1_12_reg = 1'b0;
+                    tmp__demux_1_13_reg = 1'b0;
+                    tmp__demux_1_14_reg = 1'b0;
+                    tmp__demux_1_15_reg = 1'b0;
+                end
+                4'b0001:
+                begin
+                    tmp__demux_1_0_reg = 1'b0;
+                    tmp__demux_1_1_reg = Net_64;
+                    tmp__demux_1_2_reg = 1'b0;
+                    tmp__demux_1_3_reg = 1'b0;
+                    tmp__demux_1_4_reg = 1'b0;
+                    tmp__demux_1_5_reg = 1'b0;
+                    tmp__demux_1_6_reg = 1'b0;
+                    tmp__demux_1_7_reg = 1'b0;
+                    tmp__demux_1_8_reg = 1'b0;
+                    tmp__demux_1_9_reg = 1'b0;
+                    tmp__demux_1_10_reg = 1'b0;
+                    tmp__demux_1_11_reg = 1'b0;
+                    tmp__demux_1_12_reg = 1'b0;
+                    tmp__demux_1_13_reg = 1'b0;
+                    tmp__demux_1_14_reg = 1'b0;
+                    tmp__demux_1_15_reg = 1'b0;
+                end
+                4'b0010:
+                begin
+                    tmp__demux_1_0_reg = 1'b0;
+                    tmp__demux_1_1_reg = 1'b0;
+                    tmp__demux_1_2_reg = Net_64;
+                    tmp__demux_1_3_reg = 1'b0;
+                    tmp__demux_1_4_reg = 1'b0;
+                    tmp__demux_1_5_reg = 1'b0;
+                    tmp__demux_1_6_reg = 1'b0;
+                    tmp__demux_1_7_reg = 1'b0;
+                    tmp__demux_1_8_reg = 1'b0;
+                    tmp__demux_1_9_reg = 1'b0;
+                    tmp__demux_1_10_reg = 1'b0;
+                    tmp__demux_1_11_reg = 1'b0;
+                    tmp__demux_1_12_reg = 1'b0;
+                    tmp__demux_1_13_reg = 1'b0;
+                    tmp__demux_1_14_reg = 1'b0;
+                    tmp__demux_1_15_reg = 1'b0;
+                end
+                4'b0011:
+                begin
+                    tmp__demux_1_0_reg = 1'b0;
+                    tmp__demux_1_1_reg = 1'b0;
+                    tmp__demux_1_2_reg = 1'b0;
+                    tmp__demux_1_3_reg = Net_64;
+                    tmp__demux_1_4_reg = 1'b0;
+                    tmp__demux_1_5_reg = 1'b0;
+                    tmp__demux_1_6_reg = 1'b0;
+                    tmp__demux_1_7_reg = 1'b0;
+                    tmp__demux_1_8_reg = 1'b0;
+                    tmp__demux_1_9_reg = 1'b0;
+                    tmp__demux_1_10_reg = 1'b0;
+                    tmp__demux_1_11_reg = 1'b0;
+                    tmp__demux_1_12_reg = 1'b0;
+                    tmp__demux_1_13_reg = 1'b0;
+                    tmp__demux_1_14_reg = 1'b0;
+                    tmp__demux_1_15_reg = 1'b0;
+                end
+                4'b0100:
+                begin
+                    tmp__demux_1_0_reg = 1'b0;
+                    tmp__demux_1_1_reg = 1'b0;
+                    tmp__demux_1_2_reg = 1'b0;
+                    tmp__demux_1_3_reg = 1'b0;
+                    tmp__demux_1_4_reg = Net_64;
+                    tmp__demux_1_5_reg = 1'b0;
+                    tmp__demux_1_6_reg = 1'b0;
+                    tmp__demux_1_7_reg = 1'b0;
+                    tmp__demux_1_8_reg = 1'b0;
+                    tmp__demux_1_9_reg = 1'b0;
+                    tmp__demux_1_10_reg = 1'b0;
+                    tmp__demux_1_11_reg = 1'b0;
+                    tmp__demux_1_12_reg = 1'b0;
+                    tmp__demux_1_13_reg = 1'b0;
+                    tmp__demux_1_14_reg = 1'b0;
+                    tmp__demux_1_15_reg = 1'b0;
+                end
+                4'b0101:
+                begin
+                    tmp__demux_1_0_reg = 1'b0;
+                    tmp__demux_1_1_reg = 1'b0;
+                    tmp__demux_1_2_reg = 1'b0;
+                    tmp__demux_1_3_reg = 1'b0;
+                    tmp__demux_1_4_reg = 1'b0;
+                    tmp__demux_1_5_reg = Net_64;
+                    tmp__demux_1_6_reg = 1'b0;
+                    tmp__demux_1_7_reg = 1'b0;
+                    tmp__demux_1_8_reg = 1'b0;
+                    tmp__demux_1_9_reg = 1'b0;
+                    tmp__demux_1_10_reg = 1'b0;
+                    tmp__demux_1_11_reg = 1'b0;
+                    tmp__demux_1_12_reg = 1'b0;
+                    tmp__demux_1_13_reg = 1'b0;
+                    tmp__demux_1_14_reg = 1'b0;
+                    tmp__demux_1_15_reg = 1'b0;
+                end
+                4'b0110:
+                begin
+                    tmp__demux_1_0_reg = 1'b0;
+                    tmp__demux_1_1_reg = 1'b0;
+                    tmp__demux_1_2_reg = 1'b0;
+                    tmp__demux_1_3_reg = 1'b0;
+                    tmp__demux_1_4_reg = 1'b0;
+                    tmp__demux_1_5_reg = 1'b0;
+                    tmp__demux_1_6_reg = Net_64;
+                    tmp__demux_1_7_reg = 1'b0;
+                    tmp__demux_1_8_reg = 1'b0;
+                    tmp__demux_1_9_reg = 1'b0;
+                    tmp__demux_1_10_reg = 1'b0;
+                    tmp__demux_1_11_reg = 1'b0;
+                    tmp__demux_1_12_reg = 1'b0;
+                    tmp__demux_1_13_reg = 1'b0;
+                    tmp__demux_1_14_reg = 1'b0;
+                    tmp__demux_1_15_reg = 1'b0;
+                end
+                4'b0111:
+                begin
+                    tmp__demux_1_0_reg = 1'b0;
+                    tmp__demux_1_1_reg = 1'b0;
+                    tmp__demux_1_2_reg = 1'b0;
+                    tmp__demux_1_3_reg = 1'b0;
+                    tmp__demux_1_4_reg = 1'b0;
+                    tmp__demux_1_5_reg = 1'b0;
+                    tmp__demux_1_6_reg = 1'b0;
+                    tmp__demux_1_7_reg = Net_64;
+                    tmp__demux_1_8_reg = 1'b0;
+                    tmp__demux_1_9_reg = 1'b0;
+                    tmp__demux_1_10_reg = 1'b0;
+                    tmp__demux_1_11_reg = 1'b0;
+                    tmp__demux_1_12_reg = 1'b0;
+                    tmp__demux_1_13_reg = 1'b0;
+                    tmp__demux_1_14_reg = 1'b0;
+                    tmp__demux_1_15_reg = 1'b0;
+                end
+                4'b1000:
+                begin
+                    tmp__demux_1_0_reg = 1'b0;
+                    tmp__demux_1_1_reg = 1'b0;
+                    tmp__demux_1_2_reg = 1'b0;
+                    tmp__demux_1_3_reg = 1'b0;
+                    tmp__demux_1_4_reg = 1'b0;
+                    tmp__demux_1_5_reg = 1'b0;
+                    tmp__demux_1_6_reg = 1'b0;
+                    tmp__demux_1_7_reg = 1'b0;
+                    tmp__demux_1_8_reg = Net_64;
+                    tmp__demux_1_9_reg = 1'b0;
+                    tmp__demux_1_10_reg = 1'b0;
+                    tmp__demux_1_11_reg = 1'b0;
+                    tmp__demux_1_12_reg = 1'b0;
+                    tmp__demux_1_13_reg = 1'b0;
+                    tmp__demux_1_14_reg = 1'b0;
+                    tmp__demux_1_15_reg = 1'b0;
+                end
+                4'b1001:
+                begin
+                    tmp__demux_1_0_reg = 1'b0;
+                    tmp__demux_1_1_reg = 1'b0;
+                    tmp__demux_1_2_reg = 1'b0;
+                    tmp__demux_1_3_reg = 1'b0;
+                    tmp__demux_1_4_reg = 1'b0;
+                    tmp__demux_1_5_reg = 1'b0;
+                    tmp__demux_1_6_reg = 1'b0;
+                    tmp__demux_1_7_reg = 1'b0;
+                    tmp__demux_1_8_reg = 1'b0;
+                    tmp__demux_1_9_reg = Net_64;
+                    tmp__demux_1_10_reg = 1'b0;
+                    tmp__demux_1_11_reg = 1'b0;
+                    tmp__demux_1_12_reg = 1'b0;
+                    tmp__demux_1_13_reg = 1'b0;
+                    tmp__demux_1_14_reg = 1'b0;
+                    tmp__demux_1_15_reg = 1'b0;
+                end
+                4'b1010:
+                begin
+                    tmp__demux_1_0_reg = 1'b0;
+                    tmp__demux_1_1_reg = 1'b0;
+                    tmp__demux_1_2_reg = 1'b0;
+                    tmp__demux_1_3_reg = 1'b0;
+                    tmp__demux_1_4_reg = 1'b0;
+                    tmp__demux_1_5_reg = 1'b0;
+                    tmp__demux_1_6_reg = 1'b0;
+                    tmp__demux_1_7_reg = 1'b0;
+                    tmp__demux_1_8_reg = 1'b0;
+                    tmp__demux_1_9_reg = 1'b0;
+                    tmp__demux_1_10_reg = Net_64;
+                    tmp__demux_1_11_reg = 1'b0;
+                    tmp__demux_1_12_reg = 1'b0;
+                    tmp__demux_1_13_reg = 1'b0;
+                    tmp__demux_1_14_reg = 1'b0;
+                    tmp__demux_1_15_reg = 1'b0;
+                end
+                4'b1011:
+                begin
+                    tmp__demux_1_0_reg = 1'b0;
+                    tmp__demux_1_1_reg = 1'b0;
+                    tmp__demux_1_2_reg = 1'b0;
+                    tmp__demux_1_3_reg = 1'b0;
+                    tmp__demux_1_4_reg = 1'b0;
+                    tmp__demux_1_5_reg = 1'b0;
+                    tmp__demux_1_6_reg = 1'b0;
+                    tmp__demux_1_7_reg = 1'b0;
+                    tmp__demux_1_8_reg = 1'b0;
+                    tmp__demux_1_9_reg = 1'b0;
+                    tmp__demux_1_10_reg = 1'b0;
+                    tmp__demux_1_11_reg = Net_64;
+                    tmp__demux_1_12_reg = 1'b0;
+                    tmp__demux_1_13_reg = 1'b0;
+                    tmp__demux_1_14_reg = 1'b0;
+                    tmp__demux_1_15_reg = 1'b0;
+                end
+                4'b1100:
+                begin
+                    tmp__demux_1_0_reg = 1'b0;
+                    tmp__demux_1_1_reg = 1'b0;
+                    tmp__demux_1_2_reg = 1'b0;
+                    tmp__demux_1_3_reg = 1'b0;
+                    tmp__demux_1_4_reg = 1'b0;
+                    tmp__demux_1_5_reg = 1'b0;
+                    tmp__demux_1_6_reg = 1'b0;
+                    tmp__demux_1_7_reg = 1'b0;
+                    tmp__demux_1_8_reg = 1'b0;
+                    tmp__demux_1_9_reg = 1'b0;
+                    tmp__demux_1_10_reg = 1'b0;
+                    tmp__demux_1_11_reg = 1'b0;
+                    tmp__demux_1_12_reg = Net_64;
+                    tmp__demux_1_13_reg = 1'b0;
+                    tmp__demux_1_14_reg = 1'b0;
+                    tmp__demux_1_15_reg = 1'b0;
+                end
+                4'b1101:
+                begin
+                    tmp__demux_1_0_reg = 1'b0;
+                    tmp__demux_1_1_reg = 1'b0;
+                    tmp__demux_1_2_reg = 1'b0;
+                    tmp__demux_1_3_reg = 1'b0;
+                    tmp__demux_1_4_reg = 1'b0;
+                    tmp__demux_1_5_reg = 1'b0;
+                    tmp__demux_1_6_reg = 1'b0;
+                    tmp__demux_1_7_reg = 1'b0;
+                    tmp__demux_1_8_reg = 1'b0;
+                    tmp__demux_1_9_reg = 1'b0;
+                    tmp__demux_1_10_reg = 1'b0;
+                    tmp__demux_1_11_reg = 1'b0;
+                    tmp__demux_1_12_reg = 1'b0;
+                    tmp__demux_1_13_reg = Net_64;
+                    tmp__demux_1_14_reg = 1'b0;
+                    tmp__demux_1_15_reg = 1'b0;
+                end
+                4'b1110:
+                begin
+                    tmp__demux_1_0_reg = 1'b0;
+                    tmp__demux_1_1_reg = 1'b0;
+                    tmp__demux_1_2_reg = 1'b0;
+                    tmp__demux_1_3_reg = 1'b0;
+                    tmp__demux_1_4_reg = 1'b0;
+                    tmp__demux_1_5_reg = 1'b0;
+                    tmp__demux_1_6_reg = 1'b0;
+                    tmp__demux_1_7_reg = 1'b0;
+                    tmp__demux_1_8_reg = 1'b0;
+                    tmp__demux_1_9_reg = 1'b0;
+                    tmp__demux_1_10_reg = 1'b0;
+                    tmp__demux_1_11_reg = 1'b0;
+                    tmp__demux_1_12_reg = 1'b0;
+                    tmp__demux_1_13_reg = 1'b0;
+                    tmp__demux_1_14_reg = Net_64;
+                    tmp__demux_1_15_reg = 1'b0;
+                end
+                4'b1111:
+                begin
+                    tmp__demux_1_0_reg = 1'b0;
+                    tmp__demux_1_1_reg = 1'b0;
+                    tmp__demux_1_2_reg = 1'b0;
+                    tmp__demux_1_3_reg = 1'b0;
+                    tmp__demux_1_4_reg = 1'b0;
+                    tmp__demux_1_5_reg = 1'b0;
+                    tmp__demux_1_6_reg = 1'b0;
+                    tmp__demux_1_7_reg = 1'b0;
+                    tmp__demux_1_8_reg = 1'b0;
+                    tmp__demux_1_9_reg = 1'b0;
+                    tmp__demux_1_10_reg = 1'b0;
+                    tmp__demux_1_11_reg = 1'b0;
+                    tmp__demux_1_12_reg = 1'b0;
+                    tmp__demux_1_13_reg = 1'b0;
+                    tmp__demux_1_14_reg = 1'b0;
+                    tmp__demux_1_15_reg = Net_64;
+                end
+            endcase
+        end
+        assign S0 = tmp__demux_1_0_reg;
+        assign S1 = tmp__demux_1_1_reg;
+        assign S2 = tmp__demux_1_2_reg;
+        assign S3 = tmp__demux_1_3_reg;
+        assign S4 = tmp__demux_1_4_reg;
+        assign S5 = tmp__demux_1_5_reg;
+        assign S6 = tmp__demux_1_6_reg;
+        assign S7 = tmp__demux_1_7_reg;
+        assign S8 = tmp__demux_1_8_reg;
+        assign S9 = tmp__demux_1_9_reg;
+        assign S10 = tmp__demux_1_10_reg;
+        assign S11 = tmp__demux_1_11_reg;
+        assign S12 = tmp__demux_1_12_reg;
+        assign S13 = tmp__demux_1_13_reg;
+        assign S14 = tmp__demux_1_14_reg;
+        assign S15 = tmp__demux_1_15_reg;
+    end
+    // -- De Mux end --
+
+    CyControlReg_v1_80 StringSel (
+        .control_1(saddr[1]),
+        .control_2(saddr[2]),
+        .control_3(saddr[3]),
+        .control_0(saddr[0]),
+        .control_4(Net_139),
+        .control_5(Net_140),
+        .control_6(Net_141),
+        .control_7(Net_142),
+        .clock(1'b0),
+        .reset(1'b0));
+    defparam StringSel.Bit0Mode = 0;
+    defparam StringSel.Bit1Mode = 0;
+    defparam StringSel.Bit2Mode = 0;
+    defparam StringSel.Bit3Mode = 0;
+    defparam StringSel.Bit4Mode = 0;
+    defparam StringSel.Bit5Mode = 0;
+    defparam StringSel.Bit6Mode = 0;
+    defparam StringSel.Bit7Mode = 0;
+    defparam StringSel.BitValue = 0;
+    defparam StringSel.BusDisplay = 0;
+    defparam StringSel.ExtrReset = 0;
+    defparam StringSel.NumOutputs = 4;
+
+    B_WS2811_v1_3 B_WS2811 (
+        .clk(Net_18),
+        .reset(Net_7),
+        .sout(Net_64),
+        .firq(Net_159),
+        .cntl(Net_163),
+        .cirq(rdy));
+
+
+
+endmodule
+
 // top
 module top ;
 
+          wire  Net_865;
+          wire  Net_864;
+          wire  Net_863;
+          wire  Net_862;
+          wire  Net_861;
+          wire  Net_860;
+          wire  Net_859;
+          wire  Net_858;
+          wire  Net_857;
+          wire  Net_856;
+          wire  Net_855;
+          wire  Net_854;
+          wire  Net_853;
+          wire  Net_849;
           wire  Net_374;
           wire  Net_373;
           wire  Net_372;
@@ -800,6 +1351,9 @@ module top ;
           wire  Net_574;
           wire  Net_573;
           wire  Net_572;
+          wire  Net_868;
+          wire  Net_867;
+          wire  Net_866;
 
     SCB_P4_v3_20_0 EZI2C (
         .cts_in(1'b0),
@@ -853,9 +1407,9 @@ module top ;
 		#(.id("e19ed0ef-2b6f-4a4a-ad00-0d69dbcb5732"),
 		  .drive_mode(3'b110),
 		  .ibuf_enabled(1'b1),
-		  .init_dr_st(1'b0),
+		  .init_dr_st(1'b1),
 		  .input_clk_en(0),
-		  .input_sync(1'b0),
+		  .input_sync(1'b1),
 		  .input_sync_mode(1'b0),
 		  .intr_mode(2'b00),
 		  .invert_in_clock(0),
@@ -871,7 +1425,7 @@ module top ;
 		  .oe_sync(1'b0),
 		  .output_clk_en(0),
 		  .output_clock_mode(1'b0),
-		  .output_conn(1'b0),
+		  .output_conn(1'b1),
 		  .output_mode(1'b0),
 		  .output_reset(0),
 		  .output_sync(1'b0),
@@ -904,7 +1458,7 @@ module top ;
 		  .input_buffer_sel(2'b00))
 		LED2
 		 (.oe(tmpOE__LED2_net),
-		  .y({1'b0}),
+		  .y({Net_868}),
 		  .fb({tmpFB_0__LED2_net[0:0]}),
 		  .io({tmpIO_0__LED2_net[0:0]}),
 		  .siovref(tmpSIOVREF__LED2_net),
@@ -928,9 +1482,9 @@ module top ;
 		#(.id("e851a3b9-efb8-48be-bbb8-b303b216c393"),
 		  .drive_mode(3'b110),
 		  .ibuf_enabled(1'b1),
-		  .init_dr_st(1'b0),
+		  .init_dr_st(1'b1),
 		  .input_clk_en(0),
-		  .input_sync(1'b0),
+		  .input_sync(1'b1),
 		  .input_sync_mode(1'b0),
 		  .intr_mode(2'b00),
 		  .invert_in_clock(0),
@@ -946,7 +1500,7 @@ module top ;
 		  .oe_sync(1'b0),
 		  .output_clk_en(0),
 		  .output_clock_mode(1'b0),
-		  .output_conn(1'b0),
+		  .output_conn(1'b1),
 		  .output_mode(1'b0),
 		  .output_reset(0),
 		  .output_sync(1'b0),
@@ -979,7 +1533,7 @@ module top ;
 		  .input_buffer_sel(2'b00))
 		LED0
 		 (.oe(tmpOE__LED0_net),
-		  .y({1'b0}),
+		  .y({Net_866}),
 		  .fb({tmpFB_0__LED0_net[0:0]}),
 		  .io({tmpIO_0__LED0_net[0:0]}),
 		  .siovref(tmpSIOVREF__LED0_net),
@@ -1003,9 +1557,9 @@ module top ;
 		#(.id("7f62ee56-c47f-4a2e-b569-e119dd0d2979"),
 		  .drive_mode(3'b110),
 		  .ibuf_enabled(1'b1),
-		  .init_dr_st(1'b0),
+		  .init_dr_st(1'b1),
 		  .input_clk_en(0),
-		  .input_sync(1'b0),
+		  .input_sync(1'b1),
 		  .input_sync_mode(1'b0),
 		  .intr_mode(2'b00),
 		  .invert_in_clock(0),
@@ -1021,7 +1575,7 @@ module top ;
 		  .oe_sync(1'b0),
 		  .output_clk_en(0),
 		  .output_clock_mode(1'b0),
-		  .output_conn(1'b0),
+		  .output_conn(1'b1),
 		  .output_mode(1'b0),
 		  .output_reset(0),
 		  .output_sync(1'b0),
@@ -1054,7 +1608,7 @@ module top ;
 		  .input_buffer_sel(2'b00))
 		LED1
 		 (.oe(tmpOE__LED1_net),
-		  .y({1'b0}),
+		  .y({Net_867}),
 		  .fb({tmpFB_0__LED1_net[0:0]}),
 		  .io({tmpIO_0__LED1_net[0:0]}),
 		  .siovref(tmpSIOVREF__LED1_net),
@@ -1080,7 +1634,7 @@ module top ;
 		  .ibuf_enabled(1'b1),
 		  .init_dr_st(1'b0),
 		  .input_clk_en(0),
-		  .input_sync(1'b0),
+		  .input_sync(1'b1),
 		  .input_sync_mode(1'b0),
 		  .intr_mode(2'b00),
 		  .invert_in_clock(0),
@@ -1155,7 +1709,7 @@ module top ;
 		  .ibuf_enabled(1'b1),
 		  .init_dr_st(1'b0),
 		  .input_clk_en(0),
-		  .input_sync(1'b0),
+		  .input_sync(1'b1),
 		  .input_sync_mode(1'b0),
 		  .intr_mode(2'b00),
 		  .invert_in_clock(0),
@@ -1217,6 +1771,25 @@ module top ;
 		  .out_reset({1'b0}));
 
 	assign tmpOE__I2C_OUT_EN_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
+
+    StripLights_v2_2_2 StripLights (
+        .rdy(Net_849),
+        .S0(Net_866),
+        .S1(Net_867),
+        .S2(Net_868),
+        .S3(Net_853),
+        .S4(Net_854),
+        .S5(Net_855),
+        .S6(Net_856),
+        .S7(Net_857),
+        .S8(Net_858),
+        .S9(Net_859),
+        .S10(Net_860),
+        .S11(Net_861),
+        .S12(Net_862),
+        .S13(Net_863),
+        .S14(Net_864),
+        .S15(Net_865));
 
 
 

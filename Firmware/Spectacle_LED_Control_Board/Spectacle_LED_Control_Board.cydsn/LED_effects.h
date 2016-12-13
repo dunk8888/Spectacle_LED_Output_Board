@@ -3,17 +3,16 @@
     
 #include "project.h"
 #include "led.h"
-#include <stdbool.h>
 
-void setColor(struct led *behavior);
+void setColor(uint32 color, uint8 stringID, uint8 pixel);
 void setPixel(struct led *behavior);
 void fadeString(struct led *behavior);
 void partialFill(struct led *behavior);
 void rainbow(struct led *behavior);
 void theaterchase(struct led *behavior);
 void scan(struct led *behavior);
-bool twinkle(struct led *behavior);
-bool lightning(struct led *behavior);
+void twinkle(struct led *behavior);
+void lightning(struct led *behavior);
 
 enum {SET_COLOR, SET_PIXEL, FADE_STRING, PARTIAL_FILL, RAINBOW,
       THEATER_CHASE, SCAN, TWINKLE, LIGHTNING};

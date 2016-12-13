@@ -5,207 +5,193 @@
 #include "led.h"
 #include "LED_effects.h"
 
-extern uint32 buffer[3][60];
 extern uint32 systemTimer;
-extern int stringLen[3];
-bool fading = false;
+extern uint8 fading[3];
+int16 redStep[3] = {0,0,0};
+int16 greenStep[3] = {0,0,0};
+int16 blueStep[3] = {0,0,0};
+int16 red[3] = {0,0,0};
+int16 green[3] = {0,0,0};
+int16 blue[3] = {0,0,0};
 
-void setColor(struct led *behavior)
+void setColor(uint32 color, uint8 stringID, uint8 pixel)
 {
-  int i = 0;
-  for (i = 0; i < behavior->stringLen; i++)
+  int j;
+  for (j = 0; j < pixel; j++)
   {
-    buffer[behavior->stringID][i] = behavior->color0;
+    StripLights_Pixel(j, stringID, color);
   }
 }
 
-void setPixel(struct led *behavior)
-{
-  int i = 0;
-  for (i = 0; i < behavior->pixel; i++)
-  {
-    buffer[behavior->stringID][i] = 0;
-  }
-  buffer[behavior->stringID][i] = behavior->color0;
-  for (i = behavior->pixel+1; i< behavior->stringLen; i++)
-  {
-    buffer[behavior->stringID][i] = 0;
-  }
-}
-/*
 void fadeString(struct led *behavior)
 {
-  static int red;
-  static int blue;
-  static int green;
-  static int redStep;
-  static int blueStep;
-  static int greenStep;
-  static int redStart;
-  static int redStop;
-  static int blueStart;
-  static int blueStop;
-  static int greenStart;
-  static int greenStop;
-  if (fading == false)
+  int redStart;
+  int redStop;
+  int blueStart;
+  int blueStop;
+  int greenStart;
+  int greenStop;
+  int temp;
+  rgbBreak(behavior->color0, &redStart, &greenStart, &blueStart);
+  rgbBreak(behavior->color1, &redStop, &greenStop, &blueStop);
+  if (redStart>redStop)
   {
-    fading = true;
-    rgbBreak(color0, &redStart, &greenStart, &blueStart);
-    red = redStart;
-    blue = blueStart;
-    green = greenStart;
-    rgbBreak(color1, &redStop, &greenStop, &blueStop);
-    int redRange = redStop - redStart;
-    int blueRange = blueStop - blueStart;
-    int greenRange = greenStop - greenStart;
-    redStep = redRange/16;
-    blueStep = blueRange/16;
-    greenStep = greenRange/16;
-
+    temp = redStart;
+    redStart = redStop;
+    redStop = temp;
+  } 
+  if (blueStart>blueStop)
+  {
+    temp = blueStart;
+    blueStart = blueStop;
+    blueStop = temp;
+  } 
+  if (greenStart>greenStop)
+  {
+    temp = greenStart;
+    greenStart = greenStop;
+    greenStop = temp;
+  } 
+  int redRange = redStop - redStart;
+  int blueRange = blueStop - blueStart;
+  int greenRange = greenStop - greenStart;
+  if (fading[behavior->stringID] == 0)
+  {
+    fading[behavior->stringID] = 1;
+    redStep[behavior->stringID] = redRange/16;
+    blueStep[behavior->stringID] = blueRange/16;
+    greenStep[behavior->stringID] = greenRange/16;
+    red[behavior->stringID] = redStart;
+    blue[behavior->stringID] = blueStart;
+    green[behavior->stringID] = greenStart;
   }
-  uint32 color = rgbMake(red, green, blue);
-  setColor(color, stringID);
 
-  if (red+redStep > redStop)
+  if (red[behavior->stringID]+redStep[behavior->stringID] >= redStop)
   {
-    red = redStop;
-    redStep*=-1;
+    red[behavior->stringID] = redStop;
+    redStep[behavior->stringID]*=-1;
   }
-  else if (red+redStep < redStart)
+  else if (red[behavior->stringID]+redStep[behavior->stringID] <= redStart)
   {
-    red = redStart;
-    redStep *= -1;
+    red[behavior->stringID] = redStart;
+    redStep[behavior->stringID] *= -1;
   }
   else
   {
-    red += redStep;
+    red[behavior->stringID] += redStep[behavior->stringID];
   }
 
-  if (blue+blueStep > blueStop)
+  if (blue[behavior->stringID]+blueStep[behavior->stringID] >= blueStop)
   {
-    blue = blueStop;
-    blueStep*=-1;
+    blue[behavior->stringID] = blueStop;
+    blueStep[behavior->stringID]*=-1;
   }
-  else if (blue+blueStep < blueStart)
+  else if (blue[behavior->stringID]+blueStep[behavior->stringID] <= blueStart)
   {
-    blue = blueStart;
-    blueStep *= -1;
+    blue[behavior->stringID] = blueStart;
+    blueStep[behavior->stringID] *= -1;
   }
   else
   {
-    blue += blueStep;
+    blue[behavior->stringID] += blueStep[behavior->stringID];
   }
   
-  if (green+greenStep > greenStop)
+  if (green[behavior->stringID]+greenStep[behavior->stringID] >= greenStop)
   {
-    green = greenStop;
-    greenStep*=-1;
+    green[behavior->stringID] = greenStop;
+    greenStep[behavior->stringID]*=-1;
   }
-  else if (green+greenStep < greenStart)
+  else if (green[behavior->stringID]+greenStep[behavior->stringID] <= greenStart)
   {
-    green = greenStart;
-    greenStep *= -1;
+    green[behavior->stringID] = greenStart;
+    greenStep[behavior->stringID] *= -1;
   }
   else
   {
-    green += greenStep;
+    green[behavior->stringID] += greenStep[behavior->stringID];
   }
-}
-
-void partialFill(struct led *behavior)
-{
-  int i = 0;
-  for (i = 0; i <= pixel; i++)
-  {
-    buffer[stringID][i] = color;
-  }
-  for (i = pixel; i< stringLen[stringID]; i++)
-  {
-    buffer[stringID][i] = 0;
-  }
+  uint32 color = rgbMake(blue[behavior->stringID], green[behavior->stringID], 
+                         red[behavior->stringID]);
+  setColor(color, behavior->stringID, behavior->stringLen);
 }
 
 void rainbow(struct led *behavior)
 {
   int i = 0;
-  for (i=0; i<stringLen[stringID]; i++)
+  for (i=0; i<behavior->stringLen; i++)
   {
-    buffer[stringID][i] = wheel((iteration + i) & 255);
+    StripLights_Pixel(i, behavior->stringID, wheel((behavior->iteration + i) & 255));
   }
+    behavior->iteration++;
   
 }
 
 void theaterchase(struct led *behavior)
 {
-  static int index = 0;
   int i;
-  setColor(0, stringID);
-  for (i = index; i < stringLen[stringID]; i+=3)
+  setColor(0, behavior->stringID, behavior->stringLen);
+  for (i = behavior->iteration; i < behavior->stringLen; i+=3)
   {
-    buffer[stringID][i] = color;
+    StripLights_Pixel(i, behavior->stringID, behavior->color0);
   }
-  if (++index > 2) 
+  if (++behavior->iteration > 2) 
   {
-    index = 0;
+    behavior->iteration = 0;
   }
 }
 
 void scan(struct led *behavior)
 {
-  static int index = 0;
-  static int scanDirection = 1;
-  int red = (color&RED_MASK)>>RED_SHIFT;
-  int green = (color&GREEN_MASK)>>GREEN_SHIFT;
-  int blue = (color&BLUE_MASK)>>BLUE_SHIFT;
-  uint32 halfColor = (red/4)<<RED_SHIFT | (green/4)<<GREEN_SHIFT | \
+  int red = (behavior->color0&RED_MASK)>>RED_SHIFT;
+  int green = (behavior->color0&GREEN_MASK)>>GREEN_SHIFT;
+  int blue = (behavior->color0&BLUE_MASK)>>BLUE_SHIFT;
+  uint32 halfcolor = (red/4)<<RED_SHIFT | (green/4)<<GREEN_SHIFT | \
                      (blue/4)<<BLUE_SHIFT;
-  setColor(0, stringID);
-  if (index == 0)
+  uint32 color = behavior->color0;
+  setColor(0, behavior->stringID, behavior->stringLen);
+  if (behavior->iteration == 0)
   {
-    buffer[stringID][0] = color;
-    buffer[stringID][1] = halfColor;
-    scanDirection = 1;
+    StripLights_Pixel(0, behavior->stringID, color);
+    StripLights_Pixel(1, behavior->stringID, halfcolor);
+    behavior->direction = 1;
   }
-  else if (index == stringLen[stringID] - 1)
+  else if (behavior->iteration == behavior->stringLen - 1)
   {
-    buffer[stringID][index] = color;
-    buffer[stringID][index-1] = halfColor;
-    scanDirection = -1;
+    StripLights_Pixel(behavior->stringLen-1, behavior->stringID, color);
+    StripLights_Pixel(behavior->stringLen-2, behavior->stringID, halfcolor);
+    behavior->direction = -1;
   }
   else
   {
-    buffer[stringID][index-1] = halfColor;
-    buffer[stringID][index] = color;
-    buffer[stringID][index+1] = halfColor;
+    StripLights_Pixel(behavior->iteration, behavior->stringID, color);
+    StripLights_Pixel(behavior->iteration-1, behavior->stringID, halfcolor);
+    StripLights_Pixel(behavior->iteration+1, behavior->stringID, halfcolor);
   }
-  index+=scanDirection;
+  behavior->iteration += behavior->direction;
 
 }
 
-bool twinkle(struct led *behavior)
+void twinkle(struct led *behavior)
 {
-  static int index=0;
-  static int twinkleStep=0;
-  static int twinkleStepMax=0;
-  static int redMax=0;
-  static int blueMax=0;
-  static int greenMax=0;
-  static int red=0;
-  static int blue=0;
-  static int green=0;
-  static bool twinkling=false;
-  if (!twinkling)
+  int index = behavior->iteration;
+  int8 twinkleStep=behavior->twinkleStep;
+  int8 twinkleStepMax = behavior->twinkleStepMax;
+  int redMax=0;
+  int blueMax=0;
+  int greenMax=0;
+  if (behavior->inProcess == 0)
   {
-    twinkling = true;
+    behavior->inProcess = 1;
     srand(systemTimer);
-    twinkleStepMax = (rand() % 4)+2;
+    behavior->twinkleStepMax = (rand() % 4)+5;
+    twinkleStepMax = behavior->twinkleStepMax;  
     twinkleStep = 0;
-    red = 0;
-    blue = 0;
-    green = 0;
-    rgbBreak(color, &redMax, &greenMax, &blueMax);
-    index = rand() % stringLen[stringID];
+    behavior->red = 0;
+    behavior->blue = 0;
+    behavior->green = 0;
+    index = rand() % behavior->stringLen;
   }
+  rgbBreak(behavior->color0, &redMax, &greenMax, &blueMax);
   int redStep = redMax/twinkleStepMax;
   int blueStep = blueMax/twinkleStepMax;
   int greenStep = greenMax/twinkleStepMax;
@@ -217,28 +203,31 @@ bool twinkle(struct led *behavior)
   }
   if (twinkleStep++ < 2*twinkleStepMax)
   {
-    red += redStep;
-    blue += blueStep;
-    green += greenStep;
+    behavior->red += redStep;
+    behavior->blue += blueStep;
+    behavior->green += greenStep;
   }
-  if (red > 255) red = 255;
-  if (blue > 255) blue = 255;
-  if (green > 255) green = 255;
-  if (red < 0) red = 0;
-  if (blue < 0) blue = 0;
-  if (green < 0) green = 0;
+  if (behavior->red > 255) behavior->red = 255;
+  if (behavior->blue > 255) behavior->blue = 255;
+  if (behavior->green > 255) behavior->green = 255;
+  if (behavior->red < 0) behavior->red = 0;
+  if (behavior->blue < 0) behavior->blue = 0;
+  if (behavior->green < 0) behavior->green = 0;
 
-  setColor(0,stringID);
-  buffer[stringID][index] = rgbMake(red, green, blue);
+  setColor(0, behavior->stringID, behavior->stringLen);
+  StripLights_Pixel(index, behavior->stringID, rgbMake(behavior->red, 
+                                                       behavior->green, 
+                                                       behavior->blue));
   if (twinkleStep == 2*twinkleStepMax)
   {
-    twinkling = false;
-    setColor(0, stringID);
-    return false;
+    behavior->inProcess = false;
+    setColor(0, behavior->stringID, behavior->stringLen);
   }
-  return true;
+  behavior->iteration = index;
+  behavior->twinkleStep = twinkleStep;
 }
 
+/*
 bool lightning(struct led *behavior)
 {
   static int strikeStep=0;
@@ -300,3 +289,4 @@ uint32 rgbMake(int red, int green, int blue)
 {
   return red<<RED_SHIFT | green<<GREEN_SHIFT | blue<<BLUE_SHIFT;
 }
+

@@ -325,14 +325,14 @@ void UART_UartPostEnable(void)
     #endif /* (UART_TX_SDA_MISO_PIN_PIN) */
 
     #if !(UART_CY_SCBIP_V0 || UART_CY_SCBIP_V1)
-        #if (UART_RTS_SS0_PIN)
-            if (UART_CHECK_RTS_SS0_PIN_USED)
+        #if (UART_SS0_PIN)
+            if (UART_CHECK_SS0_PIN_USED)
             {
                 /* Set SCB UART to drive the output pin */
-                UART_SET_HSIOM_SEL(UART_RTS_SS0_HSIOM_REG, UART_RTS_SS0_HSIOM_MASK,
-                                               UART_RTS_SS0_HSIOM_POS, UART_RTS_SS0_HSIOM_SEL_UART);
+                UART_SET_HSIOM_SEL(UART_SS0_HSIOM_REG, UART_SS0_HSIOM_MASK,
+                                               UART_SS0_HSIOM_POS, UART_SS0_HSIOM_SEL_UART);
             }
-        #endif /* (UART_RTS_SS0_PIN) */
+        #endif /* (UART_SS0_PIN) */
     #endif /* !(UART_CY_SCBIP_V0 || UART_CY_SCBIP_V1) */
 
 #else
@@ -377,17 +377,17 @@ void UART_UartStop(void)
     #endif /* (UART_TX_SDA_MISO_PIN_PIN) */
 
     #if !(UART_CY_SCBIP_V0 || UART_CY_SCBIP_V1)
-        #if (UART_RTS_SS0_PIN)
-            if (UART_CHECK_RTS_SS0_PIN_USED)
+        #if (UART_SS0_PIN)
+            if (UART_CHECK_SS0_PIN_USED)
             {
                 /* Set output pin state after block is disabled */
-                UART_uart_rts_spi_ss0_Write(UART_GET_UART_RTS_INACTIVE);
+                UART_spi_ss0_Write(UART_GET_UART_RTS_INACTIVE);
 
                 /* Set GPIO to drive output pin */
-                UART_SET_HSIOM_SEL(UART_RTS_SS0_HSIOM_REG, UART_RTS_SS0_HSIOM_MASK,
-                                               UART_RTS_SS0_HSIOM_POS, UART_RTS_SS0_HSIOM_SEL_GPIO);
+                UART_SET_HSIOM_SEL(UART_SS0_HSIOM_REG, UART_SS0_HSIOM_MASK,
+                                               UART_SS0_HSIOM_POS, UART_SS0_HSIOM_SEL_GPIO);
             }
-        #endif /* (UART_RTS_SS0_PIN) */
+        #endif /* (UART_SS0_PIN) */
     #endif /* !(UART_CY_SCBIP_V0 || UART_CY_SCBIP_V1) */
 
 #else
