@@ -13,6 +13,9 @@ struct led
   uint8 pixel;
   uint8 stringLen;
   int32 delay;
+  int8 stepDelayMax;
+  int8 stepDelay;
+  int8 stepCntr;
   int32 ledTimer;
   int32 iteration;
   uint8 fading;
@@ -24,8 +27,8 @@ struct led
   int16 red;
   int16 green;
   int16 blue;
-  uint8 twinkleStepMax;
-  uint8 twinkleStep;
+  int8 twinkleStepMax;
+  int8 twinkleStep;
 
 };
 #pragma pack()

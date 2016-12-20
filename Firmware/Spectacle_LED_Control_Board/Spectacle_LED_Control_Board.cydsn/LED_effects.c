@@ -173,7 +173,7 @@ void scan(struct led *behavior)
 
 void twinkle(struct led *behavior)
 {
-  int index = behavior->iteration;
+  uint8 index = behavior->iteration;
   int8 twinkleStep=behavior->twinkleStep;
   int8 twinkleStepMax = behavior->twinkleStepMax;
   int redMax=0;
@@ -190,6 +190,7 @@ void twinkle(struct led *behavior)
     behavior->blue = 0;
     behavior->green = 0;
     index = rand() % behavior->stringLen;
+    behavior->iteration = index;
   }
   rgbBreak(behavior->color0, &redMax, &greenMax, &blueMax);
   int redStep = redMax/twinkleStepMax;
@@ -220,45 +221,69 @@ void twinkle(struct led *behavior)
                                                        behavior->blue));
   if (twinkleStep == 2*twinkleStepMax)
   {
-    behavior->inProcess = false;
+    behavior->inProcess = 0;
+    behavior->stepCntr = 0;
     setColor(0, behavior->stringID, behavior->stringLen);
   }
-  behavior->iteration = index;
   behavior->twinkleStep = twinkleStep;
 }
 
-/*
-bool lightning(struct led *behavior)
+
+void lightning(struct led *behavior)
 {
-  static int strikeStep=0;
-  static int strikeStepMax=0;
-  static uint32 colorCache;
-  static bool twinkling=false;
-  if (!twinkling)
+  if (behavior->inProcess == 0)
   {
-    twinkling = true;
+    behavior->inProcess = 1;
     srand(systemTimer);
-    strikeStepMax = (rand() % 6)+3;
-    colorCache = color;
-    strikeStep = 0;
+    behavior->twinkleStepMax = (rand() % 6)+3;
+    behavior->twinkleStep = 0;
   }
   if ((rand() % 2) == 1)
   {
-    setColor(colorCache, stringID);
+    setColor(behavior->color0, behavior->stringID, behavior->stringLen);
   }
   else
   {
-    setColor(0, stringID);
+    setColor(0, behavior->stringID, behavior->stringLen);
   }
-  if (strikeStep++ == 2*strikeStepMax)
+  if (behavior->twinkleStep++ == 2*behavior->twinkleStepMax)
   {
-    twinkling = false;
-    setColor(0, stringID);
-    return false;
+    behavior->inProcess = 0;
+    setColor(0, behavior->stringID, behavior->stringLen);
   }
-  return true;
 }
-*/
+
+void flame(struct led *behavior)
+{
+  int red, green, blue;
+  rgbBreak(behavior->color0, &red, &green, &blue);
+  if (red > 0)
+  {
+    red = (red/2) + (rand() % (red-(red/2)));
+  }
+  else
+  {
+    red = 0;
+  }
+  if (green > 0)
+  {
+    green = (green/2) + (rand() % (green-(green/2)));
+  }
+  else
+  {
+    green = 0;
+  }
+  if (blue > 0)
+  {
+    blue = (blue/2) + (rand() % (blue-(blue/2)));
+  }
+  else
+  {
+    blue = 0;
+  }
+  setColor(rgbMake(red, green, blue), behavior->stringID, behavior->stringLen);
+}
+
 // This function was lifted from the Adafruit NeoPixel library example. It
 //  calculates a color wheel transition from red thru green and blue back to
 //  red. Can be used for multiple effects.

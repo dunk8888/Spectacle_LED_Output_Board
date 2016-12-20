@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Spectacle_LED_Control_Board\Spectacle_LED_Control_Board\Spectacle_LED_Control_Board.cydwr\Pins">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Spectacle_LED_Control_Board\Spectacle_LED_Control_Board\Source Files\main.c">
 <ExpandedNodeIds>
 <v>Spectacle_LED_Control_Board</v>
 <v>Spectacle_LED_Control_Board\Spectacle_LED_Control_Board</v>
@@ -441,11 +441,9 @@
 <Unloaded />
 <OpenDocs>
 <name v=".\Spectacle_LED_Control_Board.cydsn\main.c" />
-<name v=".\Spectacle_LED_Control_Board.cydsn\programming.c" />
-<name v=".\Spectacle_LED_Control_Board.cydsn\Generated_Source\PSoC4\EZI2C.c" />
+<name v=".\Spectacle_LED_Control_Board.cydsn\LED_effects.c" />
+<name v=".\Spectacle_LED_Control_Board.cydsn\led.h" />
 <name v=".\Spectacle_LED_Control_Board.cydsn\Generated_Source\PSoC4\EZI2C_EZI2C_INT.c" />
-<name v=".\Spectacle_LED_Control_Board.cydsn\WS2811.c" />
-<name v=".\Spectacle_LED_Control_Board.cydsn\Generated_Source\PSoC4\Cm0plusStart.c" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -453,7 +451,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1262, 711" SelectedTabbedMdiWindow="628200a8-0322-42c7-b177-0a7547b561ce"><DocumentWindow Key="13c26a7c-4eb2-4ba5-a306-f8a215b50375" Guid="628200a8-0322-42c7-b177-0a7547b561ce" /><DocumentWindow Key="2e95a68b-bbdb-469d-96b5-1d505aaba38b" Guid="02da8e1b-d0d7-4ace-8720-04583a22bca2" /><DocumentWindow Key="becc0ea0-1984-45e1-9710-544fa2e2cbdb" Guid="b531b963-5dad-44ec-997c-6f5df88a9134" /><DocumentWindow Key="189da8c8-c61c-45f6-931c-a5c539434ab8" Guid="20e49049-2e8f-47ab-b5ed-3427e4a5e8bf" /><DocumentWindow Key="1c3a4388-2720-4214-8d0e-1d0d6b50dc90" Guid="61e0b6e2-85e9-4a38-bea9-a6e38afd525f" /><DocumentWindow Key="0935d0ad-d5fe-43e4-ad7a-f7afd69e6c05" Guid="f9bc2279-7200-4aea-ae0c-3372ce5cce75" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1262, 711" SelectedTabbedMdiWindow="71cfc4d9-25cb-43ee-8571-c55d0be6ef83"><DocumentWindow Key="c3c203da-bf8b-4c67-93d8-64b5f0fc176e" Guid="71cfc4d9-25cb-43ee-8571-c55d0be6ef83" /><DocumentWindow Key="c622f970-618a-47bc-b286-3b3023034ad3" Guid="f426ff10-bb07-4ac8-b0d9-31b9e1f25c7c" /><DocumentWindow Key="e73e1cc2-98f8-4844-b530-572de81fc5ca" Guid="66f7a3a6-ab74-427a-ac57-4bc137a7abed" /><DocumentWindow Key="81b3690e-b7f5-4e1a-b196-2273661d9407" Guid="5c328ed8-8a91-4ce8-8c7e-748ebe9e21f4" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

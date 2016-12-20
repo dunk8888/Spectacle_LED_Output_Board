@@ -239,10 +239,23 @@ int main()
           case TWINKLE:
             if (mailboxes[behaviors[i].channel] > behaviors[i].threshold)
             {
-              if (behaviors[i].ledTimer + behaviors[i].delay < systemTimer)
+              if (behaviors[i].inProcess == 1)
+              {
+                if (behaviors[i].stepCntr++ == behaviors[i].stepDelay)
+                {
+                  behaviors[i].stepCntr = 0;
+                  twinkle(&behaviors[i]);
+                }
+              }
+              else if (behaviors[i].ledTimer + behaviors[i].delay < systemTimer)
               {
                 behaviors[i].ledTimer = systemTimer;
-                twinkle(&behaviors[i]);
+                if (rand() % behaviors[i].pixel == 1)
+                {
+                  behaviors[i].stepDelay = (rand()%3) + 3;
+                  behaviors[i].stepCntr = 0;
+                  twinkle(&behaviors[i]);
+                }
               }
             }
             else
@@ -251,6 +264,49 @@ int main()
             }
             break;
           case LIGHTNING:
+            if (mailboxes[behaviors[i].channel] > behaviors[i].threshold)
+            {
+              if (behaviors[i].inProcess == 1)
+              {
+                lightning(&behaviors[i]);
+              }
+              else if (behaviors[i].ledTimer + behaviors[i].delay < systemTimer)
+              {
+                behaviors[i].ledTimer = systemTimer;
+                if (rand() % behaviors[i].pixel == 1)
+                {
+                  lightning(&behaviors[i]);
+                }
+              }
+            }
+            else
+            {
+              setColor(0, behaviors[i].stringID, behaviors[i].stringLen);
+            }
+            break;
+          case FLAME:
+            if (mailboxes[behaviors[i].channel] > behaviors[i].threshold)
+            {
+              if (behaviors[i].inProcess == 1)
+              {
+                if (behaviors[i].stepCntr++ == behaviors[i].stepDelay)
+                {
+                  behaviors[i].stepCntr = 0;
+                  flame(&behaviors[i]);
+                }
+              }
+              else if (behaviors[i].inProcess == 0)
+              {
+                behaviors[i].inProcess = 1;
+                behaviors[i].stepCntr = 0;
+                behaviors[i].stepDelay = 5;
+              }
+            }
+            else
+            {
+              setColor(0, behaviors[i].stringID, behaviors[i].stringLen);
+              behaviors[i].inProcess = 0;
+            }
             break;
         }
       }

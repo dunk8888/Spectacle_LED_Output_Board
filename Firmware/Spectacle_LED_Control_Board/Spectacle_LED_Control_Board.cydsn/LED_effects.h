@@ -13,9 +13,10 @@ void theaterchase(struct led *behavior);
 void scan(struct led *behavior);
 void twinkle(struct led *behavior);
 void lightning(struct led *behavior);
+void flame(struct led *behavior);
 
 enum {SET_COLOR, SET_PIXEL, FADE_STRING, PARTIAL_FILL, RAINBOW,
-      THEATER_CHASE, SCAN, TWINKLE, LIGHTNING};
+      THEATER_CHASE, SCAN, TWINKLE, LIGHTNING, FLAME};
 
 uint32 wheel(uint8 wheelPos);
 uint32 rgbMake(int red, int green, int blue);
