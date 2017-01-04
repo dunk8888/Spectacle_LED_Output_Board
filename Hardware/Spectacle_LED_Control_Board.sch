@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.7.0">
+<eagle version="7.6.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -20189,6 +20189,7 @@ Supply</text>
 near U4.5</text>
 <text x="170.18" y="58.42" size="0.6096" layer="97">C10 to be
 near U5.5</text>
+<text x="38.1" y="93.98" size="0.6096" layer="97">C5 C6 should be close to U2</text>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
