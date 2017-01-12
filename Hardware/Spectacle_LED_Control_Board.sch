@@ -20171,7 +20171,7 @@ near U1G6.31</text>
 <wire x1="104.14" y1="185.42" x2="104.14" y2="127" width="0.3048" layer="97" style="longdash"/>
 <wire x1="58.42" y1="86.36" x2="0" y2="86.36" width="0.3048" layer="97" style="longdash"/>
 <text x="165.1" y="7.62" size="2.54" layer="94" font="vector">Dia Campbell and Mike Hord</text>
-<text x="239.268" y="6.604" size="3.81" layer="91" font="vector">02</text>
+<text x="239.268" y="6.604" size="3.81" layer="91" font="vector">03</text>
 <wire x1="104.14" y1="127" x2="248.92" y2="127" width="0.3048" layer="97" style="longdash"/>
 <text x="236.22" y="129.54" size="3.81" layer="97" font="vector">MCU</text>
 <text x="105.156" y="36.068" size="3.81" layer="97" font="vector">Connectors</text>
