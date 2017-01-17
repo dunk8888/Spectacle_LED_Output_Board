@@ -20171,7 +20171,7 @@ near U1G6.31</text>
 <wire x1="104.14" y1="185.42" x2="104.14" y2="127" width="0.3048" layer="97" style="longdash"/>
 <wire x1="58.42" y1="86.36" x2="0" y2="86.36" width="0.3048" layer="97" style="longdash"/>
 <text x="165.1" y="7.62" size="2.54" layer="94" font="vector">Dia Campbell and Mike Hord</text>
-<text x="239.268" y="6.604" size="3.81" layer="91" font="vector">03</text>
+<text x="239.268" y="6.604" size="3.81" layer="94" font="vector">03</text>
 <wire x1="104.14" y1="127" x2="248.92" y2="127" width="0.3048" layer="97" style="longdash"/>
 <text x="236.22" y="129.54" size="3.81" layer="97" font="vector">MCU</text>
 <text x="105.156" y="36.068" size="3.81" layer="97" font="vector">Connectors</text>
@@ -20179,8 +20179,8 @@ near U1G6.31</text>
 Connectors</text>
 <text x="81.28" y="88.9" size="3.81" layer="97" font="vector">Power
 Supply</text>
-<text x="4.318" y="88.9" size="2.54" layer="97" font="vector">4.5V &lt; VIN &lt; 5.5V</text>
-<text x="228.6" y="102.362" size="1.778" layer="97" font="vector">I2C p/u</text>
+<text x="66.802" y="84.328" size="2.54" layer="97" font="vector">4.5V &lt; VIN &lt; 5.5V</text>
+<text x="217.932" y="92.71" size="1.778" layer="97" font="vector">I2C p/u</text>
 <wire x1="104.14" y1="127" x2="104.14" y2="35.56" width="0.3048" layer="97" style="longdash"/>
 <wire x1="104.14" y1="35.56" x2="147.32" y2="35.56" width="0.3048" layer="97" style="longdash"/>
 <wire x1="104.14" y1="35.56" x2="58.42" y2="35.56" width="0.3048" layer="97" style="longdash"/>
@@ -20189,7 +20189,7 @@ Supply</text>
 near U4.5</text>
 <text x="170.18" y="58.42" size="0.6096" layer="97">C10 to be
 near U5.5</text>
-<text x="38.1" y="93.98" size="0.6096" layer="97">C5 C6 should be close to U2</text>
+<text x="16.256" y="112.522" size="0.6096" layer="97">C5 C6 should be close to U2</text>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
@@ -20214,7 +20214,7 @@ near U5.5</text>
 <instance part="R3" gate="G$1" x="215.9" y="86.36" rot="R90"/>
 <instance part="R4" gate="G$1" x="231.14" y="86.36" rot="R90"/>
 <instance part="JP1" gate="G$1" x="223.52" y="96.52" smashed="yes" rot="R270">
-<attribute name="NAME" x="225.298" y="94.361" size="1.778" layer="95" rot="R180"/>
+<attribute name="NAME" x="220.472" y="98.933" size="1.778" layer="95" rot="R180"/>
 </instance>
 <instance part="J2" gate="G$1" x="108.966" y="57.912"/>
 <instance part="GND10" gate="1" x="124.206" y="47.752"/>
@@ -20274,14 +20274,17 @@ near U5.5</text>
 <instance part="GND18" gate="1" x="157.48" y="43.18"/>
 <instance part="SUPPLY17" gate="G$1" x="157.48" y="63.5"/>
 <instance part="U4" gate="G$1" x="162.56" y="104.14"/>
-<instance part="U5" gate="G$1" x="152.4" y="81.28"/>
+<instance part="U5" gate="G$1" x="152.4" y="81.28" smashed="yes">
+<attribute name="NAME" x="141.224" y="93.98" size="1.778" layer="95"/>
+<attribute name="VALUE" x="141.478" y="91.948" size="1.778" layer="96"/>
+</instance>
 <instance part="SUPPLY15" gate="G$1" x="170.18" y="119.38"/>
 <instance part="SUPPLY16" gate="G$1" x="160.02" y="96.52"/>
 <instance part="GND5" gate="1" x="170.18" y="96.52"/>
 <instance part="GND19" gate="1" x="160.02" y="73.66"/>
 <instance part="U1" gate="G1" x="129.54" y="170.18"/>
 <instance part="U1" gate="G2" x="162.56" y="170.18"/>
-<instance part="U1" gate="G3" x="198.12" y="170.18"/>
+<instance part="U1" gate="G3" x="203.2" y="170.18"/>
 <instance part="U1" gate="G4" x="147.32" y="142.24"/>
 <instance part="U1" gate="G5" x="180.34" y="142.24"/>
 <instance part="U1" gate="G6" x="10.16" y="157.48" smashed="yes" rot="MR0">
@@ -20808,8 +20811,8 @@ near U5.5</text>
 </segment>
 <segment>
 <pinref part="U1" gate="G3" pin="P2.6"/>
-<wire x1="185.42" y1="162.56" x2="182.88" y2="162.56" width="0.1524" layer="91"/>
-<label x="182.88" y="162.56" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="190.5" y1="162.56" x2="187.96" y2="162.56" width="0.1524" layer="91"/>
+<label x="187.96" y="162.56" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="LED_2" class="0">
@@ -20826,9 +20829,9 @@ near U5.5</text>
 </net>
 <net name="I2C_OUT_EN" class="0">
 <segment>
-<label x="182.88" y="170.18" size="1.27" layer="95" rot="R180" xref="yes"/>
+<label x="187.96" y="170.18" size="1.27" layer="95" rot="R180" xref="yes"/>
 <pinref part="U1" gate="G3" pin="P2.3"/>
-<wire x1="185.42" y1="170.18" x2="182.88" y2="170.18" width="0.1524" layer="91"/>
+<wire x1="190.5" y1="170.18" x2="187.96" y2="170.18" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="U4" gate="G$1" pin="CTRL_IN"/>
