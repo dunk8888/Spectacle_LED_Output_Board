@@ -1,3 +1,20 @@
+/****************************************************************************
+main.c
+Main code file for Spectacle LED output board project
+Mike Hord @ SparkFun Electronics
+24 Jan 2017
+https://github.com/sparkfun/Spectacle_LED_Output_Board
+
+This file includes main(), which configures the hardware for the system as
+well as monitoring the data coming from the director board.
+
+Development environment specifics:
+Developed in PSoC Creator 4.0
+
+This code is beerware; if you see me (or any other SparkFun employee) at the
+local, and you've found our code helpful, please buy us a round!
+****************************************************************************/
+
 #include <project.h>
 #include <stdbool.h>
 #include <math.h>
@@ -61,6 +78,7 @@ int main()
   I2C_Mem[PROG_ENABLE_REG] = 0;
   I2C_Mem[PROG_READY_REG] = 0;
   I2C_Mem[DATA_READY_REG] = 0;
+  I2C_Mem[BOARD_ID_REG] = BOARD_ID;
 
   // This is the startup code for the incoming I2C peripheral. We first enable
   // the peripheral, then tell it what it needs to know about the memory it

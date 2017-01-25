@@ -1,3 +1,20 @@
+/****************************************************************************
+programming.c
+Handles receipt of config data from director
+Mike Hord @ SparkFun Electronics
+24 Jan 2017
+https://github.com/sparkfun/Spectacle_LED_Output_Board
+
+This file handles the config data from the director board, which is loaded
+every time the system power cycles.
+
+Development environment specifics:
+Developed in PSoC Creator 4.0
+
+This code is beerware; if you see me (or any other SparkFun employee) at the
+local, and you've found our code helpful, please buy us a round!
+****************************************************************************/
+
 #include <project.h>
 #include "programming.h"
 #include "led.h"

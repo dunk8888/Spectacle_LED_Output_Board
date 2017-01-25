@@ -1,3 +1,20 @@
+/****************************************************************************
+led.h
+Main code file for Spectacle LED output board project
+Mike Hord @ SparkFun Electronics
+24 Jan 2017
+https://github.com/sparkfun/Spectacle_LED_Output_Board
+
+Defines the behavioral structure of the LED output board. This is uploaded
+to the board by the director board.
+
+Development environment specifics:
+Developed in PSoC Creator 4.0
+
+This code is beerware; if you see me (or any other SparkFun employee) at the
+local, and you've found our code helpful, please buy us a round!
+****************************************************************************/
+
 #ifndef __audio_h__
 #define __audio_h__
 #include "project.h"

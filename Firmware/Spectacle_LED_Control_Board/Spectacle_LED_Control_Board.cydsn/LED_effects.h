@@ -1,3 +1,19 @@
+/****************************************************************************
+LED_effects.h
+Header file for LED effects
+Mike Hord @ SparkFun Electronics
+24 Jan 2017
+https://github.com/sparkfun/Spectacle_LED_Output_Board
+
+Declares all the functions and constants for the LED effects.
+
+Development environment specifics:
+Developed in PSoC Creator 4.0
+
+This code is beerware; if you see me (or any other SparkFun employee) at the
+local, and you've found our code helpful, please buy us a round!
+****************************************************************************/
+
 #ifndef __led_effects_h__
 #define __led_effects_h__
     

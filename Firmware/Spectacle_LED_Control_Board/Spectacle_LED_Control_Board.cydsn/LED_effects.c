@@ -1,3 +1,19 @@
+/****************************************************************************
+LED_effects.c
+LED effects code file
+Mike Hord @ SparkFun Electronics
+24 Jan 2017
+https://github.com/sparkfun/Spectacle_LED_Output_Board
+
+Defines all of the functions which implement the various LED functions.
+
+Development environment specifics:
+Developed in PSoC Creator 4.0
+
+This code is beerware; if you see me (or any other SparkFun employee) at the
+local, and you've found our code helpful, please buy us a round!
+****************************************************************************/
+
 #include <project.h>
 #include <stdbool.h>
 #include <stdlib.h>

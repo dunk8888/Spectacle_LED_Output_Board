@@ -1,7 +1,24 @@
+/****************************************************************************
+spectacle.h
+Spectacle project definitions
+Mike Hord @ SparkFun Electronics
+24 Jan 2017
+https://github.com/sparkfun/Spectacle_LED_Output_Board
+
+Among other things, this defines the Specatacle board ID for this type of
+board.
+
+Development environment specifics:
+Developed in PSoC Creator 4.0
+
+This code is beerware; if you see me (or any other SparkFun employee) at the
+local, and you've found our code helpful, please buy us a round!
+****************************************************************************/
+
 #ifndef __spectacle_h__
 #define __spectacle_h__
 
-#define BOARD_ID        0x01 // unique identifier for this type of spectacle 
+#define BOARD_ID        0x00 // unique identifier for this type of spectacle 
                              // board. The MSb signifies whether this is an
                              // input type board (1) or output type (0)
 #define BOARD_ID_REG    0xff // I2C register holding the board ID.

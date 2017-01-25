@@ -37,10 +37,8 @@
       <Folder BuildType="STRICT" Path="C:\Dropbox\Projects\Spectacle\Spectacle_LED_Control_Board\Firmware\Spectacle_LED_Control_Board\Spectacle_LED_Control_Board.cydsn">
         <Files Root="C:\Dropbox\Projects\Spectacle\Spectacle_LED_Control_Board\Firmware\Spectacle_LED_Control_Board\Spectacle_LED_Control_Board.cydsn">
           <File BuildType="BUILD" Toolchain="">main.c</File>
-          <File BuildType="BUILD" Toolchain="">WS2811.c</File>
           <File BuildType="BUILD" Toolchain="">LED_effects.c</File>
           <File BuildType="BUILD" Toolchain="">programming.c</File>
-          <File BuildType="BUILD" Toolchain="">cyapicallbacks.h</File>
           <File BuildType="BUILD" Toolchain="">WS2811.h</File>
           <File BuildType="BUILD" Toolchain="">LED_effects.h</File>
           <File BuildType="BUILD" Toolchain="">programming.h</File>

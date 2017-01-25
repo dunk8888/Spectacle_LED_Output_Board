@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Spectacle_LED_Control_Board\Spectacle_LED_Control_Board\Source Files\main.c">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Spectacle_LED_Control_Board\Spectacle_LED_Control_Board\Header Files\programming.h">
 <ExpandedNodeIds>
 <v>Spectacle_LED_Control_Board</v>
 <v>Spectacle_LED_Control_Board\Spectacle_LED_Control_Board</v>
@@ -27,7 +27,6 @@
 <v>Spectacle_LED_Control_Board\Spectacle_LED_Control_Board\Spectacle_LED_Control_Board.cydwr\Directives</v>
 <v>Spectacle_LED_Control_Board\Spectacle_LED_Control_Board\Spectacle_LED_Control_Board.cydwr\Flash Security</v>
 <v>Spectacle_LED_Control_Board\Spectacle_LED_Control_Board\Header Files</v>
-<v>Spectacle_LED_Control_Board\Spectacle_LED_Control_Board\Header Files\cyapicallbacks.h</v>
 <v>Spectacle_LED_Control_Board\Spectacle_LED_Control_Board\Header Files\led.h</v>
 <v>Spectacle_LED_Control_Board\Spectacle_LED_Control_Board\Header Files\LED_effects.h</v>
 <v>Spectacle_LED_Control_Board\Spectacle_LED_Control_Board\Header Files\programming.h</v>
@@ -37,7 +36,6 @@
 <v>Spectacle_LED_Control_Board\Spectacle_LED_Control_Board\Source Files\LED_effects.c</v>
 <v>Spectacle_LED_Control_Board\Spectacle_LED_Control_Board\Source Files\main.c</v>
 <v>Spectacle_LED_Control_Board\Spectacle_LED_Control_Board\Source Files\programming.c</v>
-<v>Spectacle_LED_Control_Board\Spectacle_LED_Control_Board\Source Files\WS2811.c</v>
 <v>Spectacle_LED_Control_Board\Spectacle_LED_Control_Board\Generated_Source</v>
 <v>Spectacle_LED_Control_Board\Spectacle_LED_Control_Board\Generated_Source\PSoC4</v>
 <v>Spectacle_LED_Control_Board\Spectacle_LED_Control_Board\Generated_Source\PSoC4\cy_boot\cm0gcc.ld</v>
@@ -176,7 +174,6 @@
 <v>Spectacle_LED_Control_Board\Spectacle_LED_Control_Board\Spectacle_LED_Control_Board.cydwr\Directives</v>
 <v>Spectacle_LED_Control_Board\Spectacle_LED_Control_Board\Spectacle_LED_Control_Board.cydwr\Flash Security</v>
 <v>Spectacle_LED_Control_Board\Spectacle_LED_Control_Board\Header Files</v>
-<v>Spectacle_LED_Control_Board\Spectacle_LED_Control_Board\Header Files\cyapicallbacks.h</v>
 <v>Spectacle_LED_Control_Board\Spectacle_LED_Control_Board\Header Files\led.h</v>
 <v>Spectacle_LED_Control_Board\Spectacle_LED_Control_Board\Header Files\LED_effects.h</v>
 <v>Spectacle_LED_Control_Board\Spectacle_LED_Control_Board\Header Files\programming.h</v>
@@ -186,7 +183,6 @@
 <v>Spectacle_LED_Control_Board\Spectacle_LED_Control_Board\Source Files\LED_effects.c</v>
 <v>Spectacle_LED_Control_Board\Spectacle_LED_Control_Board\Source Files\main.c</v>
 <v>Spectacle_LED_Control_Board\Spectacle_LED_Control_Board\Source Files\programming.c</v>
-<v>Spectacle_LED_Control_Board\Spectacle_LED_Control_Board\Source Files\WS2811.c</v>
 <v>Spectacle_LED_Control_Board\Spectacle_LED_Control_Board\Generated_Source</v>
 <v>Spectacle_LED_Control_Board\Spectacle_LED_Control_Board\Generated_Source\PSoC4</v>
 <v>Spectacle_LED_Control_Board\Spectacle_LED_Control_Board\Generated_Source\PSoC4\cy_boot</v>
@@ -212,6 +208,8 @@
 <v>Spectacle_LED_Control_Board\Spectacle_LED_Control_Board\Generated_Source\PSoC4\StripLights_fisr</v>
 <v>Spectacle_LED_Control_Board\Spectacle_LED_Control_Board\Generated_Source\PSoC4\StripLights_fisr\StripLights_fisr.c</v>
 <v>Spectacle_LED_Control_Board\Spectacle_LED_Control_Board\Generated_Source\PSoC4\StripLights_fisr\StripLights_fisr.h</v>
+<v>Spectacle_LED_Control_Board\Spectacle_LED_Control_Board\Generated_Source\PSoC4\StripLights_StringSel</v>
+<v>Spectacle_LED_Control_Board\Spectacle_LED_Control_Board\Generated_Source\PSoC4\StripLights_StringSel\StripLights_StringSel.c</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Spectacle_LED_Control_Board\Spectacle_LED_Control_Board\StripLights_v2_2\API\SLights.c">
@@ -334,7 +332,6 @@
 <v>Spectacle_LED_Control_Board\Spectacle_LED_Control_Board\CortexM0\ARM_GCC_493\Debug\Listing Files\UART_tx_PM.lst</v>
 <v>Spectacle_LED_Control_Board\Spectacle_LED_Control_Board\CortexM0\ARM_GCC_493\Debug\Listing Files\UART_UART.lst</v>
 <v>Spectacle_LED_Control_Board\Spectacle_LED_Control_Board\CortexM0\ARM_GCC_493\Debug\Listing Files\UART_UART_BOOT.lst</v>
-<v>Spectacle_LED_Control_Board\Spectacle_LED_Control_Board\CortexM0\ARM_GCC_493\Debug\Listing Files\WS2811.lst</v>
 <v>Spectacle_LED_Control_Board\Spectacle_LED_Control_Board\CortexM0\ARM_GCC_493\Debug\Spectacle_LED_Control_Board.elf</v>
 <v>Spectacle_LED_Control_Board\Spectacle_LED_Control_Board\CortexM0\ARM_GCC_493\Debug\Spectacle_LED_Control_Board.hex</v>
 <v>Spectacle_LED_Control_Board\Spectacle_LED_Control_Board\CortexM0\ARM_GCC_493\Debug\Spectacle_LED_Control_Board.map</v>
@@ -440,10 +437,14 @@
 </CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
 <Unloaded />
 <OpenDocs>
-<name v=".\Spectacle_LED_Control_Board.cydsn\main.c" />
-<name v=".\Spectacle_LED_Control_Board.cydsn\LED_effects.c" />
 <name v=".\Spectacle_LED_Control_Board.cydsn\led.h" />
-<name v=".\Spectacle_LED_Control_Board.cydsn\Generated_Source\PSoC4\EZI2C_EZI2C_INT.c" />
+<name v=".\Spectacle_LED_Control_Board.cydsn\LED_effects.c" />
+<name v=".\Spectacle_LED_Control_Board.cydsn\LED_effects.h" />
+<name v=".\Spectacle_LED_Control_Board.cydsn\spectacle.h" />
+<name v=".\Spectacle_LED_Control_Board.cydsn\main.c" />
+<name v=".\Spectacle_LED_Control_Board.cydsn\programming.c" />
+<name v=".\Spectacle_LED_Control_Board.cydsn\WS2811.h" />
+<name v=".\Spectacle_LED_Control_Board.cydsn\programming.h" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -451,7 +452,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1262, 711" SelectedTabbedMdiWindow="71cfc4d9-25cb-43ee-8571-c55d0be6ef83"><DocumentWindow Key="c3c203da-bf8b-4c67-93d8-64b5f0fc176e" Guid="71cfc4d9-25cb-43ee-8571-c55d0be6ef83" /><DocumentWindow Key="c622f970-618a-47bc-b286-3b3023034ad3" Guid="f426ff10-bb07-4ac8-b0d9-31b9e1f25c7c" /><DocumentWindow Key="e73e1cc2-98f8-4844-b530-572de81fc5ca" Guid="66f7a3a6-ab74-427a-ac57-4bc137a7abed" /><DocumentWindow Key="81b3690e-b7f5-4e1a-b196-2273661d9407" Guid="5c328ed8-8a91-4ce8-8c7e-748ebe9e21f4" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1262, 711" SelectedTabbedMdiWindow="bb592b4a-002d-4909-bb5d-ad072b4d6c56"><DocumentWindow Key="63e5cf4f-6ab3-4920-904e-de98bb21c4a3" Guid="7a18251f-5982-4de4-91df-9ce54b4396e7" /><DocumentWindow Key="7e718804-38bf-46eb-a226-6fa49b00ac98" Guid="6613d65f-a0e1-4b3e-a808-89b6a8373126" /><DocumentWindow Key="513f4d5a-c755-4e28-b93d-57dad7a204fa" Guid="b20ec131-7ac0-4637-a33b-6d55b2bd507f" /><DocumentWindow Key="4b969ba5-0e8c-4d43-99ec-059ccdd6a1e6" Guid="0c1c4a9d-c17b-4c67-9b5f-82a474b00ac1" /><DocumentWindow Key="13635bb5-255b-4cac-8336-d64b397b2bf0" Guid="9ad28479-9c5e-4099-baab-2c8ef776e09f" /><DocumentWindow Key="1a83bb9f-1499-4eb0-bcad-8b7a1edc5b5c" Guid="5e255160-c989-4fef-9934-ab1be454bb49" /><DocumentWindow Key="b6c4d177-9ae9-42f5-bb4d-cca834083bfc" Guid="aedd4828-a6d5-42ce-9c72-94d796ec87cb" /><DocumentWindow Key="556611a2-7ce4-4546-9585-e6a153a2311c" Guid="bb592b4a-002d-4909-bb5d-ad072b4d6c56" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
