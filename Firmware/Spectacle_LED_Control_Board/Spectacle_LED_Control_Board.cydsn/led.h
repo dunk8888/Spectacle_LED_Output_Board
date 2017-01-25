@@ -18,6 +18,9 @@ local, and you've found our code helpful, please buy us a round!
 #ifndef __audio_h__
 #define __audio_h__
 #include "project.h"
+    
+#define USER_DATA_LEN 19
+    
 #pragma pack(1)
 struct led
 {
@@ -30,6 +33,7 @@ struct led
   uint8 pixel;
   uint8 stringLen;
   int32 delay;
+    // end of user definable attributes
   int8 stepDelayMax;
   int8 stepDelay;
   int8 stepCntr;
