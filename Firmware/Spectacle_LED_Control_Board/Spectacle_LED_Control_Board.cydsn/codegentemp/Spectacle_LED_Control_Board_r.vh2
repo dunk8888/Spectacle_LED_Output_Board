@@ -1,6 +1,6 @@
 -- Project:   Spectacle_LED_Control_Board
--- Generated: 12/08/2016 16:37:30
--- PSoC Creator  4.0
+-- Generated: 02/10/2017 09:30:00
+-- PSoC Creator  4.0 Update 1
 
 ENTITY Spectacle_LED_Control_Board IS
     PORT(

@@ -164,7 +164,7 @@ int main()
             }
             break;
           case FADE_STRING:
-            if (fading[behaviors[i].stringID] == 0)
+            if (behaviors[i].fading == 0)
             {
               fadeTimer[behaviors[i].stringID] = systemTimer;
               if (mailboxes[behaviors[i].channel] > behaviors[i].threshold)
@@ -188,7 +188,7 @@ int main()
               }
               else
               {
-                fading[behaviors[i].stringID] = 0;
+                behaviors[i].fading = 0;
               }
             }
             break;

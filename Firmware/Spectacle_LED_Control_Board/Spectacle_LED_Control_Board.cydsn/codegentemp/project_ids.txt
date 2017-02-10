@@ -1,7 +1,5 @@
-C:\Dropbox\Projects\Spectacle\Spectacle_LED_Control_Board\Firmware\Spectacle_LED_Control_Board\Spectacle_LED_Control_Board.cydsn\Spectacle_LED_Control_Board.cyprj|521590b1-b8d2-40ba-8fec-9d08d6bb1331
-C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|6a6b422e-0a6d-4b5e-b295-d8d93afe41ce
-C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|ee5f1bc9-1552-4b4e-9e9d-30442f92ce97
-C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|3491a7ac-ff42-486e-9f7d-dbe3bd3ad327
-C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|af4e1c7e-b01f-433a-b19a-d020694cd3c8
-C:\Dropbox\PSoC_Creator\FunWithLEDs\FunWithLEDs\StripLightLib.cylib\StripLightLib.cyprj|928c9d61-abf6-4ec7-b32f-ffc5f8f894fc
-C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\default\CyReferenceLibrary\CyReferenceLibrary.cylib\CyReferenceLibrary.cyprj|b18edd56-4ce5-46d1-b84b-eb8fd5bda01d
+C:\Dropbox\Projects\Spectacle\Spectacle_LED_Control_Board\Firmware\Spectacle_LED_Control_Board\Spectacle_LED_Control_Board.cydsn\Spectacle_LED_Control_Board.cyprj|399be843-2946-4f07-a3df-e3b030ea2739
+C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|0760d552-e629-45c3-95a6-516245041c0f
+C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|ecea4845-be0d-4e9e-ba16-29162d083d03
+C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|ff2f8529-02a9-46df-9eea-80f9a4637044
+C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|c1553d4e-06cb-4cfd-9be2-c08dc21293e2

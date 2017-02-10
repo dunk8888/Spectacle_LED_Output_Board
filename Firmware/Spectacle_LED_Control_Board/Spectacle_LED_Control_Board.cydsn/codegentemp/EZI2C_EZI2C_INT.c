@@ -18,7 +18,7 @@
 
 #include "EZI2C_PVT.h"
 #include "EZI2C_EZI2C_PVT.h"
-#include "cyapicallbacks.h"
+
 
 #if(EZI2C_EZI2C_SCL_STRETCH_ENABLE_CONST)
     /*******************************************************************************

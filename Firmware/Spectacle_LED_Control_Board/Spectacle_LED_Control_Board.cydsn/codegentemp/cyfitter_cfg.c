@@ -1,7 +1,7 @@
 /*******************************************************************************
 * File Name: cyfitter_cfg.c
 * 
-* PSoC Creator  4.0
+* PSoC Creator  4.0 Update 1
 *
 * Description:
 * This file contains device initialization code.
@@ -22,7 +22,6 @@
 #include "CyLib.h"
 #include "CyLFClk.h"
 #include "cyfitter_cfg.h"
-#include "cyapicallbacks.h"
 
 
 #if defined(__GNUC__) || defined(__ARMCC_VERSION)
@@ -221,7 +220,7 @@ static void ClockSetup(void)
 	CY_SET_XTND_REG32((void CYFAR *)(CYREG_CLK_DIVIDER_A00), 0x80000005u);
 
 	/* CYDEV_CLK_DIVIDER_B00 Starting address: CYDEV_CLK_DIVIDER_B00 */
-	CY_SET_XTND_REG32((void CYFAR *)(CYREG_CLK_DIVIDER_B00), 0x80000022u);
+	CY_SET_XTND_REG32((void CYFAR *)(CYREG_CLK_DIVIDER_B00), 0x800001A0u);
 
 	(void)CyIntSetVector(9u, &CySysWdtIsr);
 	CyIntEnable(9u);

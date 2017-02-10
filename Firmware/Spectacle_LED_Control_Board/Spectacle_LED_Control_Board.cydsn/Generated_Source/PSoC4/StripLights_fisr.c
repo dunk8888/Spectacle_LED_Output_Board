@@ -19,7 +19,7 @@
 #include <cydevice_trm.h>
 #include <CyLib.h>
 #include <StripLights_fisr.h>
-#include "cyapicallbacks.h"
+
 
 #if !defined(StripLights_fisr__REMOVED) /* Check for removal by optimization */
 

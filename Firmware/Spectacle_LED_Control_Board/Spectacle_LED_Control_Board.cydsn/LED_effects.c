@@ -15,7 +15,7 @@ local, and you've found our code helpful, please buy us a round!
 ****************************************************************************/
 
 #include <project.h>
-#include <stdbool.h>
+#include <stdio.h>
 #include <stdlib.h>
 #include "WS2811.h"
 #include "led.h"
@@ -23,9 +23,9 @@ local, and you've found our code helpful, please buy us a round!
 
 extern uint32 systemTimer;
 extern uint8 fading[3];
-int16 redStep[3] = {0,0,0};
-int16 greenStep[3] = {0,0,0};
-int16 blueStep[3] = {0,0,0};
+float redStep[3] = {0,0,0};
+float greenStep[3] = {0,0,0};
+float blueStep[3] = {0,0,0};
 int16 red[3] = {0,0,0};
 int16 green[3] = {0,0,0};
 int16 blue[3] = {0,0,0};
@@ -47,87 +47,42 @@ void fadeString(struct led *behavior)
   int blueStop;
   int greenStart;
   int greenStop;
-  int temp;
   rgbBreak(behavior->color0, &redStart, &greenStart, &blueStart);
   rgbBreak(behavior->color1, &redStop, &greenStop, &blueStop);
-  if (redStart>redStop)
-  {
-    temp = redStart;
-    redStart = redStop;
-    redStop = temp;
-  } 
-  if (blueStart>blueStop)
-  {
-    temp = blueStart;
-    blueStart = blueStop;
-    blueStop = temp;
-  } 
-  if (greenStart>greenStop)
-  {
-    temp = greenStart;
-    greenStart = greenStop;
-    greenStop = temp;
-  } 
-  int redRange = redStop - redStart;
-  int blueRange = blueStop - blueStart;
-  int greenRange = greenStop - greenStart;
-  if (fading[behavior->stringID] == 0)
-  {
-    fading[behavior->stringID] = 1;
-    redStep[behavior->stringID] = redRange/16;
-    blueStep[behavior->stringID] = blueRange/16;
-    greenStep[behavior->stringID] = greenRange/16;
-    red[behavior->stringID] = redStart;
-    blue[behavior->stringID] = blueStart;
-    green[behavior->stringID] = greenStart;
-  }
+  
+  redStep[behavior->stringID] = (redStop - redStart)/16;
+  greenStep[behavior->stringID] = (greenStop - greenStart)/16;
+  blueStep[behavior->stringID] = (blueStop - blueStart)/16;
 
-  if (red[behavior->stringID]+redStep[behavior->stringID] >= redStop)
+  if (behavior->fading == 0)
   {
-    red[behavior->stringID] = redStop;
-    redStep[behavior->stringID]*=-1;
-  }
-  else if (red[behavior->stringID]+redStep[behavior->stringID] <= redStart)
-  {
-    red[behavior->stringID] = redStart;
-    redStep[behavior->stringID] *= -1;
-  }
-  else
-  {
-    red[behavior->stringID] += redStep[behavior->stringID];
-  }
-
-  if (blue[behavior->stringID]+blueStep[behavior->stringID] >= blueStop)
-  {
-    blue[behavior->stringID] = blueStop;
-    blueStep[behavior->stringID]*=-1;
-  }
-  else if (blue[behavior->stringID]+blueStep[behavior->stringID] <= blueStart)
-  {
-    blue[behavior->stringID] = blueStart;
-    blueStep[behavior->stringID] *= -1;
-  }
-  else
-  {
-    blue[behavior->stringID] += blueStep[behavior->stringID];
+    behavior->iteration = 0;
+    behavior->direction = 1;
+    behavior->fading = 1;
   }
   
-  if (green[behavior->stringID]+greenStep[behavior->stringID] >= greenStop)
+  behavior->iteration += behavior->direction;
+  
+  if (behavior->iteration == 17 || behavior->iteration == 0)
   {
-    green[behavior->stringID] = greenStop;
-    greenStep[behavior->stringID]*=-1;
+    behavior->direction *= -1;
   }
-  else if (green[behavior->stringID]+greenStep[behavior->stringID] <= greenStart)
-  {
-    green[behavior->stringID] = greenStart;
-    greenStep[behavior->stringID] *= -1;
-  }
-  else
-  {
-    green[behavior->stringID] += greenStep[behavior->stringID];
-  }
-  uint32 color = rgbMake(blue[behavior->stringID], green[behavior->stringID], 
-                         red[behavior->stringID]);
+  red[behavior->stringID] = (int16)(redStart + behavior->iteration*redStep[behavior->stringID]);
+  green[behavior->stringID] = (int16)(greenStart + behavior->iteration*greenStep[behavior->stringID]);
+  blue[behavior->stringID] = (int16)(blueStart + behavior->iteration*blueStep[behavior->stringID]);
+  //char buffer[64];
+  //sprintf(buffer, "Iter: %ld r%d g%d b%d\n", behavior->iteration, red[behavior->stringID], green[behavior->stringID], blue[behavior->stringID]);
+  //UART_UartPutString(buffer);
+  if (red[behavior->stringID] < 0) red[behavior->stringID] = 0;
+  if (red[behavior->stringID] > 255) red[behavior->stringID] = 255;
+  if (green[behavior->stringID] < 0) green[behavior->stringID] = 0;
+  if (green[behavior->stringID] > 255) green[behavior->stringID] = 255;
+  if (blue[behavior->stringID] < 0) blue[behavior->stringID] = 0;
+  if (blue[behavior->stringID] > 255) blue[behavior->stringID] = 255;
+  
+  uint32 color = rgbMake(red[behavior->stringID], green[behavior->stringID], 
+                         blue[behavior->stringID]);
+  
   setColor(color, behavior->stringID, behavior->stringLen);
 }
 

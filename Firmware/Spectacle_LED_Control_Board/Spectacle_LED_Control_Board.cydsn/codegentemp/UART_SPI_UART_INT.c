@@ -18,7 +18,7 @@
 
 #include "UART_PVT.h"
 #include "UART_SPI_UART_PVT.h"
-#include "cyapicallbacks.h"
+
 
 #if (UART_SCB_IRQ_INTERNAL)
 /*******************************************************************************

@@ -6,7 +6,7 @@
 
 #Build Date:         Apr 29 2016 09:00:55
 
-#File Generated:     Dec 8 2016 16:37:30
+#File Generated:     Feb 10 2017 09:30:00
 
 #Purpose:            
 
@@ -85,8 +85,8 @@ Clock: CyRouted1            | Frequency: N/A       | Target:  48.0 MHz
 Clock: CySYSCLK             | Frequency: N/A       | Target:  48.0 MHz
 Clock: EZI2C_SCBCLK         | Frequency: N/A       | Target:   8.0 MHz
 Clock: EZI2C_SCBCLK(FFB)    | Frequency: N/A       | Target:   8.0 MHz
-Clock: UART_SCBCLK          | Frequency: N/A       | Target:   1.4 MHz
-Clock: UART_SCBCLK(FFB)     | Frequency: N/A       | Target:   1.4 MHz
+Clock: UART_SCBCLK          | Frequency: N/A       | Target:   0.1 MHz
+Clock: UART_SCBCLK(FFB)     | Frequency: N/A       | Target:   0.1 MHz
 
 ======================================================================
                      End of Clock Summary
@@ -107,8 +107,8 @@ Clock: CyRouted1            | Frequency: N/A       | Target:  48.0 MHz
 Clock: CySYSCLK             | Frequency: N/A       | Target:  48.0 MHz
 Clock: EZI2C_SCBCLK         | Frequency: N/A       | Target:   8.0 MHz
 Clock: EZI2C_SCBCLK(FFB)    | Frequency: N/A       | Target:   8.0 MHz
-Clock: UART_SCBCLK          | Frequency: N/A       | Target:   1.4 MHz
-Clock: UART_SCBCLK(FFB)     | Frequency: N/A       | Target:   1.4 MHz
+Clock: UART_SCBCLK          | Frequency: N/A       | Target:   0.1 MHz
+Clock: UART_SCBCLK(FFB)     | Frequency: N/A       | Target:   0.1 MHz
 
 ======================================================================
                      End of Clock Summary
@@ -152,8 +152,8 @@ Clock: CyRouted1            | Frequency: N/A       | Target:  48.0 MHz
 Clock: CySYSCLK             | Frequency: N/A       | Target:  48.0 MHz
 Clock: EZI2C_SCBCLK         | Frequency: N/A       | Target:   8.0 MHz
 Clock: EZI2C_SCBCLK(FFB)    | Frequency: N/A       | Target:   8.0 MHz
-Clock: UART_SCBCLK          | Frequency: N/A       | Target:   1.4 MHz
-Clock: UART_SCBCLK(FFB)     | Frequency: N/A       | Target:   1.4 MHz
+Clock: UART_SCBCLK          | Frequency: N/A       | Target:   0.1 MHz
+Clock: UART_SCBCLK(FFB)     | Frequency: N/A       | Target:   0.1 MHz
 
 ======================================================================
                      End of Clock Summary

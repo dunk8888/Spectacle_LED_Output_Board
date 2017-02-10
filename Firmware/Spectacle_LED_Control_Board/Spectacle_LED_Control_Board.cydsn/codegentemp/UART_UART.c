@@ -18,7 +18,7 @@
 
 #include "UART_PVT.h"
 #include "UART_SPI_UART_PVT.h"
-#include "cyapicallbacks.h"
+
 
 #if (UART_UART_WAKE_ENABLE_CONST && UART_UART_RX_WAKEUP_IRQ)
     /**
