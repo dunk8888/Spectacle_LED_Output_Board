@@ -32,7 +32,7 @@ set_io "\EZI2C:sda(0)\" iocell 4 1
 set_io "\UART:rx(0)\" iocell 0 4
 set_location "\UART:SCB\" m0s8scbcell -1 -1 1
 set_location "\StripLights:B_WS2811:ctrl\" controlcell 0 1 6 
-set_io "LED(0)" iocell 1 6
+set_io "LED(0)" iocell 1 4
 set_io "I2C_OUT_EN(0)" iocell 2 3
 set_location "\EZI2C:SCB\" m0s8scbcell -1 -1 0
 set_location "\StripLights:StringSel:Sync:ctrl_reg\" controlcell 1 1 6 

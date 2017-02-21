@@ -39,7 +39,7 @@ CY_ISR_PROTO(tickISR);
 // single string of LEDs may have more than one channel associated with it,
 // however, only one channel of behavior will be actively displayed at a time.
 //struct led *behaviors;
-struct led behaviors[10];
+struct led behaviors[20];
 // behaviorListLen tracks the number of behaviors that have been uploaded from
 // the director. We cycle through this number of behaviors on every go around
 // of the 100Hz timer.
@@ -60,6 +60,7 @@ int32 fadeTimer[3] = {0,0,0};
 int main()
 {
   CyGlobalIntEnable; /* Enable global interrupts. */
+  I2C_OUT_EN_Write(0);
   StripLights_Start(); 
   StripLights_Dim(0);
   StripLights_MemClear(0);
@@ -70,6 +71,7 @@ int main()
   // We need to clear any cruft from the mailboxes to avoid spurious behavior.
   bzero(mailboxes, 128);
 
+  //behaviors = malloc(64*sizeof(struct led));
   // Point our GP I2C memory pointer at the I2C memory area.
   I2C_Mem = (uint8*)mailboxes;
 
@@ -78,6 +80,7 @@ int main()
   I2C_Mem[PROG_ENABLE_REG] = 0;
   I2C_Mem[PROG_READY_REG] = 0;
   I2C_Mem[DATA_READY_REG] = 0;
+  I2C_Mem[CONFIGURED_REG] = 0;
   I2C_Mem[BOARD_ID_REG] = BOARD_ID;
 
   // This is the startup code for the incoming I2C peripheral. We first enable
@@ -120,7 +123,6 @@ int main()
       if (I2C_Mem[PROG_ENABLE_REG] == 1)
       {
         program();
-        I2C_OUT_EN_Write(0);
       }
       if (I2C_Mem[CONFIGURED_REG] == 1)
       {

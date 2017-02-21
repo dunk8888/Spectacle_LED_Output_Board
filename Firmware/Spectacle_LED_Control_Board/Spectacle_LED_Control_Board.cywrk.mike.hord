@@ -298,15 +298,16 @@
 </CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
 <Unloaded />
 <OpenDocs>
+<name v=".\Spectacle_LED_Control_Board.cydsn\main.c" />
 <name v=".\Spectacle_LED_Control_Board.cydsn\led.h" />
 <name v=".\Spectacle_LED_Control_Board.cydsn\LED_effects.c" />
 <name v=".\Spectacle_LED_Control_Board.cydsn\LED_effects.h" />
 <name v=".\Spectacle_LED_Control_Board.cydsn\spectacle.h" />
-<name v=".\Spectacle_LED_Control_Board.cydsn\main.c" />
 <name v=".\Spectacle_LED_Control_Board.cydsn\programming.c" />
 <name v=".\Spectacle_LED_Control_Board.cydsn\WS2811.h" />
 <name v=".\Spectacle_LED_Control_Board.cydsn\programming.h" />
 <name v=".\Spectacle_LED_Control_Board.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\Spectacle_LED_Control_Board.cydsn\Spectacle_LED_Control_Board.cydwr" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -314,7 +315,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1262, 711" SelectedTabbedMdiWindow="9bb2bc2b-4730-40f2-af2b-b84b7fa2241d"><DocumentWindow Key="ce9f7210-89e3-423d-af3a-6a8935cae2ec" Guid="d48821b1-8a83-4974-b429-f073218463e8" /><DocumentWindow Key="84331fb7-b278-4413-ab25-96a6246be8b3" Guid="9bb2bc2b-4730-40f2-af2b-b84b7fa2241d" /><DocumentWindow Key="8508ea05-171a-4261-b27d-fc3965f92d01" Guid="1af61fd5-2da6-4427-ab56-d403508359e2" /><DocumentWindow Key="24479e76-ad74-4350-9873-b39ca075fa39" Guid="97e6b525-b979-42ec-8ad4-5675e3ac88b8" /><DocumentWindow Key="995226b0-7195-4be5-a205-22ef31a407f2" Guid="e7c32033-d458-41bf-a4aa-b285df55c94a" /><DocumentWindow Key="181c7fa9-e297-42c5-bc97-794db120bb8f" Guid="ebbd3d90-93f7-40fd-a41f-70cf3dc9dcd9" /><DocumentWindow Key="c72b2f5c-6a29-4501-ad02-3f27d7576bfa" Guid="c1a17a2a-9f27-4463-b5a4-5432c13eb70f" /><DocumentWindow Key="ed161a60-4521-49b1-ac02-0f88a29ad25d" Guid="c9c02258-8f76-46f6-b24d-c2dfc067507a" /><DocumentWindow Key="35557210-dd88-4806-8879-c0de852584fc" Guid="f24acd7a-5fba-4789-8f15-0b246f66be9d" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1262, 711" SelectedTabbedMdiWindow="ddd66f19-01b1-4bfa-abb2-6bd3898dd5e0"><DocumentWindow Key="f512f355-94d5-49b0-a677-d2f527b6a0df" Guid="ddd66f19-01b1-4bfa-abb2-6bd3898dd5e0" /><DocumentWindow Key="89602f5b-f025-4505-8343-889cfc4b026b" Guid="25dbbe4f-4b77-4554-8e15-a3e08c0f9a31" /><DocumentWindow Key="f44130f6-bc4b-4ce7-baa3-c7acb511811b" Guid="4655ac3d-ca71-4d69-8ad9-87a4253a4cbf" /><DocumentWindow Key="518143e5-2f3c-4844-97b3-f9d62ee209e0" Guid="0a2cc600-b4e8-4640-83fb-84920a302ae5" /><DocumentWindow Key="43edd9cb-5db1-473f-92f3-53bdef8c47e8" Guid="2a81a558-8c74-4d18-89be-8ebbfb788e0b" /><DocumentWindow Key="cbbb532c-beab-4ea8-b291-e4ef2b2ef8fb" Guid="cd702d5b-9012-4b53-95a5-2812ae1d6e42" /><DocumentWindow Key="0175d763-6806-466f-8b80-5b5340723faf" Guid="fe8afd97-736c-4556-90f3-c06471e86eeb" /><DocumentWindow Key="871f8b79-a3e2-4b72-a3ad-c729200c7a1f" Guid="7da469eb-e127-4772-a16d-d18f16e65a53" /><DocumentWindow Key="9598af9e-bc34-4bf4-95ba-cc395aad05b2" Guid="9a21fde1-be73-4e6c-a108-4ba92a41d56c" /><DocumentWindow Key="0d71de3e-1913-4d76-af1c-e420ddd4d1d3" Guid="2ab8456d-1508-4997-bade-efca4e366894" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

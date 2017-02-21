@@ -1,5 +1,5 @@
 -- Project:   Spectacle_LED_Control_Board
--- Generated: 02/10/2017 09:30:00
+-- Generated: 02/16/2017 15:54:47
 -- PSoC Creator  4.0 Update 1
 
 ENTITY Spectacle_LED_Control_Board IS
@@ -143,7 +143,7 @@ ARCHITECTURE __DEFAULT__ OF Spectacle_LED_Control_Board IS
     ATTRIBUTE lib_model OF LED1(0) : LABEL IS "iocell7";
     ATTRIBUTE Location OF LED1(0) : LABEL IS "P2[6]";
     ATTRIBUTE lib_model OF LED(0) : LABEL IS "iocell8";
-    ATTRIBUTE Location OF LED(0) : LABEL IS "P1[6]";
+    ATTRIBUTE Location OF LED(0) : LABEL IS "P1[4]";
     ATTRIBUTE lib_model OF I2C_OUT_EN(0) : LABEL IS "iocell9";
     ATTRIBUTE Location OF I2C_OUT_EN(0) : LABEL IS "P2[3]";
     ATTRIBUTE lib_model OF Net_866 : LABEL IS "macrocell1";

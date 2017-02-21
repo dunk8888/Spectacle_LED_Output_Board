@@ -1,9 +1,9 @@
 Loading plugins phase: Elapsed time ==> 0s.162ms
 <CYPRESSTAG name="CyDsfit arguments...">
-cydsfit arguments: -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p C:\Dropbox\Projects\Spectacle\Spectacle_LED_Control_Board\Firmware\Spectacle_LED_Control_Board\Spectacle_LED_Control_Board.cydsn\Spectacle_LED_Control_Board.cyprj -d CY8C4245AXI-483 -s C:\Dropbox\Projects\Spectacle\Spectacle_LED_Control_Board\Firmware\Spectacle_LED_Control_Board\Spectacle_LED_Control_Board.cydsn\Generated_Source\PSoC4 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE</CYPRESSTAG>
+cydsfit arguments: -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p C:\Dropbox\Projects\Spectacle\Spectacle_LED_Control_Board\Firmware\Spectacle_LED_Control_Board\Spectacle_LED_Control_Board.cydsn\Spectacle_LED_Control_Board.cyprj -d CY8C4245LQI-483 -s C:\Dropbox\Projects\Spectacle\Spectacle_LED_Control_Board\Firmware\Spectacle_LED_Control_Board\Spectacle_LED_Control_Board.cydsn\Generated_Source\PSoC4 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE</CYPRESSTAG>
 <CYPRESSTAG name="Design elaboration results...">
 </CYPRESSTAG>
-Elaboration phase: Elapsed time ==> 0s.727ms
+Elaboration phase: Elapsed time ==> 0s.728ms
 <CYPRESSTAG name="HDL generation results...">
 </CYPRESSTAG>
 HDL generation phase: Elapsed time ==> 0s.032ms
@@ -40,7 +40,7 @@ Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Dropbox\Pro
 ======================================================================
 
 vlogfe V6.3 IR 41:  Verilog parser
-Fri Feb 10 09:29:59 2017
+Thu Feb 16 15:54:46 2017
 
 
 ======================================================================
@@ -50,7 +50,7 @@ Options  :    -yv2 -q10 Spectacle_LED_Control_Board.v
 ======================================================================
 
 vpp V6.3 IR 41:  Verilog Pre-Processor
-Fri Feb 10 09:29:59 2017
+Thu Feb 16 15:54:46 2017
 
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\ZeroTerminal\ZeroTerminal.v'
@@ -91,7 +91,7 @@ Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Dropbox\Pro
 ======================================================================
 
 tovif V6.3 IR 41:  High-level synthesis
-Fri Feb 10 09:29:59 2017
+Thu Feb 16 15:54:46 2017
 
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\warp\lib\common\std.vhd'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\warp\lib\common\cypress.vhd'.
@@ -126,7 +126,7 @@ Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Dropbox\Pro
 ======================================================================
 
 topld V6.3 IR 41:  Synthesis and optimization
-Fri Feb 10 09:30:00 2017
+Thu Feb 16 15:54:46 2017
 
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\warp\lib\common\std.vhd'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\warp\lib\common\cypress.vhd'.
@@ -434,14 +434,14 @@ CYPRESS_DIR    : C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\wa
 Warp Program   : C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\warp\bin\warp.exe
 Warp Arguments : -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Dropbox\Projects\Spectacle\Spectacle_LED_Control_Board\Firmware\Spectacle_LED_Control_Board\Spectacle_LED_Control_Board.cydsn\Spectacle_LED_Control_Board.cyprj -dcpsoc3 Spectacle_LED_Control_Board.v -verilog
 </CYPRESSTAG>
-Warp synthesis phase: Elapsed time ==> 0s.377ms
+Warp synthesis phase: Elapsed time ==> 0s.372ms
 <CYPRESSTAG name="Fitter results...">
 <CYPRESSTAG name="Fitter startup details...">
-cyp3fit: V4.0.0.432, Family: PSoC3, Started at: Friday, 10 February 2017 09:30:00
-Options: -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Dropbox\Projects\Spectacle\Spectacle_LED_Control_Board\Firmware\Spectacle_LED_Control_Board\Spectacle_LED_Control_Board.cydsn\Spectacle_LED_Control_Board.cyprj -d CY8C4245AXI-483 Spectacle_LED_Control_Board.v -verilog
+cyp3fit: V4.0.0.432, Family: PSoC3, Started at: Thursday, 16 February 2017 15:54:46
+Options: -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Dropbox\Projects\Spectacle\Spectacle_LED_Control_Board\Firmware\Spectacle_LED_Control_Board\Spectacle_LED_Control_Board.cydsn\Spectacle_LED_Control_Board.cyprj -d CY8C4245LQI-483 Spectacle_LED_Control_Board.v -verilog
 </CYPRESSTAG>
 <CYPRESSTAG name="Design parsing">
-Design parsing phase: Elapsed time ==> 0s.006ms
+Design parsing phase: Elapsed time ==> 0s.007ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Tech Mapping">
 <CYPRESSTAG name="Initial Mapping" icon="FILE_RPT_TECHM">
@@ -1268,7 +1268,7 @@ Resource Type                 : Used : Free :  Max :  % Used
 ============================================================
 Digital Clocks                :    0 :    4 :    4 :  0.00 %
 Interrupts                    :    3 :   29 :   32 :  9.38 %
-IO                            :   11 :   25 :   36 : 30.56 %
+IO                            :   11 :   23 :   34 : 32.35 %
 Segment LCD                   :    0 :    1 :    1 :  0.00 %
 CapSense                      :    0 :    1 :    1 :  0.00 %
 Die Temp                      :    0 :    1 :    1 :  0.00 %
@@ -1290,18 +1290,18 @@ DAC                           :      :      :      :
   7-bit IDAC                  :    0 :    1 :    1 :  0.00 %
   8-bit IDAC                  :    0 :    1 :    1 :  0.00 %
 </CYPRESSTAG>
-Technology Mapping: Elapsed time ==> 0s.040ms
-Tech Mapping phase: Elapsed time ==> 0s.053ms
+Technology Mapping: Elapsed time ==> 0s.038ms
+Tech Mapping phase: Elapsed time ==> 0s.049ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Placement">
 <CYPRESSTAG name="Analog Placement">
-Elapsed time ==> 0.0803356s
+Elapsed time ==> 0.0740498s
 </CYPRESSTAG>
-Analog Placement phase: Elapsed time ==> 0s.180ms
+Analog Placement phase: Elapsed time ==> 0s.163ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Routing">
 <CYPRESSTAG name="Analog Routing">
-Route success=True, Iterations=1 Elapsed=0.0005546 secs
+Route success=True, Iterations=1 Elapsed=0.0004700 secs
 </CYPRESSTAG>
 Analog Routing phase: Elapsed time ==> 0s.000ms
 </CYPRESSTAG>
@@ -1970,7 +1970,7 @@ Pin : Name = LED2(0)
     }
 
 Port 1 contains the following IO cells:
-[IoId=6]: 
+[IoId=4]: 
 Pin : Name = LED(0)
     Attributes:
         In Group/Port: True
@@ -2318,7 +2318,7 @@ Port | Pin | Fixed |      Type |       Drive Mode |           Name | Connections
      |   5 |     * |      NONE |         CMOS_OUT |   \UART:tx(0)\ | In(\UART:tx_wire\)
      |   7 |     * |      NONE |         CMOS_OUT |        LED2(0) | In(Net_868)
 -----+-----+-------+-----------+------------------+----------------+---------------------
-   1 |   6 |     * |      NONE |         CMOS_OUT |         LED(0) | 
+   1 |   4 |     * |      NONE |         CMOS_OUT |         LED(0) | 
 -----+-----+-------+-----------+------------------+----------------+---------------------
    2 |   3 |     * |      NONE |         CMOS_OUT |  I2C_OUT_EN(0) | 
      |   6 |     * |      NONE |         CMOS_OUT |        LED1(0) | In(Net_867)
@@ -2332,31 +2332,31 @@ Port | Pin | Fixed |      Type |       Drive Mode |           Name | Connections
 </CYPRESSTAG>
 </CYPRESSTAG>
 Digital component placer commit/Report: Elapsed time ==> 0s.001ms
-Digital Placement phase: Elapsed time ==> 0s.397ms
+Digital Placement phase: Elapsed time ==> 0s.409ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Digital Routing">
 Routing successful.
-Digital Routing phase: Elapsed time ==> 0s.464ms
+Digital Routing phase: Elapsed time ==> 0s.466ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Bitstream Generation">
-Bitstream Generation phase: Elapsed time ==> 0s.095ms
+Bitstream Generation phase: Elapsed time ==> 0s.096ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Bitstream Verification">
 Bitstream Verification phase: Elapsed time ==> 0s.013ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Static timing analysis">
 Timing report is in Spectacle_LED_Control_Board_timing.html.
-Static timing analysis phase: Elapsed time ==> 0s.125ms
+Static timing analysis phase: Elapsed time ==> 0s.126ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Data reporting">
 Data reporting phase: Elapsed time ==> 0s.000ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Database update...">
-Design database save phase: Elapsed time ==> 0s.098ms
+Design database save phase: Elapsed time ==> 0s.101ms
 </CYPRESSTAG>
 cydsfit: Elapsed time ==> 1s.458ms
 </CYPRESSTAG>
 Fitter phase: Elapsed time ==> 1s.459ms
-API generation phase: Elapsed time ==> 0s.957ms
-Dependency generation phase: Elapsed time ==> 0s.009ms
-Cleanup phase: Elapsed time ==> 0s.000ms
+API generation phase: Elapsed time ==> 1s.002ms
+Dependency generation phase: Elapsed time ==> 0s.010ms
+Cleanup phase: Elapsed time ==> 0s.001ms
